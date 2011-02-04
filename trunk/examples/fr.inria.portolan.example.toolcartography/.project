@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>fr.inria.portolan.example.toolcartography</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>fr.inria.portolan.visualization.build.PortolanVDBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>fr.inria.portolan.common.build.EcoreRegistrationBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2m.atl.adt.builder.atlBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.m2m.atl.adt.builder.atlNature</nature>
+		<nature>fr.inria.portolan.common.build.PortolanNature</nature>
+	</natures>
+</projectDescription>

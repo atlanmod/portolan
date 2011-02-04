@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="fr.inria.portolan.visualization.ui.perspective.VisualizationPerspective"
+            icon="icons/portolan_16x16.png"
+            id="fr.inria.portolan.visualization.ui.perspective"
+            name="Visualization">
+      </perspective>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:fr.inria.portolan.menus.perspectiveMenu">
+            <command
+                  commandId="org.eclipse.ui.perspectives.showPerspective"
+                  icon="icons/portolan_16x16.png"
+                  id="fr.inria.portolan.visualization.ui.menus.visualizationPerspectiveCommand"
+                  label="Visualization">
+               <parameter
+                     name="org.eclipse.ui.perspectives.showPerspective.perspectiveId"
+                     value="fr.inria.portolan.visualization.ui.perspective">
+               </parameter>
+            </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="fr.inria.portolan.visualization.ui.bar.VDsSideBar"
+            icon="icons/portolan_16x16.png"
+            id="fr.inria.portolan.visualization.ui.bar.VDsSideBar"
+            name="View Definitions Side Bar"
+            restorable="true">
+      </view>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="fr.inria.portolan.visualization.ui.ViewCategory"
+            name=" View Category">
+      </category>
+      <view
+            category="fr.inria.portolan.visualization.ui.ViewCategory"
+            class="fr.inria.portolan.visualization.ui.views.VisualizationView"
+            icon="icons/portolan_16x16.png"
+            id="fr.inria.portolan.visualization.ui.views.VisualizationView"
+            name="Portolan Visualization View"
+            restorable="false">
+      </view>
+   </extension>
+</plugin>

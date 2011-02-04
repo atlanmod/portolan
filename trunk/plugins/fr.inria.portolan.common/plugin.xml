@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="fr.inria.portolan.common.builder" name="Portolan Builder extension" schema="schema/fr.inria.portolan.common.builder.exsd"/>
+   <extension
+         point="fr.inria.portolan.common.builder">
+      <builder
+            builderId="fr.inria.portolan.common.build.EcoreRegistrationBuilder"
+            name="Portolan Ecore Registration Builder">
+      </builder>
+   </extension>
+   <extension
+         id="fr.inria.portolan.common.build.EcoreRegistrationBuilder"
+         name="Portolan Ecore Registration Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="false">
+         <run
+               class="fr.inria.portolan.common.build.EcoreRegistrationBuilder">
+         </run>
+      </builder>
+   </extension>
+
+</plugin>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Visualization Task</title>
+   </head>
+
+   <body>
+      <h2>
+         Visualization Task
+      </h2>
+      <p>
+		The visualizations stricto sensu are external components which are realized and
+		brought to end-users by <em>Visualization Providers</em>. Each visualization
+		relies on a specific viewer and a dedicated transformation chain. This chain
+		implies Model-Driven Interoperability and embeds the metamodels corresponding to
+		the formats needed by the viewer. We have used existing metamodels (like
+		GraphML, from previous projects) and we defined these which were lacking (such
+		as the KML one).
+      </p>
+      <p>
+		Each chain takes the central cartography model conforming to the cartography
+		metamodel as input, translates its contents into a model conforming to the DSL
+		of the viewer format through a model-to-model transformation, and extracts the
+		corresponding file in the textual format using a model-to-text extractor.
+      </p>
+      <p>
+		The final output is opened by the viewer. The <em>Cartography User</em> can then
+		manipulate the view in order to better understand and analyze it.
+      </p>
+  </body>
+</html>

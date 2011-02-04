@@ -1,0 +1,94 @@
+-- @nsURI MyMM=http://example.portolan.inria.fr/1.0
+-- @path  XML=http://www.eclipse.org/XML
+
+-- ******************************************************************************
+-- * Copyright (c) 2009, 2011 INRIA Rennes Bretagne-Atlantique and others.
+-- *
+-- * All rights reserved.   This program and the accompanying materials
+-- * are made available under the terms of the Eclipse Public License v1.0
+-- * which accompanies this distribution, and is available at
+-- * http://www.eclipse.org/legal/epl-v10.html
+-- *
+-- * Contributors:
+-- *   INRIA Rennes Bretagne-Atlantique - Initial API and implementation
+-- ******************************************************************************
+
+-- This module extracts elements of the XML example data to the model.
+module ExampleXML2MapTransformation;
+
+create OUT : MyMM from IN : XML;
+
+
+rule Element2Node {
+	from
+		e : XML!Element ( e.name = 'node' )
+	to
+		node : MyMM!KindOfNode (
+			__id		<- e.getChildrenByName('description')->first()
+									.getStringAttrValue('value'),
+			identifier	<- ident,
+			locator		<- geo
+		),
+		ident : MyMM!ID (
+			value	<- e.getStringAttrValue('id')
+		),
+		geo : MyMM!GeoLocator (
+			value	<- e.getChildrenByName('place')->first()
+									.getStringAttrValue('value')
+		)
+}
+
+rule Element2Edge {
+	from
+		e : XML!Element ( e.name = 'edge')
+	to
+		edge : MyMM!KindOfEdge (
+			__id	<- e.getStringAttrValue('text'),
+			source	<- e.getChildrenByName('from')
+						->collect(_from |
+							_from.getChildrenByName('nodeId')
+						)->flatten()
+						->collect(nodeId |
+							thisModule.getNodeByID(
+								nodeId.getStringAttrValue('id')
+							)
+						),
+			target	<- e.getChildrenByName('to')
+						->collect(_to |
+							_to.getChildrenByName('nodeId')
+						)->flatten()
+						->collect(nodeId |
+							thisModule.getNodeByID(
+								nodeId.getStringAttrValue('id')
+							)
+						)
+		)
+}
+
+helper def: getNodeByID(id : String) : XML!Element =
+	let nodes : Sequence(XML!Element) =
+		XML!Element.allInstances()->select(e | e.name = 'node')
+	in
+		nodes->select(n | n.getStringAttrValue('id') = id)->first();
+
+-- This helper permits to recover the value of a string attribute thanks to its name.
+-- It returns an empty string if the attribute doesn't exist.
+-- CONTEXT: XML!Element
+-- RETURN: String
+helper context XML!Element def: getStringAttrValue(attrName : String) : String =
+	let eltC : Sequence(XML!Attribute) = 
+		self.children->select(a | a.oclIsTypeOf(XML!Attribute) and a.name = attrName)->asSequence()
+	in
+		if eltC->notEmpty() 
+		then
+			eltC->first().value
+		else
+			''
+		endif;
+
+
+-- This helper permits to recover the element's set of children thanks to their name.
+-- CONTEXT: XML!Element
+-- RETURN: Set(XML!Element)
+helper context XML!Element def: getChildrenByName(name : String) : Set(XML!Element) =
+	self.children->select(e | e.oclIsTypeOf(XML!Element) and e.name = name);

@@ -1,0 +1,3 @@
+PortolanMetamodel=platform\:/fr.inria.portolan.usecase.template.project/Metamodel/ExampleMetamodel.ecore
+PortolanModel=/fr.inria.portolan.usecase.template.project/Model/ExampleModel.xmi
+eclipse.preferences.version=1

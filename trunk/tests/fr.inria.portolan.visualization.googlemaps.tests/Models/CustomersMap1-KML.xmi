@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document name="Root Document">
+    <features xsi:type="kml:Folder" name="Items"/>
+  </kml:Document>
+  <kml:Placemark name="Untel">
+    <geometry xsi:type="kml:Point">
+      <coordinates lon="-1.521066" lat="47.282815"/>
+    </geometry>
+  </kml:Placemark>
+  <kml:Placemark name="Bidule">
+    <geometry xsi:type="kml:Point">
+      <coordinates lon="-1.656508" lat="48.090451"/>
+    </geometry>
+  </kml:Placemark>
+  <kml:Placemark name="Machin">
+    <geometry xsi:type="kml:Point">
+      <coordinates lon="1.656508" lat="46.090451"/>
+    </geometry>
+  </kml:Placemark>
+</xmi:XMI>

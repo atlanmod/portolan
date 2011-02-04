@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="fr.inria.portolan.edition.ui.perspective.EditionPerspective"
+            icon="icons/edition.png"
+            id="fr.inria.portolan.edition.ui.perspective"
+            name="Edition">
+      </perspective>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:fr.inria.portolan.menus.perspectiveMenu">
+            <command
+                  commandId="org.eclipse.ui.perspectives.showPerspective"
+                  id="fr.inria.portolan.edition.ui.menus.editionPerspectiveCommand"
+                  icon="icons/edition.png"
+                  label="Edition"
+                  mnemonic="S">
+               <parameter
+                     name="org.eclipse.ui.perspectives.showPerspective.perspectiveId"
+                     value="fr.inria.portolan.edition.ui.perspective">
+               </parameter>
+            </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

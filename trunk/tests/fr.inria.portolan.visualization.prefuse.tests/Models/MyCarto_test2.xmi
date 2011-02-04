@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mycartomm="http://mycartomm/1.0" xsi:schemaLocation="http://mycartomm/1.0 /fr.inria.portolan.visualization.prefuse.tests/Metamodels/MyCartoMM2.ecore">
+  <mycartomm:Format __id="The useful format X" sourceOf="/9 /17" targetOf="/6">
+    <identifier xsi:type="mycartomm:URI" value="Format X"/>
+  </mycartomm:Format>
+  <mycartomm:Format __id="Another useful format" sourceOf="/10 /14" targetOf="/7 /12 /15">
+    <identifier xsi:type="mycartomm:URI" value="Format Y"/>
+  </mycartomm:Format>
+  <mycartomm:Format __id="Useless format Z ;-)" sourceOf="/11 /18" targetOf="/8 /13 /16">
+    <identifier xsi:type="mycartomm:URI" value="Format Z"/>
+  </mycartomm:Format>
+  <mycartomm:Tool __id="Amazing tool One" sourceOf="/6 /7 /8" targetOf="/9 /10 /11">
+    <metadata key="weight" value="5"/>
+    <identifier xsi:type="mycartomm:URI" value="Tool One"/>
+    <locator xsi:type="mycartomm:URL" value="http://toolOne.org"/>
+  </mycartomm:Tool>
+  <mycartomm:Tool __id="Too much tool Two" sourceOf="/12 /13" targetOf="/14">
+    <metadata key="weight" value="64"/>
+    <identifier xsi:type="mycartomm:URI" value="Tool Two"/>
+    <locator xsi:type="mycartomm:URL" value="http://tool.two.com"/>
+  </mycartomm:Tool>
+  <mycartomm:Tool __id="Poor lonesome tool Three (with no weight)" sourceOf="/15 /16" targetOf="/17 /18">
+    <identifier xsi:type="mycartomm:URI" value="Tool Three"/>
+    <locator xsi:type="mycartomm:URL" value="http://tool3.eu.org"/>
+  </mycartomm:Tool>
+  <mycartomm:Export __id="One to X" source="/3" target="/0">
+    <identifier xsi:type="mycartomm:URI" value="Tool One exports to Format X"/>
+  </mycartomm:Export>
+  <mycartomm:Export __id="One to Y" source="/3" target="/1">
+    <identifier xsi:type="mycartomm:URI" value="Tool One exports to Format Y"/>
+  </mycartomm:Export>
+  <mycartomm:Export __id="One to Z" source="/3" target="/2">
+    <identifier xsi:type="mycartomm:URI" value="Tool One exports to Format Z"/>
+  </mycartomm:Export>
+  <mycartomm:Import __id="X to One" source="/0" target="/3">
+    <identifier xsi:type="mycartomm:URI" value="Tool One imports from Format X"/>
+  </mycartomm:Import>
+  <mycartomm:Import __id="Y to One" source="/1" target="/3">
+    <identifier xsi:type="mycartomm:URI" value="Tool One imports from Format Y"/>
+  </mycartomm:Import>
+  <mycartomm:Import __id="Z to One" source="/2" target="/3">
+    <identifier xsi:type="mycartomm:URI" value="Tool One imports from Format Z"/>
+  </mycartomm:Import>
+  <mycartomm:Export __id="Two to Y" source="/4" target="/1">
+    <identifier xsi:type="mycartomm:URI" value="Tool Two exports to Format Y"/>
+  </mycartomm:Export>
+  <mycartomm:Export __id="Two to Z" source="/4" target="/2">
+    <identifier xsi:type="mycartomm:URI" value="Tool Two exports to Format Z"/>
+  </mycartomm:Export>
+  <mycartomm:Import __id="Y to Two" source="/1" target="/4">
+    <identifier xsi:type="mycartomm:URI" value="Tool Two imports from Format Y"/>
+  </mycartomm:Import>
+  <mycartomm:Export __id="Three to Y" source="/5" target="/1">
+    <identifier xsi:type="mycartomm:URI" value="Tool Three exports to Format Y"/>
+  </mycartomm:Export>
+  <mycartomm:Export __id="Three to Z" source="/5" target="/2">
+    <identifier xsi:type="mycartomm:URI" value="Tool Three exports to Format Z"/>
+  </mycartomm:Export>
+  <mycartomm:Import __id="X to Three" source="/0" target="/5">
+    <identifier xsi:type="mycartomm:URI" value="Tool Three imports from Format X"/>
+  </mycartomm:Import>
+  <mycartomm:Import __id="Z to Three" source="/2" target="/5">
+    <identifier xsi:type="mycartomm:URI" value="Tool Three imports from Format Z"/>
+  </mycartomm:Import>
+</xmi:XMI>

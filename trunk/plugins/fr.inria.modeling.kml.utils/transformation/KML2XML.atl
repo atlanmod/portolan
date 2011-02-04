@@ -1,0 +1,1001 @@
+-- @path XML=http://modeling.inria.fr/XML
+-- @path KML=http://www.opengis.net/kml/2.2
+
+-- ******************************************************************************
+-- Copyright (c) 2009 INRIA. 
+-- All rights reserved. This program and the accompanying materials 
+-- are made available under the terms of the Eclipse Public License v1.0 
+-- which accompanies this distribution, and is available at
+-- http://www.eclipse.org/legal/epl-v10.html
+-- 
+-- Contributors: 
+-- 	INRIA - Initial implementation
+--  
+-- ******************************************************************************
+
+--@authors Vincent Mahé
+
+module KML2XML;
+create OUT : XML from IN : KML;
+
+
+-- every KML elements are contained in a Document instance
+helper def:  xmlRoot : XML!Root = OclUndefined;
+entrypoint rule root2root() {
+	to
+		root	: XML!Root (
+			name		<- 'kml',
+--			value		<- '',
+			children	<- Sequence{xmlns}
+		),
+		xmlns	: XML!Attribute (
+			name		<- 'xmlns',
+			value		<- 'http://www.opengis.net/kml/2.2'
+		)
+	do {
+		thisModule.xmlRoot <- root;
+	}
+}
+
+-- generic rule to manage IDs
+rule Object {
+	from
+		s		: KML!Object
+	to
+		e		: XML!Element (
+			name		<- ' -- the type <' + s.oclType().name + '> transformation is not implemented --',
+--			value		<- '',
+			children	<- Sequence{id, targetId}
+		),
+		id		: XML!Attribute (
+			name		<- 'id',
+			value		<- if (s.id = OclUndefined) then '' else s.id endif
+		),
+		targetId: XML!Element (
+			name		<- 'targetId',
+			children	<- thisModule.getText(s.targetId)
+		)
+}
+
+rule Feature extends Object {
+	from
+		s		: KML!Feature
+	to
+		e		: XML!Element (
+			-- abstract so Element name is given by implementations
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region}
+		),
+		name	: XML!Element (
+			name		<- 'name',
+			children	<- thisModule.getText(s.name)
+		),
+		visibility	: XML!Element (
+			name		<- 'visibility',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.visibility))
+		),
+		open		: XML!Element (
+			name		<- 'open',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.open))
+		),
+		address	: XML!Element (
+			name		<- 'address',
+			children	<- thisModule.getText(s.address)
+		),
+		phoneNumber	: XML!Element (
+			name		<- 'phoneNumber',
+			children	<- thisModule.getText(s.phoneNumber)
+		),
+		snippet	: XML!Element (
+			name		<- 'snippet',
+			children	<- thisModule.getText(s.snippet)
+		),
+		description	: XML!Element (
+			name		<- 'description',
+			children	<- thisModule.getText(s.description)
+		),
+		styleUrl	: XML!Element (
+			name		<- 'styleUrl',
+			children	<- thisModule.getText(s.styleUrl)
+		)
+}
+
+rule Placemark extends Feature {
+	from
+		s		: KML!Placemark
+	to
+		e		: XML!Element (
+			name		<- 'Placemark',
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region,
+									s.geometry}
+		)
+}
+
+rule Overlay extends Feature {
+	from
+		s		: KML!Overlay
+	to
+		e		: XML!Element (
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region,
+									color,
+									drawOrder,
+									s.icon}
+		),
+		color	: XML!Element (
+			name		<- 'color',
+			children	<- thisModule.getText(s.color)
+		),
+		drawOrder	: XML!Element (
+			name		<- 'drawOrder',
+			children	<- thisModule.getText(s.drawOrder.toString())
+		)
+}
+
+rule GroundOverlay extends Overlay {
+	from
+		s		: KML!GroundOverlay
+	to
+		e		: XML!Element (
+			name		<- 'GroundOverlay',
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region,
+									color,
+									drawOrder,
+									s.icon,
+									altitude,
+									mode,
+									s.latLonBox}
+		),
+		altitude	: XML!Element (
+			name		<- 'altitude',
+			children	<- thisModule.getText(s.altitude.toString())
+		),
+		mode		: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		)
+}
+
+rule PhotoOverlay extends Overlay {
+	from
+		s		: KML!PhotoOverlay
+	to
+		e		: XML!Element (
+			name		<- 'PhotoOverlay',
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region,
+									color,
+									drawOrder,
+									s.icon,
+									shape,
+									roll,
+									s.viewVolume}
+		),
+		shape		: XML!Element (
+			name		<- 'shape',
+			children	<- thisModule.getText(s.shape.toString())
+		),
+		roll		: XML!Element (
+			name		<- 'roll',
+			children	<- thisModule.getText(s.roll.toString())
+		)
+}
+
+rule ScreenOverlay extends Overlay {
+	from
+		s		: KML!ScreenOverlay
+	to
+		e		: XML!Element (
+			name		<- 'ScreenOverlay',
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region,
+									color,
+									drawOrder,
+									s.icon--,
+-- TODO : manage Vec2Type properties:
+									-- overLayXY,
+									-- screenXY,
+									-- rotation,
+									-- size
+									}
+		)
+}
+
+rule Container extends Feature {
+	from
+		s		: KML!Feature
+	to
+		e		: XML!Element (
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region,
+									s.features}
+		)
+}
+
+rule Document extends Container {
+	from
+		s		: KML!Document
+	to
+		e		: XML!Element (
+			name		<- 'Document',
+			children	<- Sequence{id, targetId,
+									name,
+									visibility,
+									open,
+									address,
+									phoneNumber,
+									snippet,
+									description,
+									styleUrl,
+									s.abstractView,
+									s.timePrimitive,
+									s.styleSelectors,
+									s.extendedData,
+									s.xalAddressDetails,
+									s.atomLink,
+									s.atomAuthor,
+									s.region,
+								 	s.features,
+									s.styleSelectors,
+									s.features,
+									s.schemas}
+		)
+	do {	-- manage the root Document --
+		if (KML!Document.allInstancesFrom('IN')->first() = s) {
+			thisModule.xmlRoot.children <- thisModule.xmlRoot.children->append(e);
+		}
+	}
+}
+
+rule Folder extends Container {
+	from
+		s		: KML!Folder
+	to
+		e		: XML!Element (
+			name		<- 'Folder'
+		)
+}
+
+rule AbstractView extends Object {
+	from
+		s		: KML!AbstractView
+	to
+		e		: XML!Element (
+			children	<- Sequence{id, targetId,
+									lon,
+									lat,
+									alt,
+									heading,
+									mode}
+		),
+		lon		: XML!Element (
+			name		<- 'longitude',
+			children	<- thisModule.getText(s.longitude.toString())
+		),
+		lat		: XML!Element (
+			name		<- 'latitude',
+			children	<- thisModule.getText(s.latitude.toString())
+		),
+		alt		: XML!Element (
+			name		<- 'altitude',
+			children	<- thisModule.getText(s.altitude.toString())
+		),
+		heading	: XML!Element (
+			name		<- 'heading',
+			children	<- thisModule.getText(s.heading.toString())
+		),
+		mode	: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		)
+}
+
+rule Camera extends AbstractView {
+	from
+		s		: KML!Camera
+	to
+		e		: XML!Element (
+			name		<- 'Camera',
+			children	<- Sequence{id, targetId,
+									lon,
+									lat,
+									alt,
+									heading,
+									mode,
+									tilt,
+									roll}
+		),
+		tilt	: XML!Element (
+			name		<- 'tilt',
+			children	<- thisModule.getText(s.tilt.toString())
+		),
+		roll	: XML!Element (
+			name		<- 'roll',
+			children	<- thisModule.getText(s.roll.toString())
+		)
+}
+
+rule LookAt extends AbstractView {
+	from
+		s		: KML!LookAt
+	to
+		e		: XML!Element (
+			name		<- 'LookAt',
+			children	<- Sequence{id, targetId,
+									lon,
+									lat,
+									alt,
+									heading,
+									mode,
+									tilt,
+									range}
+		),
+		tilt	: XML!Element (
+			name		<- 'tilt',
+			children	<- thisModule.getText(s.tilt.toString())
+		),
+		range	: XML!Element (
+			name		<- 'range',
+			children	<- thisModule.getText(s.range.toString())
+		)
+}
+
+rule StyleSelector extends Object {
+	from
+		s		: KML!StyleSelector
+	to
+		e		: XML!Element (
+			name		<- 'StyleSelector'
+		)
+}
+
+rule Style extends StyleSelector {
+	from
+		s		: KML!Style
+	to
+		e		: XML!Element (
+			name		<- 'Style',
+			children	<- Sequence{id, targetId, s.styles}
+		)
+}
+
+rule StyleMap extends StyleSelector {
+	from
+		s		: KML!StyleMap
+	to
+		e		: XML!Element (
+			name		<- 'StyleMap',
+			children	<- Sequence{id, targetId, s.pairs}
+		)
+}
+
+rule Link extends Object {
+	from
+		s		: KML!Link
+	to
+		e		: XML!Element (
+			name		<- 'Link',
+			children	<- Sequence{id,
+									targetId,
+									urlRef,
+									refreshM,
+									refreshI,
+									vwRefM,
+									vwRefT,
+									vwBoundS,
+									vwFormat,
+									httpQ}
+		),
+		urlRef		: XML!Element (
+			name		<- 'href',
+			children	<- thisModule.getText(s.urlRef)
+		),
+		refreshM	: XML!Element (
+			name		<- 'refreshMode',
+			children	<- thisModule.getText(s.refreshMode.toString())
+		),
+		refreshI	: XML!Element (
+			name		<- 'refreshInterval',
+			children	<- thisModule.getText(s.refreshInterval.toString())
+		),
+		vwRefM		: XML!Element (
+			name		<- 'viewRefreshMode',
+			children	<- thisModule.getText(s.viewRefreshMode.toString())
+		),
+		vwRefT		: XML!Element (
+			name		<- 'viewRefreshTime',
+			children	<- thisModule.getText(s.viewRefreshTime.toString())
+		),
+		vwBoundS	: XML!Element (
+			name		<- 'viewBoundScale',
+			children	<- thisModule.getText(s.viewBoundScale.toString())
+		),
+		vwFormat	: XML!Element (
+			name		<- 'viewFormat',
+			children	<- thisModule.getText(s.viewFormat)
+		),
+		httpQ		: XML!Element (
+			name		<- 'httpQuery',
+			children	<- thisModule.getText(s.httpQuery)
+		)
+}
+
+rule AbstractStyle extends Object {
+	from
+		s		: KML!AbstractStyle
+	to
+		e		: XML!Element (
+			name		<- ' -- the type <' + s.oclType().name + '> transformation is not implemented --'
+		)
+}
+
+rule ColorStyle extends AbstractStyle {
+	from
+		s		: KML!ColorStyle
+	to
+		e		: XML!Element (
+			name		<- 'ColorStyle',
+			children	<- Sequence{id, targetId, color, mode}
+		),
+		color	: XML!Element (
+			name		<- 'color',
+			children	<- thisModule.getText(s.color)
+		),
+		mode	: XML!Element (
+			name		<- 'colorMode',
+			children	<- thisModule.getText(s.mode.toString())
+		)
+}
+
+rule LineStyle extends ColorStyle {
+	from
+		s		: KML!LineStyle
+	to
+		e		: XML!Element (
+			name		<- 'LineStyle',
+			children	<- Sequence{id, targetId, color, mode, width}
+		),
+		width	: XML!Element (
+			name		<- 'width',
+			children	<- thisModule.getText(s.width.toString())
+		)
+}
+
+rule PolyStyle extends ColorStyle {
+	from
+		s		: KML!PolyStyle
+	to
+		e		: XML!Element (
+			name		<- 'PolyStyle',
+			children	<- Sequence{id, targetId, color, mode, fill}
+		),
+		fill	:XML!Element (
+			name		<- 'fill',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.fill))
+		)
+}
+
+rule ListStyle extends AbstractStyle {
+	from
+		s		: KML!ListStyle
+	to
+		e		: XML!Element (
+			name		<- 'ListStyle',
+			children	<- Sequence{id, targetId, bgcolor, type, s.items}
+		),
+		bgcolor	: XML!Element (
+			name		<- 'bgColor',
+			children	<- thisModule.getText(s.bgColor)
+		),
+		type	: XML!Element (
+			name		<- 'itemType',
+			children	<- thisModule.getText(s.itemType.toString())
+		)
+}
+
+rule ItemIcon {
+	from
+		s		: KML!ItemIcon
+	to
+		e		: XML!Element (
+			name		<- 'ItemIcon',
+			children	<- Sequence{state, href}
+		),
+		state	: XML!Element (
+			name		<- 'state',
+			children	<- thisModule.getText(s.state.toString())
+		),
+		href	: XML!Element (
+			name		<- 'href',
+			children	<- thisModule.getText(s.href)
+		)
+}
+
+rule LabelStyle extends ColorStyle {
+	from
+		s		: KML!LabelStyle
+	to
+		e		: XML!Element (
+			name		<- 'LabelStyle',
+			children	<- Sequence{id, targetId, color, mode, scale}
+		),
+		scale	: XML!Element (
+			name		<- 'scale',
+			children	<- thisModule.getText(s.scale.toString())
+		)
+}
+
+rule IconStyle extends ColorStyle {
+	from
+		s		: KML!IconStyle
+	to
+		e		: XML!Element (
+			name		<- 'IconStyle',
+			children	<- Sequence{id, targetId, color, mode,
+								scale, heading, s.icon,
+-- TODO: manage Vec2Type property
+--								if(not (s.hotSpot=OclUndefined)) then
+--									thisModule.Vec2Type(s.hotSpot, 'hotSpot')->asSequence()->first()
+--								else OclUndefined endif
+								s.hotSpot
+								}
+		),
+		scale	: XML!Element (
+			name		<- 'scale',
+			children	<- thisModule.getText(s.scale.toString())
+		),
+		heading	: XML!Element (
+			name		<- 'heading',
+			children	<- thisModule.getText(s.heading.toString())
+		)
+--	do {
+--		thisModule.resolveTemp(s.hotSpot, 'e').name <- 'hotSpot';
+--	}
+}
+
+rule BalloonStyle extends AbstractStyle {
+	from
+		s		: KML!BalloonStyle
+	to
+		e		: XML!Element (
+			name		<- 'BalloonStyle',
+			children	<- Sequence{id, targetId,
+									bgColor, textColor,
+									text, mode}
+		),
+		bgColor	: XML!Element (
+			name		<- 'bgColor',
+			children	<- thisModule.getText(s.bgColor)
+		),
+		textColor	: XML!Element (
+			name		<- 'textColor',
+			children	<- thisModule.getText(s.textColor)
+		),
+		text	: XML!Element (
+			name		<- 'text',
+			children	<- thisModule.getText(s.text)
+		),
+		mode	: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		)
+}
+
+rule Icon extends Link {
+	from
+		s		: KML!Icon
+	to
+		e		: XML!Element (
+			name		<- 'Icon',
+			children	<- Sequence{id, targetId, urlRef,
+									refreshM, refreshI,
+									vwRefM, vwRefT, vwBoundS, vwFormat,
+									httpQ}
+		)
+}
+
+rule Vec2Type {
+	from
+		s		: KML!Vec2Type
+	to
+		e		: XML!Element (
+			name		<- ' -- the type <' + s.oclType().name + '> transformation is not implemented --',
+			children	<- Sequence{x, y, xunits, yunits}
+		),
+		x		: XML!Element (
+			name		<- 'x',
+			children	<- thisModule.getText(s.x.toString())
+		),
+		y		: XML!Element (
+			name		<- 'y',
+			children	<- thisModule.getText(s.y.toString())
+		),
+		xunits	: XML!Element (
+			name		<- 'xunits',
+			children	<- thisModule.getText(s.xunits.toString())
+		),
+		yunits	: XML!Element (
+			name		<- 'yunits',
+			children	<- thisModule.getText(s.yunits.toString())
+		)
+}
+
+-- abstract element
+rule Geometry extends Object {
+	from
+		s		: KML!Geometry
+	to
+		e		: XML!Element (
+			name		<- ' -- the type <' + s.oclType().name + '> transformation is not implemented --'
+		)
+}
+
+rule MultiGeometry extends Geometry {
+	from
+		s		: KML!MultiGeometry
+	to
+		e		: XML!Element (
+			name		<- 'MultiGeometry',
+			children	<- Sequence{id, targetId, s.geometries}
+		)
+}
+	
+rule LineString extends Geometry {
+	from
+		s		: KML!LineString
+	to
+		e		: XML!Element (
+			name		<- 'LineString',
+			children	<- Sequence{id, targetId,
+									extrude,
+									tessellate,
+									mode,
+									coords}
+		),
+		extrude	: XML!Element (
+			name		<- 'extrude',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.extrude))
+		),
+		tessellate	: XML!Element (
+			name		<- 'tessellate',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.tessellate))
+		),
+		mode	: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		),
+		coords	: XML!Element (
+			name		<- 'coordinates',
+			children	<- thisModule.getText(thisModule.coord2string(s.coordinates))
+		)
+}
+
+	
+rule Point extends Geometry {
+	from
+		s		: KML!Point
+	to
+		e		: XML!Element (
+			name		<- 'Point',
+			children	<- Sequence{id, targetId,
+									extrude,
+									mode,
+									coords}
+		),
+		extrude	: XML!Element (
+			name		<- 'extrude',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.extrude))
+		),
+		mode	: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		),
+		coords	: XML!Element (
+			name		<- 'coordinates',
+			children	<- thisModule.getText(
+				thisModule.coord2string(Sequence{s.coordinates}))
+		)
+}
+
+	
+rule LinearRing extends Geometry {
+	from
+		s		: KML!LinearRing
+	to
+		e		: XML!Element (
+			name		<- 'LinearRing',
+			children	<- Sequence{id, targetId,
+									extrude,
+									tessellate,
+									mode,
+									coords}
+		),
+		extrude	: XML!Element (
+			name		<- 'extrude',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.extrude))
+		),
+		tessellate	: XML!Element (
+			name		<- 'tessellate',
+			children	<- thisModule.getText(
+							thisModule.boolValue(s.tessellate))
+		),
+		mode	: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		),
+		coords	: XML!Element (
+			name		<- 'coordinates',
+			children	<- thisModule.getText(thisModule.coord2string(s.coordinates))
+		)
+}
+	
+rule Polygon extends Geometry {
+	from
+		s		: KML!Polygon
+	to
+		e		: XML!Element (
+			name		<- 'Polygon',
+			children	<- Sequence{id, targetId,
+									extrude,
+									tessellate,
+									mode,
+									s.innerBoundaryIs,
+									s.outerBoundaryIs}
+		),
+		extrude	: XML!Element (
+			name		<- 'extrude',
+			children	<- thisModule.boolValue(s.extrude)
+		),
+		tessellate	: XML!Element (
+			name		<- 'tessellate',
+			children	<- thisModule.boolValue(s.tessellate)
+		),
+		mode	: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		)
+}
+
+rule Model extends Geometry {
+	from
+		s		: KML!Model
+	to
+		e		: XML!Element (
+			name		<- 'Model',
+			children	<- Sequence{id, targetId,
+									mode,
+									s.location,
+									s.orientation,
+									s.scale,
+									s.resourceMap,
+									s.link}
+		),
+		mode	: XML!Element (
+			name		<- 'mode',
+			children	<- thisModule.getText(s.mode.toString())
+		)
+}
+
+rule Scale {
+	from
+		s		: KML!Scale
+	to
+		e		: XML!Attribute (
+			name		<- 'scale',
+			value		<- 'x = "' + s.x +'" y = "' + s.y + '" z = "' + s.z +'"'
+		)
+}
+
+rule Location {
+	from
+		s		: KML!Location
+	to
+		e		: XML!Element (
+			name		<- 'Location',
+			children	<- Sequence{long, lat, alt}
+		),
+		long	: XML!Element (
+			name		<- 'longitude',
+			children	<- thisModule.getText(s.longitude.toString())
+		),
+		lat	: XML!Element (
+			name		<- 'latitude',
+			children	<- thisModule.getText(s.latitude.toString())
+		),
+		alt	: XML!Element (
+			name		<- 'altitude',
+			children	<- thisModule.getText(s.altitude.toString())
+		)
+}
+
+rule Orientation {
+	from
+		s		: KML!Orientation
+	to
+		e		: XML!Element (
+			name		<- 'Orientation',
+			children	<- Sequence{heading, tilt, roll}
+		),
+		heading	: XML!Element (
+			name		<- 'heading',
+			children	<- thisModule.getText(s.heading.toString())
+		),
+		tilt	: XML!Element (
+			name		<- 'tilt',
+			children	<- thisModule.getText(s.tilt.toString())
+		),
+		roll	: XML!Element (
+			name		<- 'roll',
+			children	<- thisModule.getText(s.roll.toString())
+		)
+}
+
+rule ResourceMap {
+	from
+		s		: KML!ResourceMap
+	to
+		e		: XML!Element (
+			name		<- 'ResourceMap',
+			children	<- s.aliases
+		)
+}
+
+rule Alias {
+	from
+		s		: KML!Alias
+	to
+		e		: XML!Element (
+			name		<- 'Alias',
+			children	<- Sequence{tgt, src}
+		),
+		tgt		: XML!Element (
+			name		<- 'targetHref',
+			children	<- thisModule.getText(s.targetHref)
+		),
+		src		: XML!Element (
+			name		<- 'sourceHref',
+			children	<- thisModule.getText(s.sourceHref)
+		)
+}
+
+-- ------- helping rules used in the transformation ---------
+
+-- every values in KML samples from Google Maps et alii
+-- are stored in XML elements (not attributes) so we have
+-- to create an Element and corresponding attribute each time
+lazy rule getText {
+	from
+		v : String
+	to
+		e		: XML!Text (
+			value	<- if (v = OclUndefined)
+						then ' '
+						else v
+						endif
+		)
+}
+
+helper def: coord2string(list : Sequence(KML!Coordinate)) : String =
+	list->iterate(coord; res : String = '' |
+						res + coord.lon.toString() + ','
+						+ coord.lat.toString() +','
+						+ coord.alt.toString() + '\n'
+				);
+
+helper def: boolValue (b : Boolean) : String =
+--	if( b = true ) then '1' else '0' endif;
+	b.toString();

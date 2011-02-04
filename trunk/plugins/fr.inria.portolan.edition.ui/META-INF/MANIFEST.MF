@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.inria.portolan.edition.ui;singleton:=true
+Bundle-Version: 0.7.0.qualifier
+Bundle-Activator: fr.inria.portolan.edition.ui.Activator
+Bundle-Vendor: %providerName
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.m2m.atl.adt.ui
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: fr.inria.portolan.edition.ui

@@ -1,0 +1,17 @@
+<plugin>
+   <extension
+         point="fr.inria.portolan.visualization.viewDefinition">
+      <view_definition
+            id="ToolsCartography.example.ExtractTools"
+            categoryId="fr.inria.portolan.visualization.prefuse.commands.viewDefinitionCategory"
+            iconPath="Transformations/ViewDefinitions/ExtractTools.png"
+            commandId="prefuse.tools.with.licenses.command"
+            name="Tools with Licenses"
+            text="View: Tools Licenses"
+            transformationPath="Transformations/ViewDefinitions/ExtractTools.asm"
+            postName="_Tools"
+            editorId="fr.inria.portolan.visualization.prefuse.ui.PrefuseEditor"
+            shortMM="Cartography">
+      </view_definition>
+   </extension>
+</plugin>

@@ -1,0 +1,39 @@
+-- ******************************************************************************
+-- * Copyright (c) 2009, 2011 INRIA Rennes Bretagne-Atlantique and others.
+-- *
+-- * All rights reserved.   This program and the accompanying materials
+-- * are made available under the terms of the Eclipse Public License v1.0
+-- * which accompanies this distribution, and is available at
+-- * http://www.eclipse.org/legal/epl-v10.html
+-- *
+-- * Contributors:
+-- *   INRIA Rennes Bretagne-Atlantique - Initial API and implementation
+-- ******************************************************************************
+
+query Cartography2L3Query = Cartography!DirectedRelationship.allInstances()
+			->asSequence()->collect(e | e.links)->flatten()
+			->iterate(e; acc : String = '' |
+				acc + if acc = '' then '' else '\n' endif + e.toString()
+			);
+
+helper context Cartography!DirectedRelationship def: links : Sequence(String) =
+	self.source->collect(src | 
+		self.target->collect(tgt |
+			src.identifier.trim + ' '
+			+ tgt.identifier.trim + ' '
+			+ src.weight
+		)
+	);
+
+helper context Cartography!Entity def: weight : String =
+	if (self.metadata->select(md | md.key = 'weight')->size() > 0) then
+		self.metadata->select(md | md.key = 'weight')->first().value
+	else
+		'1.0'
+	endif;
+
+helper context Cartography!Identifier def: trim : String =
+	self.value.toString().split(' ')
+		->iterate(subs; acc : String = '' |
+			acc + if acc = '' then '' else '_' endif + subs
+		);

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<graphml:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:graphml="http://www.eclipse.org/GraphML">
+  <keys id="label" for="node" attrName="label" type="string"/>
+  <keys id="type" for="node" attrName="type" type="string"/>
+  <keys id="weight" for="node" attrName="weight"/>
+  <keys id="error" for="node" attrName="error" type="string"/>
+  <keys id="group" for="node" attrName="group" type="string"/>
+  <keys id="type" attrName="type" type="string"/>
+  <keys id="weight" attrName="weight"/>
+  <keys id="descr" for="node" attrName="descr" type="string"/>
+  <keys id="descr" attrName="descr" type="string"/>
+  <keys id="directed" attrName="directed" type="string"/>
+  <graphs id="Cartography graph">
+    <contents xsi:type="graphml:Node" id="Format X" sourceOf="//@graphs.0/@contents.9 //@graphs.0/@contents.17" targetOf="//@graphs.0/@contents.6">
+      <datas key="label" value="Format X"/>
+      <datas key="type" value="Cartography!Format"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Format X&#xA;title: The useful format X&#xA;[]type: Cartography!Format"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Format Y" sourceOf="//@graphs.0/@contents.10 //@graphs.0/@contents.14" targetOf="//@graphs.0/@contents.7 //@graphs.0/@contents.12 //@graphs.0/@contents.15">
+      <datas key="label" value="Format Y"/>
+      <datas key="type" value="Cartography!Format"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Format Y&#xA;title: Another useful format&#xA;[]type: Cartography!Format"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Format Z" sourceOf="//@graphs.0/@contents.11 //@graphs.0/@contents.18" targetOf="//@graphs.0/@contents.8 //@graphs.0/@contents.13 //@graphs.0/@contents.16">
+      <datas key="label" value="Format Z"/>
+      <datas key="type" value="Cartography!Format"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Format Z&#xA;title: Useless format Z ;-)&#xA;[]type: Cartography!Format"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Tool One" sourceOf="//@graphs.0/@contents.6 //@graphs.0/@contents.7 //@graphs.0/@contents.8" targetOf="//@graphs.0/@contents.9 //@graphs.0/@contents.10 //@graphs.0/@contents.11">
+      <datas key="label" value="Tool One"/>
+      <datas key="type" value="Cartography!Tool"/>
+      <datas key="weight" value="5"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Tool One&#xA;title: Amazing tool One&#xA;[weight: 5&#xA;]type: Cartography!Tool"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Tool Two" sourceOf="//@graphs.0/@contents.12 //@graphs.0/@contents.13" targetOf="//@graphs.0/@contents.14">
+      <datas key="label" value="Tool Two"/>
+      <datas key="type" value="Cartography!Tool"/>
+      <datas key="weight" value="64"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Tool Two&#xA;title: Too much tool Two&#xA;[weight: 64&#xA;]type: Cartography!Tool"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Tool Three" sourceOf="//@graphs.0/@contents.15 //@graphs.0/@contents.16" targetOf="//@graphs.0/@contents.17 //@graphs.0/@contents.18">
+      <datas key="label" value="Tool Three"/>
+      <datas key="type" value="Cartography!Tool"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Tool Three&#xA;title: Poor lonesome tool Three (with no weight)&#xA;[]type: Cartography!Tool"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool One exports to Format X" source="//@graphs.0/@contents.3" target="//@graphs.0/@contents.0">
+      <datas key="type" value="Cartography!Export"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool One exports to Format X&#xA;title: One to X&#xA;[]type: Cartography!Export"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool One exports to Format Y" source="//@graphs.0/@contents.3" target="//@graphs.0/@contents.1">
+      <datas key="type" value="Cartography!Export"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool One exports to Format Y&#xA;title: One to Y&#xA;[]type: Cartography!Export"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool One exports to Format Z" source="//@graphs.0/@contents.3" target="//@graphs.0/@contents.2">
+      <datas key="type" value="Cartography!Export"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool One exports to Format Z&#xA;title: One to Z&#xA;[]type: Cartography!Export"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool One imports from Format X" source="//@graphs.0/@contents.0" target="//@graphs.0/@contents.3">
+      <datas key="type" value="Cartography!Import"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool One imports from Format X&#xA;title: X to One&#xA;[]type: Cartography!Import"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool One imports from Format Y" source="//@graphs.0/@contents.1" target="//@graphs.0/@contents.3">
+      <datas key="type" value="Cartography!Import"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool One imports from Format Y&#xA;title: Y to One&#xA;[]type: Cartography!Import"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool One imports from Format Z" source="//@graphs.0/@contents.2" target="//@graphs.0/@contents.3">
+      <datas key="type" value="Cartography!Import"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool One imports from Format Z&#xA;title: Z to One&#xA;[]type: Cartography!Import"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool Two exports to Format Y" source="//@graphs.0/@contents.4" target="//@graphs.0/@contents.1">
+      <datas key="type" value="Cartography!Export"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool Two exports to Format Y&#xA;title: Two to Y&#xA;[]type: Cartography!Export"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool Two exports to Format Z" source="//@graphs.0/@contents.4" target="//@graphs.0/@contents.2">
+      <datas key="type" value="Cartography!Export"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool Two exports to Format Z&#xA;title: Two to Z&#xA;[]type: Cartography!Export"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool Two imports from Format Y" source="//@graphs.0/@contents.1" target="//@graphs.0/@contents.4">
+      <datas key="type" value="Cartography!Import"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool Two imports from Format Y&#xA;title: Y to Two&#xA;[]type: Cartography!Import"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool Three exports to Format Y" source="//@graphs.0/@contents.5" target="//@graphs.0/@contents.1">
+      <datas key="type" value="Cartography!Export"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool Three exports to Format Y&#xA;title: Three to Y&#xA;[]type: Cartography!Export"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool Three exports to Format Z" source="//@graphs.0/@contents.5" target="//@graphs.0/@contents.2">
+      <datas key="type" value="Cartography!Export"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool Three exports to Format Z&#xA;title: Three to Z&#xA;[]type: Cartography!Export"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool Three imports from Format X" source="//@graphs.0/@contents.0" target="//@graphs.0/@contents.5">
+      <datas key="type" value="Cartography!Import"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool Three imports from Format X&#xA;title: X to Three&#xA;[]type: Cartography!Import"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Tool Three imports from Format Z" source="//@graphs.0/@contents.2" target="//@graphs.0/@contents.5">
+      <datas key="type" value="Cartography!Import"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Tool Three imports from Format Z&#xA;title: Z to Three&#xA;[]type: Cartography!Import"/>
+      <datas key="directed" value="true"/>
+    </contents>
+  </graphs>
+</graphml:Root>

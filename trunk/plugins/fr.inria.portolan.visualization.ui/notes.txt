@@ -1,0 +1,7 @@
+fr.inria.portolan.visualization.ui
+-------------------------------------
+
+Defines the UI common parts of Visualization part (display of available
+view definitions to the user):
+	- ViewDefinition tool bar
+	- Visualization menu into Portolan menu

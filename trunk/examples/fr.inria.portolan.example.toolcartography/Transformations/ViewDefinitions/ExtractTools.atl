@@ -1,0 +1,84 @@
+-- @path Cartography=http://portolan.inria.fr/1.0
+
+-- ******************************************************************************
+-- * Copyright (c) 2009, 2011 INRIA Rennes Bretagne-Atlantique and others.
+-- *
+-- * All rights reserved.   This program and the accompanying materials
+-- * are made available under the terms of the Eclipse Public License v1.0
+-- * which accompanies this distribution, and is available at
+-- * http://www.eclipse.org/legal/epl-v10.html
+-- *
+-- * Contributors:
+-- *   INRIA Rennes Bretagne-Atlantique - Initial API and implementation
+-- ******************************************************************************
+ 
+module ExtractTools;
+create OUT : Cartography from IN : Cartography;
+
+rule Tool2Tool {
+	from
+		t : Cartography!Tool
+	using {
+		-- the formats which the current tool exports to
+		exportedFormats : Sequence(Cartography!Format) =
+			t.sourceOf->collect(exp |
+					exp.target)->flatten();
+		formats : Sequence(Cartography!Format) =
+			t.sourceOf->union(t.targetOf);
+		licenseCost : String =
+			t.metadata->select(md | md.key = 'cost')->first().value;
+	}
+	to
+		tool : Cartography!Tool (
+			__id		<- '$ ' + licenseCost,
+			identifier	<- ident,
+			sourceOf	<- 		-- exports
+				exportedFormats->collect( f |
+					f.importedTools->select(tA |
+						tA <> t
+					)->collect(tB |
+							thisModule.createExport(t, f, tB)
+					)
+				)->flatten(),
+			metadata	<- Sequence{thisModule.createData('weight', licenseCost)}
+		),
+		ident : Cartography!ID (
+			value		<- t.identifier.value
+		)
+}
+
+-- we transform the export / import directed relationships
+--  ( ToolA <- Export -> FormatX <- Import -> ToolB)
+-- into an export relationship
+--          (ToolA <- Export -> ToolB)
+lazy rule createExport {
+	from
+		toolA : Cartography!Tool,
+		formatX : Cartography!Format,
+		toolB : Cartography!Tool
+	to
+		exp : Cartography!Export (
+			__id	<- 'format '+ formatX.__id,
+			identifier	<- ident,
+--			source	<- toolA,		-- set via the Tool.sourceOf property
+			target	<- toolB
+		),
+		ident : Cartography!ID (
+			value		<- formatX.identifier.value
+		)
+}
+
+-- for a given format, we get its imports and then the imports' targets
+helper context Cartography!Format def: importedTools : Sequence(Cartography!Tool) =
+	self.sourceOf->collect(import | import.target)		-- sequence of sequences
+		->flatten();
+
+lazy rule createData {
+	from
+		k : String, v : Integer
+	to
+		data : Cartography!Metadata (
+			key          <- k,
+			value        <- v.toString()
+		)
+}

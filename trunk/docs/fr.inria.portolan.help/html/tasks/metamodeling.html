@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Metamodeling</title>
+   </head>
+
+   <body>
+      <h2>
+         Metamodeling task
+      </h2>
+      <p>
+		The metamodeling step is a work of specification of the user's domain over the
+		cartography metamodel. Three cases are relevant:
+			<ul>
+			  <li>the Cartography core metamodel can be used as-is by customers, who
+				  will then build the discovery tools and generate the central model using the
+				  core types (see the first figure below);
+			  <li>it may also be extended by an engineer (the <em>Cartography
+				  Designer</em> role) to carry types closer to the user domain, these specific
+				  types relying to the core ones by inheritance; in this case, the
+				  metamodeling initial step consists in catching the concepts underlying the
+				  user domain and drawing the corresponding metamodel extension over the
+				  cartography core metamodel; each kind of element within the system under
+				  study needs to be identified, giving the corresponding type; the resulting
+				  types of the metamodel extension define a DSL which enables corresponding
+				  tooling, transformations and modeling of the domain; such a DSL is visible in
+				  second figure below;
+			  <li>an existing metamodel of the domain could also be reused as soon as
+				  inheritance to cartography core metamodel types is added to its types; we
+				  have to remark that the relations between elements which were defined by
+				  references need to be reified within explicit types in order to inherit from
+				  (<code>Directed</code>)\<code>Relationship</code> core type;
+			</ul>
+      </p>
+      <p>
+		  <img src="../images/PortolanCore.png" alt="PortolanCore metamodel">
+      </p>
+      <p>
+		  <img src="../images/BusinessMap.png" alt="DSL extension metamodel">
+      </p>
+   </body>
+</html>

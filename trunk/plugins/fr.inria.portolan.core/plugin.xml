@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.dynamic_package">
+      <resource
+            location="model/PortolanCore.ecore"
+            uri="http://portolan.inria.fr/1.0">
+      </resource>
+      <resource
+            location="model/PortolanCore.ecore"
+            uri="http://portolan.inria.fr/PrimitiveTypes/1.0">
+      </resource>
+   </extension>
+</plugin>

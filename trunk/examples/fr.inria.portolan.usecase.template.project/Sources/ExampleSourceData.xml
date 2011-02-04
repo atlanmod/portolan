@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<source xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<node id="Node ONE">
+		<description value="First node"/>
+		<place value="-1.0,47.0,0.0" />
+	</node>
+	<node id="Node TWO">
+		<description value="Second node"/>
+		<place value="1.5,50.0,0.0" />
+	</node>
+	<node id="Node THREE">
+		<description value="Third node"/>
+		<place value="1.0,45.0,0.0" />
+	</node>
+	<edge text="simple edge">
+		<from>
+			<nodeId id="Node ONE"/>
+		</from>
+		<to>
+			<nodeId id="Node TWO"/>
+		</to>
+	</edge>
+	<edge text="multiple edge">
+		<from>
+			<nodeId id="Node TWO"/>
+		</from>
+		<to>
+			<nodeId id="Node ONE"/>
+			<nodeId id="Node THREE"/>
+		</to>
+	</edge>
+	<edge text="uncomplete edge">
+		<from>
+			<nodeId id="Node ONE"/>
+		</from>
+		<to>
+		</to>
+	</edge>
+</source>

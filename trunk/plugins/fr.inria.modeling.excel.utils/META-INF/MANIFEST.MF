@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.inria.modeling.excel.utils;singleton:=true
+Bundle-Version: 0.9.0.qualifier
+Bundle-Activator: fr.inria.modeling.excel.utils.Activator
+Bundle-Vendor: %providerName
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.m2m.atl.core,
+ org.eclipse.m2m.atl.core.emf,
+ org.eclipse.m2m.atl.engine.emfvm,
+ org.eclipse.m2m.atl.projectors.xml.ui
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: fr.inria.modeling.excel.utils

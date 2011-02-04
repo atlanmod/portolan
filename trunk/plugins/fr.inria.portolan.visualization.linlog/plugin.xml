@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="fr.inria.portolan.visualization.fullView">
+      <full_view
+            commandId="fr.inria.portolan.visualization.linlog.ui.LinLogLayoutEditor"
+            editorId="fr.inria.portolan.visualization.linlog.ui.LinLogLayoutEditor"
+            iconPath="icons/LinLog_64x32.png"
+            id="fr.inria.portolan.visualization.linlog.LinLogLayout"
+            name="LinLog"
+            pluginId="fr.inria.portolan.visualization.linlog"
+            text="Full Model Clusters"
+            tooltip="Independent simple LinLog clustering">
+      </full_view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="fr.inria.portolan.visualization.linlog.ui.LinLogLayoutEditor"
+            default="false"
+            icon="icons/portolan_16x16.png"
+            id="fr.inria.portolan.visualization.linlog.ui.LinLogLayoutEditor"
+            name="Portolan LinLog Layout Editor">
+      </editor>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+       <objectContribution
+            id="fr.inria.portolan.visualization.linlog.objectContribution2bis"
+            nameFilter="*.xmi"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               icon="icons/portolan_16x16.png"
+               id="fr.inria.portolan.visualization.linlog.menu"
+               label="Portolan LinLog"
+               path="additions">
+            <groupMarker
+                  name="group1">
+            </groupMarker>
+         </menu>
+         <action
+               class="fr.inria.portolan.visualization.linlog.actions.Cartography2L3Action"
+               enablesFor="1"
+               icon="icons/portolan_16x16.png"
+               id="fr.inria.portolan.visualization.linlog.am3toL3Action"
+               label="Generate a LinLog Layout file from a Cartography model"
+               menubarPath="fr.inria.portolan.visualization.linlog.menu/group1">
+         </action>
+      </objectContribution>
+     <objectContribution
+            id="fr.inria.portolan.visualization.linlog.objectContribution3"
+            nameFilter="*.l3"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               icon="icons/portolan_16x16.png"
+               id="fr.inria.portolan.visualization.linlog.menu"
+               label="Portolan LinLog"
+               path="additions">
+            <groupMarker
+                  name="group1">
+            </groupMarker>
+         </menu>
+         <action
+               class="fr.inria.portolan.visualization.linlog.actions.ViewL3Action"
+               enablesFor="1"
+               icon="icons/portolan_16x16.png"
+               id="fr.inria.portolan.visualization.linlog.viewL3Action"
+               label="View a LinLog Layout file"
+               menubarPath="fr.inria.portolan.visualization.linlog.menu/group1">
+         </action>
+      </objectContribution>
+   </extension>
+</plugin>

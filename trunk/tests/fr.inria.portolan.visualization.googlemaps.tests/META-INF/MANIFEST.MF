@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: fr.inria.portolan.visualization.googlemaps.tests
+Bundle-Version: 0.1.0.qualifier

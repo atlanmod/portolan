@@ -1,0 +1,41 @@
+-- @path Cartography=http://portolan.inria.fr/1.0
+
+-- ******************************************************************************
+-- * Copyright (c) 2009, 2011 INRIA Rennes Bretagne-Atlantique and others.
+-- *
+-- * All rights reserved.   This program and the accompanying materials
+-- * are made available under the terms of the Eclipse Public License v1.0
+-- * which accompanies this distribution, and is available at
+-- * http://www.eclipse.org/legal/epl-v10.html
+-- *
+-- * Contributors:
+-- *   INRIA Rennes Bretagne-Atlantique - Initial API and implementation
+-- ******************************************************************************
+ 
+module Developers;
+create OUT : Cartography from IN : Cartography;
+
+rule Use2User {
+	from
+		use : Cartography!Use (
+			use.target->select(t | t.identifier.value = 'DevTool')->size() > 0
+		)
+	using {
+		devtool : Cartography!Tool =
+			use.target->select(t | t.identifier.value = 'DevTool')->first();
+		user : Cartography!User =
+			use.source->first();
+	}
+	to	-- we create one instance of ARIS for each use(r) found
+		u : Cartography!User (
+			__id		<- user.__id,
+			identifier	<- ident,
+			locator		<- geoloc
+		),
+		ident : Cartography!ID (
+			value		<- user.identifier.value + ' (DEV)'
+		),
+		geoloc : Cartography!GeoLocator (
+			value		<- user.locator.value
+		)
+}

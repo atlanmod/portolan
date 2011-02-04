@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="fr.inria.portolan.visualization.fullView">
+      <full_view
+            commandId="fr.inria.portolan.visualization.googlemaps.commands.fullView"
+            editorId="fr.inria.portolan.visualization.googlemaps.ui.GoogleMapsEditor"
+            iconPath="icons/googlemaps.png"
+            id="fr.inria.portolan.visualization.googleMaps"
+            name="Google Full Model View"
+            pluginId="fr.inria.portolan.visualization.googlemaps"
+            text="Full Model Map"
+            tooltip="Display your geo-located elements on a Google Map">
+      </full_view>
+  </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+       <objectContribution
+            id="fr.inria.portolan.visualization.googlemaps.objectContribution1"
+            nameFilter="*.xmi"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               icon="icons/googlemaps_16x16.png"
+               id="fr.inria.portolan.visualization.googlemaps.menu"
+               label="Portolan Maps"
+               path="additions">
+            <groupMarker
+                  name="group1">
+            </groupMarker>
+         </menu>
+         <action
+               class="fr.inria.portolan.visualization.googlemaps.actions.Cartography2KMLAction"
+               enablesFor="1"
+               icon="icons/googlemaps_16x16.png"
+               id="fr.inria.portolan.visualization.googlemaps.am3toKMLAction"
+               label="Generate a GoogleMaps KML model from a Cartography model"
+               menubarPath="fr.inria.portolan.visualization.googlemaps.menu/group1">
+         </action>
+      </objectContribution>
+     <objectContribution
+            id="fr.inria.portolan.visualization.googlemaps.objectContribution2"
+            nameFilter="*.kml"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               icon="icons/googlemaps_16x16.png"
+               id="fr.inria.portolan.visualization.googlemaps.menu"
+               label="Portolan Maps"
+               path="additions">
+            <groupMarker
+                  name="group1">
+            </groupMarker>
+         </menu>
+         <action
+               class="fr.inria.portolan.visualization.googlemaps.actions.ViewKMLAction"
+               enablesFor="1"
+               icon="icons/googlemaps_16x16.png"
+               id="fr.inria.portolan.visualization.prefuse.viewKMLAction"
+               label="View a GoogleMaps KML file"
+               menubarPath="fr.inria.portolan.visualization.googlemaps.menu/group1">
+         </action>
+      </objectContribution>
+     <objectContribution
+           id="fr.inria.portolan.visualization.googlemaps.objectContribution2bis"
+           nameFilter="*.xmi"
+           objectClass="org.eclipse.core.resources.IFile">
+        <menu
+              icon="icons/googlemaps_16x16.png"
+              id="fr.inria.portolan.visualization.googlemaps.menu"
+              label="Portolan Maps"
+              path="additions">
+           <groupMarker
+                 name="group1">
+           </groupMarker>
+        </menu>
+        <action
+              class="fr.inria.portolan.visualization.googlemaps.actions.ViewKMLModelAction"
+              enablesFor="1"
+              icon="icons/googlemaps_16x16.png"
+              id="fr.inria.portolan.visualization.prefuse.viewKMLModelAction"
+              label="View a GoogleMaps KML Model"
+              menubarPath="fr.inria.portolan.visualization.googlemaps.menu/group1">
+        </action>
+     </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="fr.inria.portolan.visualization.googlemaps.ui.GoogleMapsEditor"
+            default="false"
+            extensions="kml, xmi"
+            icon="icons/googlemaps_16x16.png"
+            id="fr.inria.portolan.visualization.googlemaps.ui.GoogleMapsEditor"
+            name="Portolan GoogleMaps Viewer">
+      </editor>
+   </extension>
+</plugin>

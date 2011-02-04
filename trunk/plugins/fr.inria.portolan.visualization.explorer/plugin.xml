@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?>
+
+<plugin>
+   <extension point="fr.inria.portolan.visualization.fullView">
+      <full_view
+            commandId="fr.inria.portolan.visualization.explorer.browser.fullView"
+            editorId="org.eclipse.gmt.modisco.infra.browser.editorID"
+            iconPath="icons/MoDiscoModelIcon.gif"
+            id="fr.inria.portolan.visualization.explorer.ExplorerView"
+            name="Portolan Full Model Explorer"
+            pluginId="fr.inria.portolan.visualization.explorer"
+            text="Full Model Explorer"
+            tooltip="Display the full model in the MoDisco browser. WARNING: it blocks other viewers!">
+      </full_view>
+   </extension>
+
+   <!--extension point="org.eclipse.gmt.modisco.infra.browser.custom.core.registration">
+      <browserCustomization file="Cartography.uiCustom" loadByDefault="true">
+      </browserCustomization>
+   </extension-->
+</plugin>

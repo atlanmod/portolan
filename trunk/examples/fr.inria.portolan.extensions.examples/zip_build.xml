@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="fr.inria.portolan.extensions.examples" default="template" basedir=".">
+
+<!-- ******************************************************************************
+	 * Copyright (c) 2009, 2011 INRIA Rennes Bretagne-Atlantique and others.
+	 *
+	 * All rights reserved.   This program and the accompanying materials
+	 * are made available under the terms of the Eclipse Public License v1.0
+	 * which accompanies this distribution, and is available at
+	 * http://www.eclipse.org/legal/epl-v10.html
+	 *
+	 * Contributors:
+	 *   INRIA Rennes Bretagne-Atlantique - Initial API and implementation
+	 ******************************************************************************
+-->
+	
+	<!-- generate the template zip containing folders and files -->
+	<target name="template" >
+		<delete file ="zip/fr.inria.portolan.example.toolcartography.zip"/>
+		<mkdir dir="temp"/>
+		<copy todir="temp"
+				failonerror="true" overwrite="true">
+			<fileset dir="../fr.inria.portolan.example.toolcartography">
+			    <include name="**"/>
+				<exclude name=".svn/**"/>
+				<!-- the nature is not restored from .project file => we have to regenerate it -->
+				<exclude name=".project"/>
+			</fileset>
+		</copy>
+		<zip destfile="zip/fr.inria.portolan.example.toolcartography.zip"
+			basedir="temp" includes="**" filesonly="false" whenempty="skip" update="false"/>
+		<delete dir="temp"/>
+	</target>
+
+</project>

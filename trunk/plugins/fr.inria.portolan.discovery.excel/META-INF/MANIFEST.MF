@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.inria.portolan.discovery.excel
+Bundle-Version: 0.7.0.qualifier
+Bundle-Activator: fr.inria.portolan.discovery.excel.Activator
+Bundle-Vendor: %provider
+Require-Bundle: org.eclipse.core.runtime,
+ fr.inria.modeling.excel,
+ fr.inria.modeling.excel.utils,
+ org.eclipse.m2m.atl.projectors.xml,
+ org.eclipse.m2m.atl.projectors.xml.ui
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: fr.inria.portolan.discovery.excel

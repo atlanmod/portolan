@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.modeling.kml/src"
+    editDirectory="/fr.inria.modeling.kml.edit/src" editorDirectory="/fr.inria.modeling.kml.editor/src"
+    modelPluginID="fr.inria.modeling.kml" modelName="KML" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>KML-2.2.ecore</foreignModel>
+  <genPackages prefix="Kml" resource="XMI" disposableProviderFactory="true" generateExampleClass="false"
+      fileExtensions="xmi" ecorePackage="KML-2.2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//AltitudeMode">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//AltitudeMode/clampToGround"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//AltitudeMode/relativeToGround"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//AltitudeMode/absolute"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//RefreshMode">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//RefreshMode/onChange"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//RefreshMode/onInterval"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//RefreshMode/onExpire"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//ViewRefreshMode">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ViewRefreshMode/never"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ViewRefreshMode/onStop"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ViewRefreshMode/onRequest"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ViewRefreshMode/onRegion"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//Shape">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//Shape/cylinder"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//Shape/rectangle"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//Shape/sphere"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//GridOrigin">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//GridOrigin/lowerLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//GridOrigin/upperLeft"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//Units">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//Units/fraction"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//Units/pixels"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//Units/insetPixels"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//SchemaType">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/int"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/uint"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/short"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/ushort"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/float"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/double"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//SchemaType/bool"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//ColorMode">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ColorMode/normal"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ColorMode/random"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//DisplayMode">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//DisplayMode/default"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//DisplayMode/hide"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//StyleState">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//StyleState/normal"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//StyleState/highlight"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//ListeItemType">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ListeItemType/check"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ListeItemType/checkOffOnly"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ListeItemType/checkHideChildren"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//ListeItemType/radioFolder"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="KML-2.2.ecore#//State">
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//State/open"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//State/close"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//State/error"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//State/fetching0"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//State/fetching1"/>
+      <genEnumLiterals ecoreEnumLiteral="KML-2.2.ecore#//State/fetching2"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="KML-2.2.ecore#//Color"/>
+    <genDataTypes ecoreDataType="KML-2.2.ecore#//Angle90"/>
+    <genDataTypes ecoreDataType="KML-2.2.ecore#//Angle180"/>
+    <genDataTypes ecoreDataType="KML-2.2.ecore#//Angle360"/>
+    <genDataTypes ecoreDataType="KML-2.2.ecore#//AnglePos90"/>
+    <genDataTypes ecoreDataType="KML-2.2.ecore#//AnglePos180"/>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//Object">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Object/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Object/targetId"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/open"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/atomAuthor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/atomLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/phoneNumber"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/xalAddressDetails"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/snippet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/abstractView"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/timePrimitive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Feature/styleUrl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/styleSelectors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/region"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Feature/extendedData"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//AbstractView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//AbstractView/longitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//AbstractView/latitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//AbstractView/altitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//AbstractView/heading"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//AbstractView/mode"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//TimePrimitive"/>
+    <genClasses ecoreClass="KML-2.2.ecore#//TimeSpan"/>
+    <genClasses ecoreClass="KML-2.2.ecore#//TimeStamp"/>
+    <genClasses ecoreClass="KML-2.2.ecore#//Camera">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Camera/tilt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Camera/roll"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//LookAt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LookAt/tilt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LookAt/range"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//StyleSelector"/>
+    <genClasses ecoreClass="KML-2.2.ecore#//Style">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Style/styles"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//StyleMap">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//StyleMap/pairs"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Region">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Region/latLonAltBox"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Region/lod"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//LatLonAltBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonAltBox/minAltitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonAltBox/maxAltitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonAltBox/mode"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Lod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Lod/minLodPixels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Lod/maxLodPixels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Lod/minFadeExtent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Lod/maxFadeExtent"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//ExtendedData">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ExtendedData/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ExtendedData/schemaData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ExtendedData/xmlContent"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Data/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Data/displayName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Data/value"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//SchemaData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//SchemaData/schemaUrl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//SchemaData/simpledata"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//SimpleData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//SimpleData/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//SimpleData/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//Overlay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Overlay/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Overlay/drawOrder"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Overlay/icon"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//Container">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Container/features"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Placemark">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Placemark/geometry"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//NetworkLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//NetworkLink/refreshVisibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//NetworkLink/flyToView"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//NetworkLink/link"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/urlRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/refreshMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/refreshInterval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/viewRefreshMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/viewRefreshTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/viewBoundScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/viewFormat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Link/httpQuery"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Icon"/>
+    <genClasses ecoreClass="KML-2.2.ecore#//GroundOverlay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//GroundOverlay/altitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//GroundOverlay/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//GroundOverlay/latLonBox"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//LatLonBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonBox/north"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonBox/south"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonBox/east"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonBox/west"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LatLonBox/rotation"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//PhotoOverlay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//PhotoOverlay/shape"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//PhotoOverlay/viewVolume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//PhotoOverlay/roll"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//PhotoOverlay/point"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//PhotoOverlay/imagePyramid"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//ViewVolume">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ViewVolume/leftFov"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ViewVolume/rightFov"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ViewVolume/bottomFov"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ViewVolume/topFov"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ViewVolume/near"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//ImagePyramid">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ImagePyramid/tileSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ImagePyramid/maxWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ImagePyramid/maxHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ImagePyramid/gridOrigin"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Point">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Point/extrude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Point/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Point/coordinates"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//ScreenOverlay">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ScreenOverlay/overlayXY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ScreenOverlay/screenXY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ScreenOverlay/rotation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ScreenOverlay/size"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Vec2Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Vec2Type/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Vec2Type/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Vec2Type/xunits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Vec2Type/yunits"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Folder"/>
+    <genClasses ecoreClass="KML-2.2.ecore#//Document">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Document/schemas"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Schema">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Schema/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//SimpleField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//SimpleField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//SimpleField/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//Geometry"/>
+    <genClasses ecoreClass="KML-2.2.ecore#//LineString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LineString/extrude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LineString/tessellate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LineString/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//LineString/coordinates"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Coordinate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Coordinate/lon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Coordinate/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Coordinate/alt"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//LinearRing">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LinearRing/extrude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LinearRing/tessellate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LinearRing/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//LinearRing/coordinates"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Polygon">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Polygon/extrude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Polygon/tessellate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Polygon/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Polygon/innerBoundaryIs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Polygon/outerBoundaryIs"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//MultiGeometry">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//MultiGeometry/geometries"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Model/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Model/location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Model/orientation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Model/scale"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Model/resourceMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//Model/link"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Location/longitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Location/latitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Location/altitude"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Orientation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Orientation/heading"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Orientation/tilt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Orientation/roll"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Scale">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Scale/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Scale/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Scale/z"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//ResourceMap">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ResourceMap/aliases"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Alias">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Alias/targetHref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Alias/sourceHref"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//ColorStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ColorStyle/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ColorStyle/mode"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//IconStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//IconStyle/scale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//IconStyle/heading"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//IconStyle/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//IconStyle/hotSpot"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//LabelStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LabelStyle/scale"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//LineStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//LineStyle/width"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//PolyStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//PolyStyle/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//PolyStyle/outline"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//BalloonStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//BalloonStyle/bgColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//BalloonStyle/textColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//BalloonStyle/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//BalloonStyle/mode"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//Pair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Pair/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Pair/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//Pair/styleUrl"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//ListStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ListStyle/bgColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ListStyle/itemType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KML-2.2.ecore#//ListStyle/items"/>
+    </genClasses>
+    <genClasses ecoreClass="KML-2.2.ecore#//ItemIcon">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ItemIcon/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KML-2.2.ecore#//ItemIcon/href"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KML-2.2.ecore#//AbstractStyle"/>
+  </genPackages>
+  <genPackages prefix="Atom" resource="XMI" disposableProviderFactory="true" generateExampleClass="false"
+      fileExtensions="xmi" ecorePackage="Atom.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Atom.ecore#//LinkRelation">
+      <genEnumLiterals ecoreEnumLiteral="Atom.ecore#//LinkRelation/alternate"/>
+      <genEnumLiterals ecoreEnumLiteral="Atom.ecore#//LinkRelation/related"/>
+      <genEnumLiterals ecoreEnumLiteral="Atom.ecore#//LinkRelation/self"/>
+      <genEnumLiterals ecoreEnumLiteral="Atom.ecore#//LinkRelation/enclosure"/>
+      <genEnumLiterals ecoreEnumLiteral="Atom.ecore#//LinkRelation/via"/>
+    </genEnums>
+    <genClasses ecoreClass="Atom.ecore#//PersonConstruct">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//PersonConstruct/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Atom.ecore#//PersonConstruct/uri"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Atom.ecore#//PersonConstruct/email"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Atom.ecore#//PersonConstruct/extension"/>
+    </genClasses>
+    <genClasses ecoreClass="Atom.ecore#//Uri">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//Uri/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Atom.ecore#//EmailAddress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//EmailAddress/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Atom.ecore#//Element">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Atom.ecore#//Element/base"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Atom.ecore#//Element/lang"/>
+    </genClasses>
+    <genClasses ecoreClass="Atom.ecore#//Author"/>
+    <genClasses ecoreClass="Atom.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//Link/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//Link/length"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Atom.ecore#//Link/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//Link/rel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//Link/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Atom.ecore#//Link/hreflang"/>
+    </genClasses>
+    <genClasses ecoreClass="Atom.ecore#//LanguageTag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Atom.ecore#//LanguageTag/value"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="XAL" resource="XMI" disposableProviderFactory="true" fileExtensions="xmi"
+      ecorePackage="Oasis.ecore#/">
+    <genClasses ecoreClass="Oasis.ecore#//AddressDetails"/>
+  </genPackages>
+</genmodel:GenModel>

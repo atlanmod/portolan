@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+   <head>
+      <title>Weight Visualization</title>
+   </head>
+
+   <body>
+      <h2>
+         Weight Visualization
+      </h2>
+      <p>
+		You may display a quantitative value for each node using the weight
+		mechanism.
+	  </p>
+      <h3>
+      	Principle
+      </h3>
+      <p>
+      	The quantitative value is represented by a shape which surface is
+      	corresponding to the value (in respect to visual principles presented
+      	by Jacques Bertin in <em>Sémiologie graphique</em>).
+      </p>
+      <h3>
+      	Syntax
+      </h3>
+      <p>
+      	As the size of nodes on the screen should be smaller than the screen,
+      	you have to ensure that values passed to the viewer do not exceed
+      	a top value fixed as the square value of the maximum width of shape
+      	you want to appear on screen (10 pixels width implies 100 max value).
+      </p>
+      <p>
+        The value for an Entity element has to be put in a metadata which key
+        is <code>weight</code> and value is an integer (stored as a String).
+      </p>
+      <h3>
+      	Effects
+      </h3>
+      <p>
+      	The Portolan Visualization will dsiplay every node with a 
+      	<code>weight</code> metadata with a shape which area will be the value
+      	stored in the metadata. If the value is not valid (error in the String
+      	to Integer reading), the node as no shape (the default behavior).
+      </p>
+      <h3>
+      	Example
+      </h3>
+      <p>
+      	TODO
+      </p>
+	</body>
+</html>

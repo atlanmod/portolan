@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="fr.inria.portolan"
+      label="Portolan"
+      version="0.7.0.qualifier"
+      provider-name="Eclipse Modeling Project">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="fr.inria.portolan.extensions"
+         version="0.0.0"/>
+
+   <includes
+         id="fr.inria.portolan.tool"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.team.svn"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarion.eclipse.team.svn.connector"
+         version="0.0.0"/>
+
+   <includes
+         id="org.polarion.eclipse.team.svn.connector.svnkit16"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.editor"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecoretools"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.platform"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.help"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.discovery.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.user.ui"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui.intro"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.ide"/>
+   </requires>
+
+   <plugin
+         id="fr.inria.portolan.rcp"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
