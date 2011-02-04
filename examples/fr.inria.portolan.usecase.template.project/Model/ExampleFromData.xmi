@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:examplemm="http://example.portolan.inria.fr/1.0" xmlns:portolan="http://portolan.inria.fr/1.0">
+  <examplemm:KindOfNode __id="First node" sourceOf="/3 /5" targetOf="/4">
+    <identifier xsi:type="examplemm:ID" value="Node ONE"/>
+    <locator xsi:type="portolan:GeoLocator" value="-1.0,47.0,0.0"/>
+  </examplemm:KindOfNode>
+  <examplemm:KindOfNode __id="Second node" sourceOf="/4" targetOf="/3">
+    <identifier xsi:type="examplemm:ID" value="Node TWO"/>
+    <locator xsi:type="portolan:GeoLocator" value="1.5,50.0,0.0"/>
+  </examplemm:KindOfNode>
+  <examplemm:KindOfNode __id="Third node" targetOf="/4">
+    <identifier xsi:type="examplemm:ID" value="Node THREE"/>
+    <locator xsi:type="portolan:GeoLocator" value="1.0,45.0,0.0"/>
+  </examplemm:KindOfNode>
+  <examplemm:KindOfEdge __id="simple edge" source="/0" target="/1"/>
+  <examplemm:KindOfEdge __id="multiple edge" source="/1" target="/0 /2"/>
+  <examplemm:KindOfEdge __id="uncomplete edge" source="/0"/>
+</xmi:XMI>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+   <head>
+      <title>Builder Extension</title>
+   </head>
+
+   <body>
+      <h2>
+         Builder Extension
+      </h2>
+      <p>
+		The Portolan projects can support special builder which could be added
+		using extension mechanism.
+      </p>
+      <p>
+		Third parties plug-ins are free to implement new builders for their own
+		purposes. They have to declare a builder using this Portolan builder
+		extension (both with Eclipse builder extension) in order ot have benefit
+		of it on every Portolan project.
+	  </p>
+      <h3>
+      	Syntax
+      </h3>
+      <p>
+      	The extension point ID is: <code>fr.inria.portolan.common.builder</code>.
+      </p>
+      <p>
+      	The attributes are:
+      	<ul>
+      		<li><code>builderId</code>: String (REQUIRED). The ID of the
+      		  corresponding registration in the Eclipse builders manager.
+      		<li><code>name</code>: String (OPTIONAL). A name that describes
+      		  shortly the builder.
+      	</ul>
+      </p>
+      <p>
+        The corresponding class must be a subclass of the 
+        <code>org.eclipse.core.resources.IncrementalProjectBuilder</code>
+        class and must be declared as an Eclipse builder, using the
+        <code>org.eclipse.core.resources.builders</code> extension point.
+      </p>
+      <h3>
+      	Effects
+      </h3>
+      <p>
+      	The user of Portolan application can (and should) add the Portolan
+      	nature to his data project(s). Doing that, the underlying nature
+      	register adds the builders which are declared using this extension
+      	point to the project.
+      </p>
+      <p>
+        The resulting effect is that the declared builder will be run on this
+        project at each change (in an incremental manner).
+      </p>
+      <h3>
+      	Example
+      </h3>
+      <p>
+      	The Portolan application comes with a builder which purpose is
+      	registration of metamodels within Portolan projects. As a good example,
+      	this builder has the parameters below:
+      	<ul>
+      	  <li><code>fr.inria.portolan.common.builder</code> extension:
+      	    <ul>
+      	      <li><code>builder.builderId</code>: <i>fr.inria.portolan.common.build.EcoreRegistrationBuilder</i>
+      	      <li><code>builder.name</code>: <i>Ecore Registration Builder</i>
+            </ul>
+          <li><code>org.eclipse.core.resources.builders</code> extension (every Portolan
+              builder must be registered as an Eclipse builder too):
+            <ul>
+              <li><code>ID</code>: <i>fr.inria.portolan.common.build.EcoreRegistrationBuilder
+              <li><code>name</code>: <i>Portolan Ecore Registration Builder</i>
+              <li><code>builder.hasNature</code>: <i>false</i>
+              <li><code>builder.run.class</code>: <i>fr.inria.portolan.common.build.EcoreRegistrationBuilder</i>
+            </ul>
+      	</ul>
+      </p>
+	</body>
+</html>

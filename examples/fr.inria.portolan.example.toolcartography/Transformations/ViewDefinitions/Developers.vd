@@ -1,0 +1,17 @@
+<plugin>
+   <extension
+         point="fr.inria.portolan.visualization.viewDefinition">
+      <view_definition
+            id="Tools.example.developers"
+            categoryId="fr.inria.portolan.visualization.googlemaps.commands.viewDefinitionCategory"
+            iconPath="Transformations/ViewDefinitions/Developers.png"
+            commandId="googlemaps.DEVs.only.command"
+            name="Developers"
+            text="View: Developers"
+            transformationPath="Transformations/ViewDefinitions/Developers.asm"
+            postName="_DEVs"
+            editorId="fr.inria.portolan.visualization.googlemaps.ui.GoogleMapsEditor"
+            shortMM="Cartography">
+      </view_definition>
+   </extension>
+</plugin>

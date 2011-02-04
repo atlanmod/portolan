@@ -1,0 +1,435 @@
+-- @path GraphML=http://modeling.inria.fr/GraphML
+-- @nsURI Cartography=http://portolan.inria.fr/1.0
+
+-- ******************************************************************************
+-- * Copyright (c) 2009, 2011 INRIA Rennes Bretagne-Atlantique and others.
+-- *
+-- * All rights reserved.   This program and the accompanying materials
+-- * are made available under the terms of the Eclipse Public License v1.0
+-- * which accompanies this distribution, and is available at
+-- * http://www.eclipse.org/legal/epl-v10.html
+-- *
+-- * Contributors:
+-- *   INRIA Rennes Bretagne-Atlantique - Initial API and implementation
+-- ******************************************************************************
+
+------------- manage each DirectedRelationship with multiple sources/targets
+------------- by creating a corresponding empty node with links to sources/targets
+module Cartography2GraphMLMulti;
+create OUT : GraphML from IN : Cartography;
+
+helper def : graph : GraphML!Graph = OclUndefined;
+
+entrypoint rule init() {
+	to 
+		root : GraphML!Root (
+			keys <- Sequence{label, nodetype, nodeweight, error, group,
+							 edgetype, edgeweight, nodedescr, edgedescr, edgedir},
+			graphs <- Sequence{g}
+		),
+		label : GraphML!Key(
+			id <- 'label',
+			"for" <- #node,
+			attrName <- 'label',
+			type <- #string
+		),
+		nodetype : GraphML!Key(
+			id <- 'type',
+			"for" <- #node,
+			attrName <- 'type',
+			type <- #string
+		),
+		nodeweight : GraphML!Key(
+			id <- 'weight',
+			"for" <- #node,
+			attrName <- 'weight',	-- default Prefuse weight ID
+			type <- #double
+		),
+		nodedescr : GraphML!Key(
+			id <- 'descr',
+			"for" <- #node,
+			attrName <- 'descr',
+			type <- #string
+		),
+		error : GraphML!Key(
+			id <- 'error',
+			"for" <- #node,
+			attrName <- 'error',
+			type <- #string
+		),
+		group : GraphML!Key(
+			id <- 'group',
+			"for" <- #node,
+			attrName <- 'group',		-- default Prefuse group ID
+			type <- #string
+		),
+		edgetype : GraphML!Key(
+			id <- 'type',
+			"for" <- #edge,
+			attrName <- 'type',
+			type <- #string
+		),
+		edgeweight : GraphML!Key(
+			id <- 'weight',
+			"for" <- #edge,
+			attrName <- 'weight',	-- default Prefuse weight ID
+			type <- #double
+		),
+		edgedescr : GraphML!Key(
+			id <- 'descr',
+			"for" <- #edge,
+			attrName <- 'descr',
+			type <- #string
+		),
+		edgedir : GraphML!Key(
+			id <- 'directed',
+			"for" <- #edge,
+			attrName <- 'directed',
+			type <- #string
+		),
+		g :	GraphML!Graph (
+--			edgeDefault <- #directed, -- not properly managed by Prefuse
+			id <- 'Cartography graph'
+		)
+	do {
+		thisModule.graph <- g;
+		Cartography!Group.allInstances()
+			->iterate(grp; unused1 : String = '' |
+			grp.ownedElements
+				->iterate(element;
+					unused2 : String = '' |
+					thisModule.groupsMap.put(element, grp.getID)
+			)
+		);
+	}
+}
+
+helper def: groupsMap : Map(Cartography!Element, String) = Map{};
+
+helper def: getGroup(element : Cartography!Element) : String =
+	thisModule.groupsMap.get(element);
+
+rule SourceElement {
+	from
+		e : Cartography!Entity
+--			(e.sourceOf->size() > 0 or e.targetOf->size() > 0)
+	using {
+		weight : String =
+			if (e.metadata->exists(md | md.key = 'weight')) then
+				e.metadata->select(md | md.key = 'weight')->first().value
+			else
+				'0'
+			endif;
+		group : String =
+			if thisModule.groupsMap.get(e).oclIsUndefined() then
+				'#na'
+			else
+				thisModule.groupsMap.get(e)
+			endif;
+		ttt : String =
+			e.getID + '\n'
+			+ 'name: ' + e.__id + '\n'
+			+ e.metadata->iterate(m; s : String = '' |
+				s + m.key + ': ' + m.value + '\n')
+			+ 'type: ' + e.getType;
+	}
+	to
+		node : GraphML!Node (
+			id			<- e.getID,
+			datas		<- Sequence{thisModule.createData('label', e.getID),
+									thisModule.createData('type', e.getType),
+									thisModule.createData('weight', weight),
+									thisModule.createData('error', ''),
+									thisModule.createData('group', group),
+									thisModule.createData('descr', ttt)},
+			graph		<- thisModule.graph
+		)
+}
+
+-- try to manage binary relations
+rule undirectedRelationship2Edges {
+	from
+		rs : Cartography!Relationship (
+			(not rs.oclIsKindOf(Cartography!DirectedRelationship))
+			and
+			(rs.linkedElements->size() = 0 or rs.linkedElements->size() = 2)
+		)
+	using {
+		rsList : String =
+			rs.linkedElements->collect(le | le.__id)
+							 ->flatten().toString();
+		ttt : String =
+			rs.getID + '\n'
+			+ 'name: ' + rs.__id + '\n'
+			+ rs.metadata->iterate(m; s : String = '' |
+				s + m.key + ': ' + m.value + '\n')
+			+ 'type: ' + rs.getType;
+		}
+	to
+		edge : GraphML!Edge (
+			id			<- rs.getID,
+									-- the node is virtual and must not be visible
+			datas		<- Sequence{thisModule.createData('type', rs.getType),
+									thisModule.createData('weight', '0'),
+									thisModule.createData('descr', ttt),
+									thisModule.createData('directed', 'false')},
+			graph		<- thisModule.graph,
+			-- manage edges of this undirected relationship
+			source		<- if rs.linkedElements->size() > 0
+							then rs.linkedElements->at(1)
+							else thisModule.createLackingNode(rs.getID, 'source lacking')
+							endif,
+			target		<- if rs.linkedElements->size() = 1
+							then rs.linkedElements->at(1)	-- unary relationship (A to A)
+							else
+								if rs.linkedElements->size() = 2
+								then rs.linkedElements->at(2)	-- binary relationship (A to B)
+								else	-- empty relationship: size() = 0
+									thisModule.createLackingNode(rs.getID, 'target lacking')
+								endif
+							endif
+		)
+}
+
+-- unary relationship with one linked element (A)
+rule undirectedRelationship2unaryEdges {
+	from
+		rs : Cartography!Relationship (
+			(not rs.oclIsKindOf(Cartography!DirectedRelationship))
+			and (rs.linkedElements->size() = 1)
+		)
+	to
+		node : GraphML!Node (
+			id			<- rs.getID,
+									-- the node is virtual and must not be visible
+			datas		<- Sequence{thisModule.createData('label', ''),
+									thisModule.createData('type', 'invisible'),
+									thisModule.createData('weight', '0'),
+									thisModule.createData('error', ''),
+									thisModule.createData('group', '#na'),
+									thisModule.createData('descr', '')},
+			graph		<- thisModule.graph,
+			targetOf	<- thisModule.createEdge(rs.linkedElements->first(), node, rs, 'false'),
+			sourceOf	<- thisModule.createEdge(node, rs.linkedElements->first(), rs, 'false')
+		)
+}
+
+-- relationship with multiple linked elements (A, B, C)
+rule undirectedRelationship2NnaryEdges {
+	from
+		rs : Cartography!Relationship (
+			(not rs.oclIsKindOf(Cartography!DirectedRelationship))
+			and (rs.linkedElements->size() > 2)
+		)
+	to
+		node : GraphML!Node (
+			id			<- rs.getID,
+									-- the node is virtual and must not be visible
+			datas		<- Sequence{thisModule.createData('label', ''),
+									thisModule.createData('type', 'invisible'),
+									thisModule.createData('weight', '0'),
+									thisModule.createData('error', ''),
+									thisModule.createData('group', '#na'),
+									thisModule.createData('descr', '')},
+			graph		<- thisModule.graph,
+			sourceOf	<- rs.edges()
+		)
+}
+
+helper context Cartography!Relationship def : edges() : Sequence(GraphML!Edge) =
+	self.linkedElements->collect(element |
+		thisModule.createEdge(self, element, self, 'false'));
+
+-- binary DRs
+rule directedRelationship2Edges {
+	from
+		rs : Cartography!DirectedRelationship (
+			(rs.source->size() <= 1)
+			and
+			(rs.target->size() <= 1)
+			and
+			(rs.source->first() <> rs.target->first())
+		)
+	using {
+		ttt : String =
+			rs.getID + '\n'
+			+ 'name: ' + rs.__id + '\n'
+			+ rs.metadata->iterate(m; s : String = '' |
+				s + m.key + ': ' + m.value + '\n')
+			+ 'type: ' + rs.getType;
+	}
+	to
+		edge : GraphML!Edge (
+			id			<- rs.getID,
+									-- the node is virtual and must not be visible
+			datas		<- Sequence{thisModule.createData('type', rs.getType),
+									thisModule.createData('weight', '0'),
+									thisModule.createData('descr', ttt),
+									thisModule.createData('directed', 'true')},
+			graph		<- thisModule.graph,
+			-- manage edges of this directed relationship
+			source		<- if rs.source->size() = 1
+							then
+								rs.source->first()
+							else	-- size() = 0
+								thisModule.createLackingNode(rs.getID, 'source lacking')
+							endif,
+			target		<- if rs.target->size() = 1
+							then
+								rs.target->first()
+							else	-- size() = 0
+								thisModule.createLackingNode(rs.getID, 'target lacking')
+							endif
+		)
+}
+
+-- DR with multiple linked elements (A & B to X & Y)
+rule directedRelationship2NnaryEdges {
+	from
+		rs : Cartography!DirectedRelationship (
+			(rs.source->size() > 1)
+			or (rs.target->size() > 1)
+		)
+	using {
+		rsList : String =
+			rs.source->collect(s | s.getID)
+				->union(rs.target->collect(t | t.getID))
+				->flatten().toString();
+	}
+	to
+		node : GraphML!Node (
+			-- we want a distinct node for each relation
+			id			<- rsList,
+									-- the node is virtual and must not be visible
+			datas		<- Sequence{thisModule.createData('label', ''),
+									thisModule.createData('type', 'invisible'),
+									thisModule.createData('weight', '0'),
+									thisModule.createData('error', ''),
+									thisModule.createData('group', '#na'),
+									thisModule.createData('descr', '')},
+			graph		<- thisModule.graph,
+			targetOf	<- if rs.source->size() > 0
+							then	-- we rely each source to the pivot node by an undirected edge
+								rs.source->collect(s |
+									thisModule.createEdge(s, rs, rs, 'false'))
+							else	-- size() = 0
+								thisModule.createEdge(
+									thisModule.createLackingNode(rs.getID, 'source lacking'),
+									rs, rs, 'false')
+							endif,
+			sourceOf	<- if rs.target->size() > 0
+							then	-- we rely each target to the pivot node by a directed edge
+								rs.target->collect(t | 
+									thisModule.createEdge(rs, t, rs, 'true'))
+							else	-- size() = 0
+								thisModule.createEdge(rs,
+									thisModule.createLackingNode(rs.getID, 'target lacking'),
+									rs, 'true')
+							endif
+		)
+}
+
+-- DR unary (Z to Z)
+rule directedRelationship2unaryEdges {
+	from
+		rs : Cartography!DirectedRelationship (
+			(rs.source->size() = 1)
+			and (rs.target->size() = 1)
+			and (rs.source->first() = rs.target->first())
+		)
+	using {
+		rsList : String =
+			rs.source->collect(s | s.getID)
+				->union(rs.target->collect(t | t.getID))
+				->flatten().toString();
+	}
+	to
+		node : GraphML!Node (
+			-- we want a distinct node for each relation
+			id			<- rsList,
+									-- the node is virtual and must not be visible
+			datas		<- Sequence{thisModule.createData('label', ''),
+									thisModule.createData('type', 'invisible'),
+									thisModule.createData('weight', '0'),
+									thisModule.createData('error', ''),
+									thisModule.createData('group', '#na'),
+									thisModule.createData('descr', '')},
+			graph		<- thisModule.graph,
+			targetOf	<- thisModule.createEdge(rs.source->first(), rs, rs, 'false'),
+			sourceOf	<- thisModule.createEdge(rs, rs.target->first(), rs, 'true')
+		)
+}
+
+lazy rule createEdge {
+	from
+		src : OclAny,
+		tgt : OclAny,
+		rel  : Cartography!Relationship,
+		dir	: String
+	using {
+			weight : String =
+				if (rel.metadata->select(md | md.key = 'weight')->size() > 0) then
+					rel.metadata->select(md | md.key = 'weight')->first().value
+				else
+					'0'
+				endif;
+		ttt : String =
+			rel.getID + '\n'
+			+ 'name: ' + rel.__id + '\n'
+			+ rel.metadata->iterate(m; s : String = '' |
+				s + m.key + ': ' + m.value + '\n')
+			+ 'type: ' + rel.getType;
+		}
+	to
+		edge : GraphML!Edge (
+			id			<- rel.getID,
+--			id			<- rel.getID + src.toString() + tgt.toString(),
+			source		<- src,
+			target		<- tgt,
+			datas		<- Sequence{thisModule.createData('type', rel.getType),
+									thisModule.createData('weight', weight),
+									thisModule.createData('descr', ttt),
+									thisModule.createData('directed', dir)},
+			graph		<- thisModule.graph
+		)
+}
+
+helper context Cartography!Element def: getType : String =
+	self.oclType().toString();
+
+-- defensive code, in order to deal with models not properly valid
+helper context Cartography!IdentifiedElement def: getID : String =
+	if self.identifier.oclIsUndefined()
+	then 'no identifier'
+	else if self.identifier.value.oclIsUndefined()
+		then 'identifier undefined'
+		else self.identifier.value
+		endif
+	endif;
+
+lazy rule createLackingNode {
+	from
+		ref    : String,
+		label : String
+	to
+		node : GraphML!Node (
+			id		<- ref + label,
+			datas	<- Sequence{thisModule.createData('label', label),
+								thisModule.createData('type', '** lacking type **'),
+								thisModule.createData('error', 'lacks'),
+								thisModule.createData('group', '** lacking nodes **'),
+							    thisModule.createData('descr', ref +' '+ label)},
+			graph	<- thisModule.graph
+		)
+}
+
+lazy rule createData {
+	from
+		k : String, v : String
+	to
+		data : GraphML!Data (
+			key          <- k,
+			-- [defensive code] Ensure the GraphML is valid even if cartography is corrupted!!
+			value        <- if v.oclIsUndefined() then '' else v endif
+		)
+}

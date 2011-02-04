@@ -1,0 +1,10 @@
+What is this "fr.inria.portolan.eclipselabs.site" project
+
+It is the place to store (and have a version of) all stuff
+for the Eclipse Labs Portolan site.
+
+This includes:
+	- image sources (like Inkscape SVG or Gimp XCF files)
+	- icons dedicated to the site
+	- ....
+	

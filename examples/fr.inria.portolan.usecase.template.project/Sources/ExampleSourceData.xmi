@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<XML:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:XML="http://www.eclipse.org/XML" name="source">
+  <children xsi:type="XML:Attribute" name="xmlns:xsi" value="http://www.w3.org/2001/XMLSchema-instance"/>
+  <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="XML:Element" name="node">
+    <children xsi:type="XML:Attribute" name="id" value="Node ONE"/>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="description">
+      <children xsi:type="XML:Attribute" name="value" value="First node"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="place">
+      <children xsi:type="XML:Attribute" name="value" value="-1.0,47.0,0.0"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="XML:Element" name="node">
+    <children xsi:type="XML:Attribute" name="id" value="Node TWO"/>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="description">
+      <children xsi:type="XML:Attribute" name="value" value="Second node"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="place">
+      <children xsi:type="XML:Attribute" name="value" value="1.5,50.0,0.0"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="XML:Element" name="node">
+    <children xsi:type="XML:Attribute" name="id" value="Node THREE"/>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="description">
+      <children xsi:type="XML:Attribute" name="value" value="Third node"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="place">
+      <children xsi:type="XML:Attribute" name="value" value="1.0,45.0,0.0"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="XML:Element" name="edge">
+    <children xsi:type="XML:Attribute" name="text" value="simple edge"/>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="from">
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="XML:Element" name="nodeId">
+        <children xsi:type="XML:Attribute" name="id" value="Node ONE"/>
+      </children>
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="to">
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="XML:Element" name="nodeId">
+        <children xsi:type="XML:Attribute" name="id" value="Node TWO"/>
+      </children>
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="XML:Element" name="edge">
+    <children xsi:type="XML:Attribute" name="text" value="multiple edge"/>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="from">
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="XML:Element" name="nodeId">
+        <children xsi:type="XML:Attribute" name="id" value="Node TWO"/>
+      </children>
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="to">
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="XML:Element" name="nodeId">
+        <children xsi:type="XML:Attribute" name="id" value="Node ONE"/>
+      </children>
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="XML:Element" name="nodeId">
+        <children xsi:type="XML:Attribute" name="id" value="Node THREE"/>
+      </children>
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="XML:Element" name="edge">
+    <children xsi:type="XML:Attribute" name="text" value="uncomplete edge"/>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="from">
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="XML:Element" name="nodeId">
+        <children xsi:type="XML:Attribute" name="id" value="Node ONE"/>
+      </children>
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="XML:Element" name="to">
+      <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="XML:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="XML:Text" name="#text" value="&#xA;"/>
+</XML:Root>

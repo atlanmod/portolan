@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Getting Started" link_to="toc.xml#gettingstarted"> 
+	<topic href="html/gettingstarted/firstlaunch.html" label="First launch of Portolan">
+	</topic>
+ <topic href="html/gettingstarted/newproject.html" label="New Project Wizard">
+ </topic> 
+</toc>

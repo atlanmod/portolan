@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Tasks" link_to="toc.xml#tasks"> 
+	<topic label="Metamodeling"  href="html/tasks/metamodeling.html"> 
+	</topic>
+	<topic label="Discover"  href="html/tasks/discover.html"> 
+	</topic>
+	<topic label="Edit" href="html/tasks/edit.html">
+	</topic>
+	<topic label="Visualize" href="html/tasks/visualize.html">
+	</topic>
+</toc>

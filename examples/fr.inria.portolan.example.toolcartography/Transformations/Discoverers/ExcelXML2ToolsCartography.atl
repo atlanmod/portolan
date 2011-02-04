@@ -1,0 +1,352 @@
+-- @nsURI Cartography=http://portolan.inria.fr/1.0
+-- @path  Excel=http://modeling.inria.fr/Excel
+
+-- ******************************************************************************
+-- * Copyright (c) 2009, 2011 INRIA Rennes Bretagne-Atlantique and others.
+-- *
+-- * All rights reserved.   This program and the accompanying materials
+-- * are made available under the terms of the Eclipse Public License v1.0
+-- * which accompanies this distribution, and is available at
+-- * http://www.eclipse.org/legal/epl-v10.html
+-- *
+-- * Contributors:
+-- *   INRIA Rennes Bretagne-Atlantique - Initial API and implementation
+-- ******************************************************************************
+ 
+-- This module extracts elements of the CartographyMap from (multiple)
+-- excel worksheets written by hand or automatically feeded.
+module ToolsFormats2CartographyMap;
+
+create OUT : Cartography from IN : Excel;
+
+-- we first catch the list of distinct formats from first row
+helper def: 
+	formats : Map(Integer, Cartography!Format) =
+		Map{};
+helper def: 
+	formatNames : Map(Integer, String) =
+		Map{};
+
+-- extract cells containing format data from a given row
+helper context Excel!Row def: 
+	formatCells : Sequence(Excel!Cell) =
+		self.r_cells->subSequence(6, self.r_cells->size());
+
+-- to store tools and retrieve them by name
+helper def:
+	tools : Map(String, Excel!Row) =
+		Excel!Row.allInstancesFrom('IN')
+			->select(row | row.r_cells->at(1).getCellStringValue() = 'tool')
+			->iterate(r; map : Map(String, Excel!Row) = Map{} |
+			map.including(r.r_cells->at(2).getCellStringValue(), r));
+
+helper def:
+	getToolByName(name : String) : Cartography!Tool =
+		thisModule.tools.get(name);
+
+helper def:
+	teams : Map(String, Cartography!Team) =
+		Map{};
+
+helper def:
+	getTeamByName(name : String) : Cartography!Team =
+		thisModule.teams.get(name);
+
+entrypoint rule initialize() {
+	using {
+		firstRow : Excel!Row =
+			Excel!Row.allInstances()->first();
+		-- ATL seems not managing .at() method on .allInstances() result
+		secondRow : Excel!Row =
+			Excel!Row.allInstances()->excluding(firstRow)->first();
+	
+		formatIDs : Sequence(Excel!Cell) =
+			firstRow.formatCells;
+	
+		formatData : Sequence(Excel!Cell) =
+			secondRow.formatCells;
+	
+		formatsMap : Map(Integer, Cartography!Format) =
+			formatIDs->iterate(c; map : Map(Integer, Cartography!Format) = Map{} |
+				map->including(
+					formatIDs->indexOf(c),
+					thisModule.createFormat(
+						c.getCellStringValue(),
+						formatData->at(formatIDs->indexOf(c))
+							.getCellStringValue())
+				)
+			);
+	
+		formatNamesMap : Map(Integer, Cartography!Format) =
+			formatIDs->iterate(c; map : Map(Integer, String) = Map{} |
+				map->including(
+					formatIDs->indexOf(c),
+					c.getCellStringValue()
+				)
+			);
+		
+		teamMap : Map(String, Cartography!Team) =
+			Excel!Row.allInstances()->select(row | 
+				row.r_cells->at(1).getCellStringValue() = 'user'
+			)->iterate(user; map : Map(String, Cartography!Team) = Map{} |
+				map->including(
+					user.r_cells->at(4).getCellStringValue(),
+					thisModule.createTeam(
+						user.r_cells->at(4).getCellStringValue()
+					)
+				)
+			);
+	}
+	do {
+		thisModule.formats		<- formatsMap;
+		thisModule.formatNames	<- formatNamesMap;
+		thisModule.teams		<- teamMap;
+	}
+}
+
+unique lazy rule createFormat {
+	from
+		name : String,
+		descr : String
+	to
+		format : Cartography!Format (
+			__id			<- descr,
+			identifier		<- ident,
+			locator			<- loc
+		),
+		ident : Cartography!ID (
+			value			<- name
+		),
+		loc : Cartography!URL (
+			value			<- '#na'
+		)
+}
+
+rule row2tool {
+	from
+		row : Excel!Row (
+			row.r_cells->at(1).getCellStringValue() = 'tool'
+		)
+	using {
+		name : String =
+			row.r_cells->at(2).getCellStringValue();
+		descr : String =
+			row.r_cells->at(3).getCellStringValue();
+		site : String =
+			row.r_cells->at(4).getCellStringValue();
+		cost : Integer =
+			row.r_cells->at(5).getCellIntValue();
+		values : Sequence(Excel!Cell) =
+			row.formatCells;
+	}
+	to
+		tool : Cartography!Tool(
+			__id				<- descr,
+			identifier			<- ident,
+			sourceOf			<- thisModule.getExportDRs(values, tool, name),
+			targetOf			<- thisModule.getImportDRs(values, tool, name),
+			locator				<- location,
+			metadata			<- Sequence{costMD, weightMD}
+		),
+		ident : Cartography!ID (
+			value				<- name
+		),
+		location : Cartography!URL (
+			value           	<- site
+		),
+		costMD : Cartography!Metadata (
+			key					<- 'cost',
+			value				<- cost.toString()
+		),
+		weightMD : Cartography!Metadata (	-- default weight value (as an example)
+			key					<- 'weight',
+			value				<- (thisModule.getExportDRs(values, tool, name)->size()*100
+					+thisModule.getImportDRs(values, tool, name)->size()*100).toString()
+		)
+}
+
+
+helper def: 
+	getExportDRs (values : Sequence(Excel!Cell), tool : Cartography!Tool, toolName : String)
+		: Sequence(Cartography!Export) =
+			values->select(cell | cell.getCellStringValue().contains('E')
+								or cell.getCellStringValue().contains('B'))
+				->collect(c | thisModule.createExport(tool,
+						thisModule.formats->get(values->indexOf(c)),
+						toolName,
+						thisModule.formatNames->get(values->indexOf(c))));
+
+helper def: 
+	getImportDRs (values : Sequence(Excel!Cell), tool : Cartography!Tool, toolName : String)
+		: Sequence(Cartography!Import) =
+			values->select(cell | cell.getCellStringValue().contains('I')
+								or cell.getCellStringValue().contains('B'))
+				->collect(c | thisModule.createImport(
+						thisModule.formats->get(values->indexOf(c)),
+						tool,
+						thisModule.formatNames->get(values->indexOf(c)),
+						toolName));
+
+
+unique lazy rule getFormatByIndex {
+	from
+		index : Integer
+	to
+		format : Cartography!Format (
+			__id		<- 'Format ' + index.toString(),
+			identifier	<- ident
+		),
+		ident : Cartography!ID (
+			value		<- 'Format ' + index.toString()
+		)
+}
+
+lazy rule createExport {
+	from
+		tool : Cartography!Tool,
+		format : Cartography!Format,
+		toolName : String,
+		formatName : String
+	to
+		dr : Cartography!Export (
+			__id		<- toolName + ' exports to ' + formatName,
+			identifier	<- ident,
+			source		<- tool,
+			target		<- format
+		),
+		ident : Cartography!ID (
+			value		<- toolName + ' exports to ' + formatName
+		)
+}
+
+lazy rule createImport {
+	from
+		format : Cartography!Format,
+		tool : Cartography!Tool,
+		formatName : String,
+		toolName : String
+	to
+		dr : Cartography!Import (
+			__id		<- toolName + ' imports from ' + formatName,
+			identifier	<- ident,
+			source		<- format,
+			target		<- tool
+		),
+		ident : Cartography!ID (
+			value		<- toolName + ' exports to ' + formatName
+		)
+}
+
+rule row2user {
+	from
+		row : Excel!Row (
+			row.r_cells->at(1).getCellStringValue() = 'user'
+		)
+	using {
+		team : String =
+			row.r_cells->at(4).getCellStringValue();
+	}
+	to
+		user : Cartography!User (
+			__id		<- row.r_cells->at(2).getCellStringValue() + ' '
+							+ row.r_cells->at(3).getCellStringValue(),
+			identifier	<- ident,
+			sourceOf	<- row.computeUses(),
+			locator		<- geo
+		),
+		ident : Cartography!ID (
+			value		<- row.r_cells->at(3).getCellStringValue() + ' '
+							+ row.r_cells->at(2).getCellStringValue()
+		),
+		geo : Cartography!GeoLocator (
+			value		<- row.r_cells->at(6).getCellStringValue()
+		)
+	do {
+		thisModule.getTeamByName(team).ownedElements
+			<- thisModule.getTeamByName(team).ownedElements
+				->insertAt(1, thisModule.resolveTemp(row, 'user'));
+	}
+}
+
+-- attribute dedicated to "user" rows => do not call it on other rows!!
+-- we split the "uses" cell into tools names and create corresponding 'use'
+helper context Excel!Row def: computeUses() : Sequence(Cartography!Use) =
+	self.r_cells->at(5).getCellStringValue()->split(',')
+		->collect(t | thisModule.createUse(thisModule.getToolByName(t)));
+
+-- called rule (takes a Tool row as input)
+lazy rule createUse {
+	from
+		tool : Excel!Row
+	to
+		use : Cartography!Use (
+			__id		<- 'uses '+ tool.r_cells->at(2).getCellStringValue(),
+			identifier	<- ident,
+			target		<- tool
+		),
+		ident : Cartography!ID (
+			value		<- tool.r_cells->at(2).getCellStringValue()
+		)
+}
+
+unique lazy rule createTeam {
+	from
+		name : String
+	to
+		team : Cartography!Team (
+			__id		<- name,
+			identifier	<- ident
+		),
+		ident : Cartography!ID (
+			value		<- name
+		)
+}
+
+helper context Excel!Cell def : getCellStringValue() : String =
+	if self.c_data.oclIsUndefined()
+	then
+		''
+	else
+		if self.c_data.value.oclIsKindOf(Excel!StringValue)
+		then
+			self.c_data.value.value
+		else
+			''
+		endif
+	endif;
+
+helper context Excel!Cell def : getCellIntValue() : Integer =
+	if self.c_data.oclIsUndefined()
+	then
+		0
+	else
+		if self.c_data.value.oclIsKindOf(Excel!NumberValue)
+		then
+			self.c_data.value.value
+		else
+			0
+		endif
+	endif;
+
+helper context Excel!Cell def : getCellStringDateValue() : String =
+	if self.c_data.oclIsUndefined()
+	then
+		''
+	else
+		if self.c_data.value.oclIsKindOf(Excel!DateTimeTypeValue)
+		then
+			if self.c_data.value.value.oclIsUndefined()
+			then
+				''
+			else
+				'' + self.c_data.value.value.year.toString()
+				+ '-' + self.c_data.value.value.month.toString()
+				+ '-' + self.c_data.value.value.day.toString()
+				+ ':' + self.c_data.value.value.hour.toString()
+				+ '.' + (self.c_data.value.value.minute
+				+ self.c_data.value.value.second).toString()
+			endif
+		else
+			''
+		endif
+	endif;

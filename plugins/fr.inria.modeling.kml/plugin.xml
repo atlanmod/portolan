@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <!--extension
+         point="org.eclipse.emf.ecore.dynamic_package">
+      <resource
+            location="model/KML-2.2.ecore"
+            uri="http://www.opengis.net/kml/2.2">
+      </resource>
+      <resource
+            location="model/Atom.ecore"
+            uri="http://atom/1.0">
+      </resource>
+      <resource
+            location="model/Oasis.ecore"
+            uri="http://atom/1.0">
+      </resource>
+   </extension-->
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.opengis.net/kml/2.2"
+            class="kml.KmlPackage"
+            genModel="model/KML-2.2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="xmi"
+            class="kml.util.KmlResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://atom/1.0"
+            class="atom.AtomPackage"
+            genModel="model/KML-2.2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="atom"
+            class="atom.util.AtomResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://oasis.names.tc.ciq/xAL/2.0"
+            class="xAL.XALPackage"
+            genModel="model/KML-2.2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="xal"
+            class="xAL.util.XALResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

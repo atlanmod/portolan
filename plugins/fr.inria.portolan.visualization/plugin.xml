@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="fr.inria.portolan.visualization.viewDefinition" name="Portolan Visualization View Definition Point" schema="schema/fr.inria.portolan.visualization.viewDefinition.exsd"/>
+
+   <extension-point id="fr.inria.portolan.visualization.fullView" name="Portolan Full Visualization View Point" schema="schema/fr.inria.portolan.visualization.fullView.exsd"/>
+   <extension
+         id="fr.inria.portolan.visualization.build.PortolanVDBuilder"
+         name="Portolan View Definitions Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="false">
+         <run
+               class="fr.inria.portolan.visualization.build.PortolanVDBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         point="fr.inria.portolan.common.builder">
+      <builder
+            builderId="fr.inria.portolan.visualization.build.PortolanVDBuilder"
+            name="View Definitions Builder">
+      </builder>
+   </extension>
+</plugin>

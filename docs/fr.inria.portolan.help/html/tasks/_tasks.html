@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Cartography High Level Tasks</title>
+   </head>
+
+   <body>
+      <h2>
+         Cartography High Level Tasks
+      </h2>
+      <p>
+		Our proposal to handle Cartography work lays in four higher order tasks (in red
+		around the user cartography model in figure below) which
+		can be understood as steps in the data-to-visualization process for a given domain:
+			<ol>
+			  <li><em>Metamodeling</em>: capture the domain concepts in a DSL which
+				  consists in a metamodel extension inheriting from the cartography metamodel;
+			  <li><em>Discovery</em>: inject user data into a central cartography model
+				  which conforms to the domain extension of the cartography metamodel;
+			  <li><em>View Definitions</em>: filter the central user cartography model to
+				  get partial and/or computed views of it;
+			  <li><em>Visualization</em>: obtain graphical displays of user's data by
+				  running provided visualizations on the central user cartography model or its subsets.
+			</ol>
+      </p>
+      <p>
+		These four high level tasks of the process involve distinct actors (in green in
+		figure below) that can be classified in three kinds:
+			<ul>
+			  <li><em>Cartography User</em>: he is the person the whole cartography is
+				  designed for; he provides its <b>data</b> as input of the process and use
+				  the corresponding <b>viewers</b> (to visualize them and take decisions from
+				  that views); he does not need skills in MDE nor in Cartography
+			  <li><em>Cartography Designer</em>: he is an engineer with enough skills in
+				  MDE to be able to draw the <b>domain metamodel</b> extension, to
+				  chain and use <b>discovery</b> tools (generating the user central
+				  cartography model) and to write useful <b>view definitions</b>; he could
+				  be an engineer of the user company or an external IT service provider;
+			  <li><em>Visualization Provider</em>: it is an external company or organism,
+				  which builds pluggable model transformations and <b>visualization</b> tools
+				  relying on the cartography metamodel; the visualization may be provided as a
+				  component-on-the-shelf.
+			</ul>
+      </p>
+      <p>
+         <img src="../images/MD_Cartography_Structure.png" alt="Model-Driven Cartography Schema">
+      </p>
+      <p>
+         <a href="metamodeling.html">Metamodeling task</a>
+      </p>
+      <p>
+         <a href="discover.html">Discovery task</a>
+      </p>
+      <p>
+         <a href="edit.html">Edition task</a>
+      </p>
+      <p>
+         <a href="visualize.html">Visualization task</a>
+      </p>
+   </body>
+</html>

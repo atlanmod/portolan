@@ -1,0 +1,1 @@
+create an example of view definition

@@ -1,0 +1,4 @@
+fr.inria.portolan.core
+-------------------------
+
+Defines the Portolan metamodel and related classes.

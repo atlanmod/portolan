@@ -1,0 +1,4 @@
+#Wed Feb 02 15:22:25 CET 2011
+PortolanMetamodel=platform\:/resource/fr.inria.portolan.example.toolcartography/Metamodel/ToolCartography.ecore
+PortolanModel=/fr.inria.portolan.example.toolcartography/Model/CartographySample.xmi
+eclipse.preferences.version=1

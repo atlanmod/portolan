@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="fr.inria.portolan.extensions.examples.category"
+            name="Portolan Examples"
+            parentCategory="org.eclipse.ui.Examples">
+      </category>
+      <wizard
+            canFinishEarly="true"
+            category="org.eclipse.ui.Examples/fr.inria.portolan.extensions.examples.category"
+            class="fr.inria.portolan.extensions.examples.ToolCartographyNewWizard"
+            finalPerspective="fr.inria.portolan.visualization.ui.perspective"
+            hasPages="false"
+            icon="icons/portolan_16x16.png"
+            id="fr.inria.portolan.extensions.examples.tools.cartography.wizard"
+            name="Portolan Tools Cartography Example">
+      </wizard>
+   </extension>
+</plugin>

@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Excel="http://modeling.inria.fr/Excel">
+  <Excel:Workbook/>
+  <Excel:Table>
+    <t_cols span="8" width="64.2614"/>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="formats"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Binary"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Text"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="XML"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Java"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="tools"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="tool ID"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="description"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="url"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="licence cost"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Binary format"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Textual files"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="eXtended Markup Language"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Sun Java programming language"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="tool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="WordProcessor"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="An anonymous word processor"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="http://word.processor.com"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:NumberValue" value="1200.0"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="B"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="I"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="I/E"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="tool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="DesignTool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="A modeler"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="http://MyModeler.com"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:NumberValue" value="500.0"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="B"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="I/E"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="E"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="tool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="DevTool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Integrated development environment"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="http://www.eclipse.org"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:NumberValue" value="2300.0"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="I"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="B"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="tool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="BugTracker"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="an useful bugs traking system"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="http://free.tracker.net"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:NumberValue" value="0.0"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="E"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="I"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="#na"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+  </Excel:Table>
+  <Excel:Table>
+    <t_cols span="5" width="64.2614"/>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="users"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="first name"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="last name"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="service"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="uses"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="location"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Jerome"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="MARTIN"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Mktg"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="WordProcessor,DesignTool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="-1.521066,47.282815,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Andre"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="MAURICE"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Prod"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="WordProcessor"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="-1.656508,48.090451,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Paul"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="ANDRE"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Prod"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="DesignTool,DevTool"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="1.656508,46.090451,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Marcel"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="MARTIN"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Prod"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="DesignTool,BugTracker"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="1.006508,47.090451,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Martin"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="ANDRE"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Dir"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="WordProcessor"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="-1.521066,46.782815,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Wolfgang"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="SCHMIDT"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Prod"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="DevTool,BugTracker"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="8.55,51.0,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Helmut"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="SCHROEDER"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Mktg"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="WordProcessor"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="8.70,49.5,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+    <t_rows autoFitHeight="false" height="12.8126">
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="user"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Juliano"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="LIPISI"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="Dir"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="DevTool,BugTracker"/>
+        </c_data>
+      </r_cells>
+      <r_cells>
+        <c_data>
+          <value xsi:type="Excel:StringValue" value="10.75,44.15,0.0"/>
+        </c_data>
+      </r_cells>
+    </t_rows>
+  </Excel:Table>
+</xmi:XMI>

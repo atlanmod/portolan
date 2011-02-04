@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Reference" link_to="toc.xml#reference"> 
+	<topic href="html/reference/extensions.html" label="Extension Points"> 
+		<topic href="html/reference/viewdefinitions.html" label="View Definition Extension"/> 
+		<topic href="html/reference/fullviews.html" label="Full View Extension"/>
+  <topic href="html/reference/builders.html" label="Builder Extension">
+  </topic>
+	</topic>
+ <topic href="html/reference/plugins.html" label="Plug-ins">
+ </topic>
+</toc>

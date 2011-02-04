@@ -1,0 +1,7 @@
+fr.inria.portolan.common.ui
+------------------------------
+
+Defines the Portolan main interface:
+	- main menu (and menu extension)
+	- perspectives switch
+	

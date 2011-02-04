@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+   <head>
+      <title>Full View Extension</title>
+   </head>
+
+   <body>
+      <h2>
+         Full View Extension
+      </h2>
+      <p>
+		This extension point is the central registration mechanism of visual
+		functionnalities inside Portolan. It is used by the default viewers
+		provided with the Portolan application (Prefuse-based graph viewer
+		and Modisco model browser).
+	  </p>
+      <h3>
+      	Syntax
+      </h3>
+      <p>
+      	The extension point ID is: <code>fr.inria.portolan.visualization.fullView</code>.
+      </p>
+      <p>
+      	The extension attributes are:
+      	<ul>
+      		<li><code>id</code>: String (REQUIRED). The ID which relies
+      		  a button to the corresponding view (so is also button ID).
+      		<li><code>commandId</code>: String (REQUIRED). The id Eclipse
+      		  will rely on to find it and execute corresponding action.
+      		<li><code>text</code>: String (REQUIRED). The label for the
+      		  corresponding button.
+      		<li><code>editorId</code>: String (REQUIRED). The editor to
+      		  use to display the subset model.
+      		<li><code>name</code>: String (OPTIONAL). The viewer label.
+       		<li><code>pluginId</code>: String (OPTIONAL). The Eclipse ID
+       		  of the plugin which contains the icon specified below.
+      		<li><code>iconPath</code>: String (OPTIONAL). The path of the
+      		  icon, relative to the plugin root.
+      	</ul>
+      </p>
+      <p>
+        The corresponding editor class must be a subclass of the 
+        <code>org.eclipse.ui.part.EditorPart</code>
+        class.
+      </p>
+      <h3>
+      	Effects
+      </h3>
+      <p>
+      	The Portolan Visualization plug-in has a specific initializer which 
+      	inserts a button in the left bar of the perspective (view bar, known 
+      	as VDsBar in code). For each declaration found using this extension,
+      	it tries to create the corresponding button (and underlying command)
+      	into the view bar of the Visualization perspective.
+      </p>
+      <p>
+        When a user clicks on such a Full View button, the corresponding
+        command is run: it takes the referent model and opens it with the
+        specified editor. The result is a visualization with the whole elements
+        of the referent user model.
+      </p>
+      <h3>
+      	Example
+      </h3>
+      <p>
+      	The Portolan application comes with a model browser from MoDisco project.
+      	As a good example, this model editor extension has the parameters below:
+      	<ul>
+      	  <li><code>fr.inria.portolan.visualization.fullView</code> extension:
+      	    <ul>
+              <li><code>full_view.id</code>: 
+                 <i>fr.inria.portolan.visualization.explorer.ExplorerView</i>
+      	      <li><code>full_view.commandId</code>:
+      	         <i>fr.inria.portolan.visualization.explorer.browser.fullView</i>
+      	      <li><code>full_view.text</code>:
+      	         <i>Full Model Explorer</i>
+      	      <li><code>full_view.editorId</code>:
+      	         <i>org.eclipse.gmt.modisco.infra.browser.editorID</i>
+              <li><code>full_view.name</code>:
+                 <i>Portolan Full Model Explorer</i>
+      	      <li><code>full_view.pluginId</code>:
+      	         <i>fr.inria.portolan.visualization.explorer</i>
+      	      <li><code>full_view.iconPath</code>:
+      	         <i>icons/MoDiscoModelIcon.gif</i>
+            </ul>
+      	</ul>
+      </p>
+	</body>
+</html>

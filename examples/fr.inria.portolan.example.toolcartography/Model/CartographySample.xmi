@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:carto="http://tools.cartography.portolan.inria.fr/1.0" xmlns:portolan="http://portolan.inria.fr/1.0">
+  <carto:Format __id="Binary format" sourceOf="/21 /26 /32 /37" targetOf="/19 /24 /29 /34">
+    <identifier xsi:type="carto:ID" value="Binary"/>
+    <locator xsi:type="carto:URL" value="#na"/>
+  </carto:Format>
+  <carto:Format __id="Textual files" sourceOf="/22 /27" targetOf="/45 /47">
+    <identifier xsi:type="carto:ID" value="Text"/>
+    <locator xsi:type="carto:URL" value="#na"/>
+  </carto:Format>
+  <carto:Format __id="eXtended Markup Language" sourceOf="/23 /28 /33 /38 /40 /43 /46 /48" targetOf="/20 /25 /30 /35">
+    <identifier xsi:type="carto:ID" value="XML"/>
+    <locator xsi:type="carto:URL" value="#na"/>
+  </carto:Format>
+  <carto:Format __id="Sun Java programming language" sourceOf="/41 /44" targetOf="/31 /36 /39 /42">
+    <identifier xsi:type="carto:ID" value="Java"/>
+    <locator xsi:type="carto:URL" value="#na"/>
+  </carto:Format>
+  <carto:Team __id="Mktg" ownedElements="/11 /17">
+    <identifier xsi:type="carto:ID" value="Mktg"/>
+  </carto:Team>
+  <carto:Team __id="Prod" ownedElements="/12 /13 /14 /16">
+    <identifier xsi:type="carto:ID" value="Prod"/>
+  </carto:Team>
+  <carto:Team __id="Dir" ownedElements="/15 /18">
+    <identifier xsi:type="carto:ID" value="Dir"/>
+  </carto:Team>
+  <carto:Tool __id="An anonymous word processor" sourceOf="/19 /20 /24 /25" targetOf="/21 /22 /23 /26 /27 /28 /49 /51 /56 /59">
+    <metadata key="cost" value="1200.0"/>
+    <metadata key="weight" value="500"/>
+    <identifier xsi:type="carto:ID" value="WordProcessor"/>
+    <locator xsi:type="carto:URL" value="http://word.processor.com"/>
+  </carto:Tool>
+  <carto:Tool __id="A modeler" sourceOf="/29 /30 /31 /34 /35 /36" targetOf="/32 /33 /37 /38 /50 /52 /54">
+    <metadata key="cost" value="500.0"/>
+    <metadata key="weight" value="500"/>
+    <identifier xsi:type="carto:ID" value="DesignTool"/>
+    <locator xsi:type="carto:URL" value="http://MyModeler.com"/>
+  </carto:Tool>
+  <carto:Tool __id="Integrated development environment" sourceOf="/39 /42" targetOf="/40 /41 /43 /44 /53 /57 /60">
+    <metadata key="cost" value="2300.0"/>
+    <metadata key="weight" value="300"/>
+    <identifier xsi:type="carto:ID" value="DevTool"/>
+    <locator xsi:type="carto:URL" value="http://www.eclipse.org"/>
+  </carto:Tool>
+  <carto:Tool __id="an useful bugs traking system" sourceOf="/45 /47" targetOf="/46 /48 /55 /58 /61">
+    <metadata key="cost" value="0.0"/>
+    <metadata key="weight" value="200"/>
+    <identifier xsi:type="carto:ID" value="BugTracker"/>
+    <locator xsi:type="carto:URL" value="http://free.tracker.net"/>
+  </carto:Tool>
+  <carto:User __id="Jerome MARTIN" sourceOf="/49 /50">
+    <identifier xsi:type="carto:ID" value="MARTIN Jerome"/>
+    <locator xsi:type="portolan:GeoLocator" value="-1.521066,47.282815,0.0"/>
+  </carto:User>
+  <carto:User __id="Andre MAURICE" sourceOf="/51">
+    <identifier xsi:type="carto:ID" value="MAURICE Andre"/>
+    <locator xsi:type="portolan:GeoLocator" value="-1.656508,48.090451,0.0"/>
+  </carto:User>
+  <carto:User __id="Paul ANDRE" sourceOf="/52 /53">
+    <identifier xsi:type="carto:ID" value="ANDRE Paul"/>
+    <locator xsi:type="portolan:GeoLocator" value="1.656508,46.090451,0.0"/>
+  </carto:User>
+  <carto:User __id="Marcel MARTIN" sourceOf="/54 /55">
+    <identifier xsi:type="carto:ID" value="MARTIN Marcel"/>
+    <locator xsi:type="portolan:GeoLocator" value="1.006508,47.090451,0.0"/>
+  </carto:User>
+  <carto:User __id="Martin ANDRE" sourceOf="/56">
+    <identifier xsi:type="carto:ID" value="ANDRE Martin"/>
+    <locator xsi:type="portolan:GeoLocator" value="-1.521066,46.782815,0.0"/>
+  </carto:User>
+  <carto:User __id="Wolfgang SCHMIDT" sourceOf="/57 /58">
+    <identifier xsi:type="carto:ID" value="SCHMIDT Wolfgang"/>
+    <locator xsi:type="portolan:GeoLocator" value="8.55,51.0,0.0"/>
+  </carto:User>
+  <carto:User __id="Helmut SCHROEDER" sourceOf="/59">
+    <identifier xsi:type="carto:ID" value="SCHROEDER Helmut"/>
+    <locator xsi:type="portolan:GeoLocator" value="8.70,49.5,0.0"/>
+  </carto:User>
+  <carto:User __id="Juliano LIPISI" sourceOf="/60 /61">
+    <identifier xsi:type="carto:ID" value="LIPISI Juliano"/>
+    <locator xsi:type="portolan:GeoLocator" value="10.75,44.15,0.0"/>
+  </carto:User>
+  <carto:Export __id="WordProcessor exports to Binary" source="/7" target="/0">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to Binary"/>
+  </carto:Export>
+  <carto:Export __id="WordProcessor exports to XML" source="/7" target="/2">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to XML"/>
+  </carto:Export>
+  <carto:Import __id="WordProcessor imports from Binary" source="/0" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to Binary"/>
+  </carto:Import>
+  <carto:Import __id="WordProcessor imports from Text" source="/1" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to Text"/>
+  </carto:Import>
+  <carto:Import __id="WordProcessor imports from XML" source="/2" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to XML"/>
+  </carto:Import>
+  <carto:Export __id="WordProcessor exports to Binary" source="/7" target="/0">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to Binary"/>
+  </carto:Export>
+  <carto:Export __id="WordProcessor exports to XML" source="/7" target="/2">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to XML"/>
+  </carto:Export>
+  <carto:Import __id="WordProcessor imports from Binary" source="/0" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to Binary"/>
+  </carto:Import>
+  <carto:Import __id="WordProcessor imports from Text" source="/1" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to Text"/>
+  </carto:Import>
+  <carto:Import __id="WordProcessor imports from XML" source="/2" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor exports to XML"/>
+  </carto:Import>
+  <carto:Export __id="DesignTool exports to Binary" source="/8" target="/0">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to Binary"/>
+  </carto:Export>
+  <carto:Export __id="DesignTool exports to XML" source="/8" target="/2">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to XML"/>
+  </carto:Export>
+  <carto:Export __id="DesignTool exports to Java" source="/8" target="/3">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to Java"/>
+  </carto:Export>
+  <carto:Import __id="DesignTool imports from Binary" source="/0" target="/8">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to Binary"/>
+  </carto:Import>
+  <carto:Import __id="DesignTool imports from XML" source="/2" target="/8">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to XML"/>
+  </carto:Import>
+  <carto:Export __id="DesignTool exports to Binary" source="/8" target="/0">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to Binary"/>
+  </carto:Export>
+  <carto:Export __id="DesignTool exports to XML" source="/8" target="/2">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to XML"/>
+  </carto:Export>
+  <carto:Export __id="DesignTool exports to Java" source="/8" target="/3">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to Java"/>
+  </carto:Export>
+  <carto:Import __id="DesignTool imports from Binary" source="/0" target="/8">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to Binary"/>
+  </carto:Import>
+  <carto:Import __id="DesignTool imports from XML" source="/2" target="/8">
+    <identifier xsi:type="carto:ID" value="DesignTool exports to XML"/>
+  </carto:Import>
+  <carto:Export __id="DevTool exports to Java" source="/9" target="/3">
+    <identifier xsi:type="carto:ID" value="DevTool exports to Java"/>
+  </carto:Export>
+  <carto:Import __id="DevTool imports from XML" source="/2" target="/9">
+    <identifier xsi:type="carto:ID" value="DevTool exports to XML"/>
+  </carto:Import>
+  <carto:Import __id="DevTool imports from Java" source="/3" target="/9">
+    <identifier xsi:type="carto:ID" value="DevTool exports to Java"/>
+  </carto:Import>
+  <carto:Export __id="DevTool exports to Java" source="/9" target="/3">
+    <identifier xsi:type="carto:ID" value="DevTool exports to Java"/>
+  </carto:Export>
+  <carto:Import __id="DevTool imports from XML" source="/2" target="/9">
+    <identifier xsi:type="carto:ID" value="DevTool exports to XML"/>
+  </carto:Import>
+  <carto:Import __id="DevTool imports from Java" source="/3" target="/9">
+    <identifier xsi:type="carto:ID" value="DevTool exports to Java"/>
+  </carto:Import>
+  <carto:Export __id="BugTracker exports to Text" source="/10" target="/1">
+    <identifier xsi:type="carto:ID" value="BugTracker exports to Text"/>
+  </carto:Export>
+  <carto:Import __id="BugTracker imports from XML" source="/2" target="/10">
+    <identifier xsi:type="carto:ID" value="BugTracker exports to XML"/>
+  </carto:Import>
+  <carto:Export __id="BugTracker exports to Text" source="/10" target="/1">
+    <identifier xsi:type="carto:ID" value="BugTracker exports to Text"/>
+  </carto:Export>
+  <carto:Import __id="BugTracker imports from XML" source="/2" target="/10">
+    <identifier xsi:type="carto:ID" value="BugTracker exports to XML"/>
+  </carto:Import>
+  <carto:Use __id="uses WordProcessor" source="/11" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor"/>
+  </carto:Use>
+  <carto:Use __id="uses DesignTool" source="/11" target="/8">
+    <identifier xsi:type="carto:ID" value="DesignTool"/>
+  </carto:Use>
+  <carto:Use __id="uses WordProcessor" source="/12" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor"/>
+  </carto:Use>
+  <carto:Use __id="uses DesignTool" source="/13" target="/8">
+    <identifier xsi:type="carto:ID" value="DesignTool"/>
+  </carto:Use>
+  <carto:Use __id="uses DevTool" source="/13" target="/9">
+    <identifier xsi:type="carto:ID" value="DevTool"/>
+  </carto:Use>
+  <carto:Use __id="uses DesignTool" source="/14" target="/8">
+    <identifier xsi:type="carto:ID" value="DesignTool"/>
+  </carto:Use>
+  <carto:Use __id="uses BugTracker" source="/14" target="/10">
+    <identifier xsi:type="carto:ID" value="BugTracker"/>
+  </carto:Use>
+  <carto:Use __id="uses WordProcessor" source="/15" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor"/>
+  </carto:Use>
+  <carto:Use __id="uses DevTool" source="/16" target="/9">
+    <identifier xsi:type="carto:ID" value="DevTool"/>
+  </carto:Use>
+  <carto:Use __id="uses BugTracker" source="/16" target="/10">
+    <identifier xsi:type="carto:ID" value="BugTracker"/>
+  </carto:Use>
+  <carto:Use __id="uses WordProcessor" source="/17" target="/7">
+    <identifier xsi:type="carto:ID" value="WordProcessor"/>
+  </carto:Use>
+  <carto:Use __id="uses DevTool" source="/18" target="/9">
+    <identifier xsi:type="carto:ID" value="DevTool"/>
+  </carto:Use>
+  <carto:Use __id="uses BugTracker" source="/18" target="/10">
+    <identifier xsi:type="carto:ID" value="BugTracker"/>
+  </carto:Use>
+</xmi:XMI>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<cartogeo:CustomersMap xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cartogeo="http://cartogeo/1.0" xsi:schemaLocation="http://cartogeo/1.0 ../Metamodels/CartoGeo.ecore">
+  <ownedElements xsi:type="cartogeo:Customer" __id="Untel" sourceOf="//@ownedElements.5">
+    <identifier xsi:type="cartogeo:Name" value="Untel Marcel"/>
+    <locator xsi:type="cartogeo:GeoLocator" value="-1.521066,47.282815,0.0"/>
+  </ownedElements>
+  <ownedElements xsi:type="cartogeo:Customer" __id="Bidule" sourceOf="//@ownedElements.6">
+    <identifier xsi:type="cartogeo:Name" value="Bidule Tonio"/>
+    <locator xsi:type="cartogeo:GeoLocator" value="-1.656508,48.090451,0.0"/>
+  </ownedElements>
+  <ownedElements xsi:type="cartogeo:Customer" __id="Machin">
+    <identifier xsi:type="cartogeo:Name" value="Machin James"/>
+    <locator xsi:type="cartogeo:GeoLocator" value="1.656508,46.090451,0.0"/>
+  </ownedElements>
+  <ownedElements xsi:type="cartogeo:Products" __id="XT16" targetOf="//@ownedElements.5">
+    <identifier xsi:type="cartogeo:SerialNumber" value="123456789"/>
+    <locator xsi:type="cartogeo:StockPlace" value="S12-RowH-Shelf5"/>
+  </ownedElements>
+  <ownedElements xsi:type="cartogeo:Products" __id="XB38" targetOf="//@ownedElements.5 //@ownedElements.6">
+    <identifier xsi:type="cartogeo:SerialNumber" value="642316874"/>
+    <locator xsi:type="cartogeo:StockPlace" value="S24-RowB-Shelf3"/>
+  </ownedElements>
+  <ownedElements xsi:type="cartogeo:Buys" __id="Untel-buys" source="//@ownedElements.0" target="//@ownedElements.3 //@ownedElements.4"/>
+  <ownedElements xsi:type="cartogeo:Buys" __id="Bidule buys" source="//@ownedElements.1" target="//@ownedElements.4"/>
+</cartogeo:CustomersMap>
