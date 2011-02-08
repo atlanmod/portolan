@@ -21,6 +21,8 @@ create OUT : GraphML from IN : Cartography;
 helper def: graph : GraphML!Graph = OclUndefined;
 helper def: entities : Sequence(Cartography!Entity) = Sequence{};
 
+helper def: incr : Integer = 0;
+
 entrypoint rule init() {
 	to 
 		root : GraphML!Root (
@@ -116,7 +118,18 @@ entrypoint rule init() {
 							then
 								thisModule.linksMap.put(
 									Tuple{source = e1, target = e2},
-									thisModule.createEdge(e1, e2, rel, 'false')
+									thisModule.createEdge(e1, e2, rel, 'false',
+										-- tool tip text for all edges corresponding to this Relationship
+										rel.getID + '\n'
+										+ 'name: ' + rel.__id + '\n'
+										+ rel.metadata->iterate(m; s : String = '' |
+											s + m.key + ': ' + m.value + '\n')
+										+ 'type: ' + rel.getType
+										+ '\n--------------------------------------------------------------\n'
+										+ 'relates: \n'
+											+ rel.linkedElements->iterate(ie; s : String = '' |
+												s + '  -> ' + ie.__id + ' (' + ie.getType + ')\n')
+									)
 								)
 							else
 								OclUndefined
@@ -157,16 +170,39 @@ rule SourceElement {
 			else
 				thisModule.groupsMap.get(e)
 			endif;
+
+		-- compute detailled tooltip texts
 		ttt : String =
 			e.getID + '\n'
 			+ 'name: ' + e.__id + '\n'
+			-- metadata ...
 			+ e.metadata->iterate(m; s : String = '' |
 				s + m.key + ': ' + m.value + '\n')
-			+ 'type: ' + e.getType;
+			-- element type
+			+ 'type: ' + e.getType
+			+ '\n----------------------------------------------\n'
+			-- list of related elements
+			+ e.relatedTo->iterate(rt; s : String = '' |
+				s + rt.getType + ' (' + rt.__id + '):\n'
+				+ rt.linkedElements->select(ie | ie <> e)
+					->iterate(ie; s2: String = '' |
+						s2 + '  -> ' + ie.getID + ' (' + ie.getType + ')\n'))
+			-- list of DirectedRelationships the entity is source
+			+ e.sourceOf->iterate(dr; s : String = '' |
+				s + dr.getType + ' (' + dr.__id + '):\n'
+				+ dr.target->iterate(ie; s2: String = '' |
+					s2 + '  -> ' + ie.getID + ' (' + ie.getType + ')\n'))
+			-- list of DirectedRelationships the entity is target
+			+ e.targetOf->iterate(dr; s : String = '' |
+				s + dr.getType + ' (' + dr.__id + '):\n'
+				+ dr.source->iterate(ie; s2: String = '' |
+					s2 + '  -> ' + ie.getID + ' (' + ie.getType + ')\n'))
+			;
 	}
 	to
 		node : GraphML!Node (
-			id			<- e.getID,
+			-- incr needed for homonyms
+			id			<- thisModule.incr.toString() + ' - ' + e.getID,
 			datas		<- Sequence{thisModule.createData('label', e.getID),
 									thisModule.createData('type', e.getType),
 									thisModule.createData('weight', weight),
@@ -178,7 +214,11 @@ rule SourceElement {
 			sourceOf	<- e.sourceEdges,
 			targetOf	<- e.targetEdges
 		)
+	do {
+		thisModule.incr <- thisModule.incr + 1;
+	}
 }
+
 -- manage relationships from source entities + undirected relationships
 helper context Cartography!Entity def: sourceEdges : Sequence(GraphML!Edge) =
 	self.sourceOf->collect(dr | dr.sEdges(self))
@@ -186,9 +226,9 @@ helper context Cartography!Entity def: sourceEdges : Sequence(GraphML!Edge) =
 
 helper context Cartography!DirectedRelationship def : sEdges(e : Cartography!Entity) : Sequence(GraphML!Edge) =
 	if (self.target->size() = 0) then
-		thisModule.createEdge(e, OclUndefined, self, 'true')
+		thisModule.createEdge(e, OclUndefined, self, 'true', self.drTtt)
 	else
-		self.target->collect(t | thisModule.createEdge(e, t, self, 'true'))
+		self.target->collect(t | thisModule.createEdge(e, t, self, 'true', self.drTtt))
 	endif;
 
 -- all Relationship instances relatedTo this Entity
@@ -196,11 +236,6 @@ helper context Cartography!Entity def: sourceLinks : Sequence(GraphML!Edge) =
 	self.relatedTo->collect(rel | 
 		rel.linkedElements->collect(e |
 			thisModule.linksMap.get(Tuple{source = self, target = e})
-		))->flatten()->select(edge | not edge.oclIsUndefined());
-helper context Cartography!Entity def: targetLinks : Sequence(GraphML!Edge) =
-	self.relatedTo->collect(rel | 
-		rel.linkedElements->collect(e |
-			thisModule.linksMap.get(Tuple{source = e, target = self})
 		))->flatten()->select(edge | not edge.oclIsUndefined());
 
 -- manage relationships from target entities
@@ -210,10 +245,16 @@ helper context Cartography!Entity def: targetEdges : Sequence(GraphML!Edge) =
 
 helper context Cartography!DirectedRelationship def : tEdges(e : Cartography!Entity) : Sequence(GraphML!Edge) =
 	if (self.source->size() = 0) then
-		thisModule.createEdge(OclUndefined, e, self, 'true')
+		thisModule.createEdge(OclUndefined, e, self, 'true', self.drTtt)
 	else
-		self.source->collect(s | thisModule.createEdge(s, e, self, 'true'))
+		self.source->collect(s | thisModule.createEdge(s, e, self, 'true', self.drTtt))
 	endif;
+
+helper context Cartography!Entity def: targetLinks : Sequence(GraphML!Edge) =
+	self.relatedTo->collect(rel | 
+		rel.linkedElements->collect(e |
+			thisModule.linksMap.get(Tuple{source = e, target = self})
+		))->flatten()->select(edge | not edge.oclIsUndefined());
 
 
 lazy rule createEdge {
@@ -221,7 +262,8 @@ lazy rule createEdge {
 		src : Cartography!IdentifiedElement,
 		tgt : Cartography!IdentifiedElement,
 		rel  : Cartography!Relationship,
-		dir	: String
+		dir	: String,
+		ttt : String
 	using {
 		weight : String =
 			if (rel.metadata->select(md | md.key = 'weight')->size() > 0) then
@@ -229,16 +271,10 @@ lazy rule createEdge {
 			else
 				'0'
 			endif;
-		ttt : String =
-			rel.getID + '\n'
-			+ 'name: ' + rel.__id + '\n'
-			+ rel.metadata->iterate(m; s : String = '' |
-				s + m.key + ': ' + m.value + '\n')
-			+ 'type: ' + rel.getType;
 	}
 	to
 		edge : GraphML!Edge (
-			id			<- rel.getID,
+			id			<- thisModule.incr.toString() + ' - ' + rel.getID,
 			source	<- if (src = OclUndefined) then
 							thisModule.createLackingNode(rel.getID, 'source lacking')
 						else
@@ -255,7 +291,39 @@ lazy rule createEdge {
 									thisModule.createData('directed', dir)},
 			graph		<- thisModule.graph
 		)
+	do {
+		thisModule.incr <- thisModule.incr + 1;
+	}
 }
+
+helper context Cartography!Relationship def: ttt : String =
+	-- tool tip text for all edges corresponding to this Relationship
+	self.getID + '\n'
+	+ 'name: ' + self.__id + '\n'
+	+ self.metadata->iterate(m; s : String = '' |
+		s + m.key + ': ' + m.value + '\n')
+	+ 'type: ' + self.getType
+	+ '\n--------------------------------------------------------------\n'
+	+ 'relates: \n'
+		+ self.linkedElements->iterate(ie; s : String = '' |
+			s + '  -> ' + ie.__id + ' (' + ie.getType + ')\n')
+	;
+
+helper context Cartography!DirectedRelationship def: drTtt : String =
+	self.getID + '\n'
+	+ 'name: ' + self.__id + '\n'
+	+ self.metadata->iterate(m; s : String = '' |
+		s + m.key + ': ' + m.value + '\n')
+	+ 'type: ' + self.getType
+	+ '\n----------------------------------------------\n'
+	-- list of DirectedRelationships the entity is source
+	+ 'sources:\n'
+		+ self.source->iterate(src; s: String = '' |
+			s + '  -> ' + src.__id + ' (' + src.getType + '):\n')
+	+ 'targets:\n'
+		+ self.target->iterate(tgt; s : String = '' |
+			s + '  -> '+ tgt.__id + ' (' + tgt.getType + '):\n')
+	;
 
 helper context Cartography!Element def: getType : String =
 	self.oclType().toString();
@@ -270,13 +338,13 @@ helper context Cartography!IdentifiedElement def: getID : String =
 		endif
 	endif;
 
-lazy rule createLackingNode {
+unique lazy rule createLackingNode {
 	from
 		ref    : String,
 		label : String
 	to
 		node : GraphML!Node (
-			id		<- ref + label,
+			id		<- ref + ' ' + label,
 			datas	<- Sequence{thisModule.createData('label', label),
 								thisModule.createData('type', '** lacking type **'),
 								thisModule.createData('error', 'lacks'),

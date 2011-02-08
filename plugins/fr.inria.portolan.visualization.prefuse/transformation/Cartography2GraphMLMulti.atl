@@ -18,7 +18,9 @@
 module Cartography2GraphMLMulti;
 create OUT : GraphML from IN : Cartography;
 
-helper def : graph : GraphML!Graph = OclUndefined;
+helper def: graph : GraphML!Graph = OclUndefined;
+
+helper def: incr : Integer = 0;
 
 entrypoint rule init() {
 	to 
@@ -131,11 +133,30 @@ rule SourceElement {
 			+ 'name: ' + e.__id + '\n'
 			+ e.metadata->iterate(m; s : String = '' |
 				s + m.key + ': ' + m.value + '\n')
-			+ 'type: ' + e.getType;
+			+ 'type: ' + e.getType
+			+ '\n----------------------------------------------\n'
+			-- list of related elements
+			+ e.relatedTo->iterate(rt; s : String = '' |
+				s + rt.getType + ' (' + rt.__id + '):\n'
+				+ rt.linkedElements->select(ie | ie <> e)
+					->iterate(ie; s2: String = '' |
+						s2 + '  -> ' + ie.__id + '\n'))
+			-- list of DirectedRelationships the entity is source
+			+ e.sourceOf->iterate(dr; s : String = '' |
+				s + dr.getType + ' (' + dr.__id + '):\n'
+				+ dr.target->iterate(ie; s2: String = '' |
+					s2 + '  -> ' + ie.__id + '\n'))
+			-- list of DirectedRelationships the entity is target
+			+ e.targetOf->iterate(dr; s : String = '' |
+				s + dr.getType + ' (' + dr.__id + '):\n'
+				+ dr.source->iterate(ie; s2: String = '' |
+					s2 + '  -> ' + ie.__id + '\n'))
+			;
 	}
 	to
 		node : GraphML!Node (
-			id			<- e.getID,
+			-- incr needed for homonyms
+			id			<- thisModule.incr.toString() + ' - ' + e.getID,
 			datas		<- Sequence{thisModule.createData('label', e.getID),
 									thisModule.createData('type', e.getType),
 									thisModule.createData('weight', weight),
@@ -144,7 +165,23 @@ rule SourceElement {
 									thisModule.createData('descr', ttt)},
 			graph		<- thisModule.graph
 		)
+	do {
+		thisModule.incr <- thisModule.incr + 1;
+	}
 }
+
+helper context Cartography!Relationship def: ttt : String =
+	-- tool tip text for all edges corresponding to this Relationship
+	self.getID + '\n'
+	+ 'name: ' + self.__id + '\n'
+	+ self.metadata->iterate(m; s : String = '' |
+		s + m.key + ': ' + m.value + '\n')
+	+ 'type: ' + self.getType
+	+ '\n--------------------------------------------------------------\n'
+	+ 'relates: \n'
+		+ self.linkedElements->iterate(ie; s : String = '' |
+			s + '  -> ' + ie.__id + ' (' + ie.getType + ')\n')
+	;
 
 -- try to manage binary relations
 rule undirectedRelationship2Edges {
@@ -158,12 +195,6 @@ rule undirectedRelationship2Edges {
 		rsList : String =
 			rs.linkedElements->collect(le | le.__id)
 							 ->flatten().toString();
-		ttt : String =
-			rs.getID + '\n'
-			+ 'name: ' + rs.__id + '\n'
-			+ rs.metadata->iterate(m; s : String = '' |
-				s + m.key + ': ' + m.value + '\n')
-			+ 'type: ' + rs.getType;
 		}
 	to
 		edge : GraphML!Edge (
@@ -171,7 +202,7 @@ rule undirectedRelationship2Edges {
 									-- the node is virtual and must not be visible
 			datas		<- Sequence{thisModule.createData('type', rs.getType),
 									thisModule.createData('weight', '0'),
-									thisModule.createData('descr', ttt),
+									thisModule.createData('descr', rs.ttt),
 									thisModule.createData('directed', 'false')},
 			graph		<- thisModule.graph,
 			-- manage edges of this undirected relationship
@@ -191,7 +222,7 @@ rule undirectedRelationship2Edges {
 		)
 }
 
--- unary relationship with one linked element (A)
+-- unary relationship with one linked element (A) => a 'loop' from it to it
 rule undirectedRelationship2unaryEdges {
 	from
 		rs : Cartography!Relationship (
@@ -209,8 +240,9 @@ rule undirectedRelationship2unaryEdges {
 									thisModule.createData('group', '#na'),
 									thisModule.createData('descr', '')},
 			graph		<- thisModule.graph,
-			targetOf	<- thisModule.createEdge(rs.linkedElements->first(), node, rs, 'false'),
-			sourceOf	<- thisModule.createEdge(node, rs.linkedElements->first(), rs, 'false')
+			-- an edge goes from linked element to this node and another goes back
+			targetOf	<- thisModule.createEdge(rs.linkedElements->first(), node, rs, 'false', rs.ttt),
+			sourceOf	<- thisModule.createEdge(node, rs.linkedElements->first(), rs, 'false', rs.ttt)
 		)
 }
 
@@ -238,8 +270,24 @@ rule undirectedRelationship2NnaryEdges {
 
 helper context Cartography!Relationship def : edges() : Sequence(GraphML!Edge) =
 	self.linkedElements->collect(element |
-		thisModule.createEdge(self, element, self, 'false'));
+		thisModule.createEdge(self, element, self, 'false', self.ttt));
 
+helper context Cartography!DirectedRelationship def: drTtt : String =
+	self.getID + '\n'
+	+ 'name: ' + self.__id + '\n'
+	+ self.metadata->iterate(m; s : String = '' |
+		s + m.key + ': ' + m.value + '\n')
+	+ 'type: ' + self.getType
+	+ '\n----------------------------------------------\n'
+	-- list of DirectedRelationships the entity is source
+	+ 'sources:\n'
+		+ self.source->iterate(src; s: String = '' |
+			s + '  -> ' + src.__id + ' (' + src.getType + '):\n')
+	+ 'targets:\n'
+		+ self.target->iterate(tgt; s : String = '' |
+			s + '  -> '+ tgt.__id + ' (' + tgt.getType + '):\n')
+	;
+	
 -- binary DRs
 rule directedRelationship2Edges {
 	from
@@ -250,21 +298,13 @@ rule directedRelationship2Edges {
 			and
 			(rs.source->first() <> rs.target->first())
 		)
-	using {
-		ttt : String =
-			rs.getID + '\n'
-			+ 'name: ' + rs.__id + '\n'
-			+ rs.metadata->iterate(m; s : String = '' |
-				s + m.key + ': ' + m.value + '\n')
-			+ 'type: ' + rs.getType;
-	}
 	to
 		edge : GraphML!Edge (
 			id			<- rs.getID,
 									-- the node is virtual and must not be visible
 			datas		<- Sequence{thisModule.createData('type', rs.getType),
 									thisModule.createData('weight', '0'),
-									thisModule.createData('descr', ttt),
+									thisModule.createData('descr', rs.drTtt),
 									thisModule.createData('directed', 'true')},
 			graph		<- thisModule.graph,
 			-- manage edges of this directed relationship
@@ -295,7 +335,7 @@ rule directedRelationship2NnaryEdges {
 			rs.source->collect(s | s.getID)
 				->union(rs.target->collect(t | t.getID))
 				->flatten().toString();
-	}
+		}
 	to
 		node : GraphML!Node (
 			-- we want a distinct node for each relation
@@ -311,20 +351,20 @@ rule directedRelationship2NnaryEdges {
 			targetOf	<- if rs.source->size() > 0
 							then	-- we rely each source to the pivot node by an undirected edge
 								rs.source->collect(s |
-									thisModule.createEdge(s, rs, rs, 'false'))
+									thisModule.createEdge(s, rs, rs, 'false', rs.drTtt))
 							else	-- size() = 0
 								thisModule.createEdge(
 									thisModule.createLackingNode(rs.getID, 'source lacking'),
-									rs, rs, 'false')
+									rs, rs, 'false', rs.drTtt)
 							endif,
 			sourceOf	<- if rs.target->size() > 0
 							then	-- we rely each target to the pivot node by a directed edge
 								rs.target->collect(t | 
-									thisModule.createEdge(rs, t, rs, 'true'))
+									thisModule.createEdge(rs, t, rs, 'true', rs.drTtt))
 							else	-- size() = 0
 								thisModule.createEdge(rs,
 									thisModule.createLackingNode(rs.getID, 'target lacking'),
-									rs, 'true')
+									rs, 'true', rs.drTtt)
 							endif
 		)
 }
@@ -342,7 +382,7 @@ rule directedRelationship2unaryEdges {
 			rs.source->collect(s | s.getID)
 				->union(rs.target->collect(t | t.getID))
 				->flatten().toString();
-	}
+		}
 	to
 		node : GraphML!Node (
 			-- we want a distinct node for each relation
@@ -355,8 +395,8 @@ rule directedRelationship2unaryEdges {
 									thisModule.createData('group', '#na'),
 									thisModule.createData('descr', '')},
 			graph		<- thisModule.graph,
-			targetOf	<- thisModule.createEdge(rs.source->first(), rs, rs, 'false'),
-			sourceOf	<- thisModule.createEdge(rs, rs.target->first(), rs, 'true')
+			targetOf	<- thisModule.createEdge(rs.source->first(), rs, rs, 'false', rs.drTtt),
+			sourceOf	<- thisModule.createEdge(rs, rs.target->first(), rs, 'true', rs.drTtt)
 		)
 }
 
@@ -365,7 +405,8 @@ lazy rule createEdge {
 		src : OclAny,
 		tgt : OclAny,
 		rel  : Cartography!Relationship,
-		dir	: String
+		dir	: String,
+		ttt : String
 	using {
 			weight : String =
 				if (rel.metadata->select(md | md.key = 'weight')->size() > 0) then
@@ -373,17 +414,10 @@ lazy rule createEdge {
 				else
 					'0'
 				endif;
-		ttt : String =
-			rel.getID + '\n'
-			+ 'name: ' + rel.__id + '\n'
-			+ rel.metadata->iterate(m; s : String = '' |
-				s + m.key + ': ' + m.value + '\n')
-			+ 'type: ' + rel.getType;
 		}
 	to
 		edge : GraphML!Edge (
-			id			<- rel.getID,
---			id			<- rel.getID + src.toString() + tgt.toString(),
+			id			<- thisModule.incr + ' - ' + rel.getID,
 			source		<- src,
 			target		<- tgt,
 			datas		<- Sequence{thisModule.createData('type', rel.getType),
@@ -392,10 +426,13 @@ lazy rule createEdge {
 									thisModule.createData('directed', dir)},
 			graph		<- thisModule.graph
 		)
+	do {
+		thisModule.incr <- thisModule.incr + 1;
+	}
 }
 
 helper context Cartography!Element def: getType : String =
-	self.oclType().toString();
+	self.oclType().toString().split('!').at(2);
 
 -- defensive code, in order to deal with models not properly valid
 helper context Cartography!IdentifiedElement def: getID : String =
