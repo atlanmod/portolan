@@ -417,7 +417,7 @@ lazy rule createEdge {
 		}
 	to
 		edge : GraphML!Edge (
-			id			<- thisModule.incr + ' - ' + rel.getID,
+			id			<- thisModule.incr.toString() + ' - ' + rel.getID,
 			source		<- src,
 			target		<- tgt,
 			datas		<- Sequence{thisModule.createData('type', rel.getType),
