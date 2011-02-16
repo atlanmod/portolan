@@ -100,7 +100,8 @@ public class KMLModel2XMLFileAction implements IObjectActionDelegate {
 									.addFileExtension(extension)
 									.lastSegment();
 		
-		String outFileUri = destDir
+		String outFileUri = ResourcesPlugin.getWorkspace().getRoot().getLocation().toOSString()
+							+ destDir
 							+ "/"
 							+ outFileName;
 
