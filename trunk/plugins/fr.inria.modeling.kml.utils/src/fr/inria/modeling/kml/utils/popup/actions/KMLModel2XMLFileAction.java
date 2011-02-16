@@ -12,11 +12,20 @@ package fr.inria.modeling.kml.utils.popup.actions;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.m2m.atl.projectors.ui.xml.popup.actions.ExtractorAction;
+import org.eclipse.m2m.atl.core.ATLCoreException;
+import org.eclipse.m2m.atl.core.IExtractor;
+import org.eclipse.m2m.atl.core.IInjector;
+import org.eclipse.m2m.atl.core.IModel;
+import org.eclipse.m2m.atl.core.IReferenceModel;
+import org.eclipse.m2m.atl.core.ModelFactory;
+import org.eclipse.m2m.atl.core.service.CoreService;
+import org.eclipse.m2m.atl.projectors.xml.XMLExtractor;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 
@@ -25,8 +34,27 @@ import org.eclipse.ui.IWorkbenchPart;
  *
  */
 public class KMLModel2XMLFileAction implements IObjectActionDelegate {
+	
+	private IInjector xmiInjector;
+	private IExtractor xmlExtractor;
+	
+	private static String MODEL_KIND = "EMF";
+	private static String XML_MM_URI = "http://www.eclipse.org/XML";
 
 	private IFile inputFile;
+	
+	/**
+	 * Constructor.
+	 */
+	public KMLModel2XMLFileAction() {
+		super();
+		try {
+			xmiInjector = CoreService.getInjector(MODEL_KIND);
+			xmlExtractor = new XMLExtractor();
+		} catch (ATLCoreException e) {
+			e.printStackTrace();
+		}
+	}
 
 	/* (non-Javadoc)
 	 * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
@@ -65,11 +93,37 @@ public class KMLModel2XMLFileAction implements IObjectActionDelegate {
 	 * @return the XML file corresponding to the GraphML model
 	 */
 	public IFile perform(IFile inFile, String destDir, String extension) {
-		KMLModel2XMLModelAction kml2xml = new KMLModel2XMLModelAction();
-		IFile xmlModel = kml2xml.perform(inFile, destDir, "xmi");
+		if (extension == null)
+			extension = "xml";
+		String outFileName = inFile.getFullPath()
+									.removeFileExtension()
+									.addFileExtension(extension)
+									.lastSegment();
 		
-		ExtractorAction xmlExtraction = new ExtractorAction();
-		return xmlExtraction.perform(xmlModel, destDir, extension);
+		String outFileUri = destDir
+							+ "/"
+							+ outFileName;
+
+		KMLModel2XMLModelAction kml2xml = new KMLModel2XMLModelAction();
+		IFile xmlModelFile = kml2xml.perform(inFile, destDir, "xmi");
+		
+		// take file storing the XML model and transform it to textual XML
+		try {
+			ModelFactory factory = CoreService.getModelFactory(MODEL_KIND);
+			
+			IReferenceModel xmlMetamodel = factory.newReferenceModel();
+			xmiInjector.inject(xmlMetamodel, XML_MM_URI);
+			
+			IModel xmlModel = factory.newModel(xmlMetamodel);
+			
+			xmiInjector.inject(xmlModel, xmlModelFile.getFullPath().toOSString());
+			
+			xmlExtractor.extract(xmlModel, outFileUri);
+		} catch (ATLCoreException e) {
+			e.printStackTrace();
+		}
+		
+		return ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(outFileUri));
 	}
 
 }
