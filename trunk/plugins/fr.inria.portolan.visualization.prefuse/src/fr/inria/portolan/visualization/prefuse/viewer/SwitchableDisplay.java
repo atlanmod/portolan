@@ -181,7 +181,7 @@ public class SwitchableDisplay extends Display {
 		shapesColors = labelsBoxColors;
 		setShapeColor(shapesColors);
 		areasColors = ColorLib.getCategoryPalette(
-				aggregates.getRowCount(), 0.40f, 0.80f, 0.95f, 0.20f);
+				aggregates.getRowCount(), 0.40f, 0.60f, 0.80f, 0.33f);
 		setAreaColor(areasColors);
 		
 		m_vis.putAction(COLOR_ACTION, colorsActionList);
