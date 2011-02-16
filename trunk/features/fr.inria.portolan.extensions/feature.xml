@@ -19,8 +19,33 @@
 
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
-      <import feature="fr.inria.portolan"/>
-      <import feature="org.eclipse.gmt.modisco.infrastructure"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="fr.inria.portolan.visualization"/>
+      <import plugin="fr.inria.portolan.visualization.ui"/>
+      <import plugin="org.eclipse.m2m.atl.core"/>
+      <import plugin="org.eclipse.m2m.atl.core.emf"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.emf.common.ui"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="fr.inria.portolan.common.ui"/>
+      <import plugin="fr.inria.portolan.common"/>
+      <import plugin="org.eclipse.emf.ecore.editor"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.m2m.atl.engine.emfvm"/>
+      <import plugin="org.eclipse.m2m.atl.core.ui"/>
+      <import plugin="fr.inria.portolan.core"/>
+      <import plugin="org.eclipse.emf.common"/>
+      <import plugin="org.eclipse.gmt.modisco.infra.browser"/>
+      <import plugin="org.eclipse.gmt.modisco.infra.common.ui"/>
+      <import plugin="org.eclipse.gmt.modisco.infra.common.core"/>
+      <import plugin="org.eclipse.gmt.modisco.infra.facet.core"/>
+      <import plugin="org.eclipse.gmt.modisco.infra.browser.uicore"/>
+      <import plugin="org.eclipse.ui.browser"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import feature="fr.inria.portolan.tool" version="0.7.0.qualifier"/>
+      <import plugin="org.apache.lucene"/>
    </requires>
 
    <plugin
@@ -108,13 +133,6 @@
 
    <plugin
          id="fr.inria.modeling.kml.utils"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="fr.inria.portolan.extensions.examples"
          download-size="0"
          install-size="0"
          version="0.0.0"
