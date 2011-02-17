@@ -39,7 +39,7 @@
 <mapAttribute key="Path">
 <mapEntry key="Cartography" value="uri:http://tools.cartography.portolan.inria.fr/1.0"/>
 <mapEntry key="Excel" value="uri:http://modeling.inria.fr/Excel"/>
-<mapEntry key="IN" value="/fr.inria.portolan.example.toolcartography/Sources/ExcelSourceSample_Excel.xmi"/>
+<mapEntry key="IN" value="/fr.inria.portolan.example.toolcartography/Sources/ExcelSourceSample_XML_Excel.xmi"/>
 <mapEntry key="OUT" value="/fr.inria.portolan.example.toolcartography/Model/CartographySample.xmi"/>
 </mapAttribute>
 <listAttribute key="Superimpose"/>
