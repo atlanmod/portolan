@@ -64,7 +64,7 @@ public class XMLFile2EXcelModelAction implements IObjectActionDelegate {
 	public void run(IAction action) {
 		String destDir = inputFile.getFullPath()
 									.removeLastSegments(1)
-									.toOSString();
+									.toString();
 		
 		IFile xmlModel = perform(inputFile, destDir);
 		

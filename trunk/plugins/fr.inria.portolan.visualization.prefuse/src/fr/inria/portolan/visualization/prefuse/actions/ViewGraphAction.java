@@ -40,7 +40,7 @@ public class ViewGraphAction implements IObjectActionDelegate {
 	public void run(IAction action) {
 		String destDir = inputFile.getFullPath()
 									.removeLastSegments(1)
-									.toOSString();
+									.toString();
 		perform(inputFile, destDir);
 	}
 

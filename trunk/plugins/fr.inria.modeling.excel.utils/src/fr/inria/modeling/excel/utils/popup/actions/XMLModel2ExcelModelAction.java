@@ -89,7 +89,7 @@ public class XMLModel2ExcelModelAction implements IObjectActionDelegate {
 	public void run(IAction action) {
 		String destDir = inputFile.getFullPath()
 									.removeLastSegments(1)
-									.toOSString();
+									.toString();
 		perform(inputFile, destDir, "xmi");
 
 		try {
@@ -121,7 +121,7 @@ public class XMLModel2ExcelModelAction implements IObjectActionDelegate {
 			xmiInjector.inject(xmlMetamodel, XML_MM_URI);
 
 			IModel xmlModel = factory.newModel(xmlMetamodel);
-			xmiInjector.inject(xmlModel, inFile.getFullPath().toOSString());
+			xmiInjector.inject(xmlModel, inFile.getFullPath().toString());
 
 			IReferenceModel excelMetamodel = factory.newReferenceModel();
 			xmiInjector.inject(excelMetamodel, EXCEL_MM_URI);
