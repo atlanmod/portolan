@@ -102,7 +102,7 @@ public class Cartography2KMLAction  implements IObjectActionDelegate {
 	public void run(IAction action) {
 		String destDir = inputFile.getFullPath()
 									.removeLastSegments(1)
-									.toOSString();
+									.toString();
 		
 		String cartoMetamodelUri = "";
 		ResourceDialog dialog = new ResourceDialog(shell, "Select your Cartography metamodel", SWT.OPEN | SWT.SINGLE);

@@ -102,7 +102,7 @@ public class Cartography2GraphMLMultiAction implements IObjectActionDelegate {
 	public void run(IAction action) {
 		String destDir = inputFile.getFullPath()
 									.removeLastSegments(1)
-									.toOSString();
+									.toString();
 		
 		String cartoMetamodelUri = "";
 		URIDialog dialog = new URIDialog(shell);
