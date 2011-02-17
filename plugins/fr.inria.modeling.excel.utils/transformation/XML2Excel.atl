@@ -1,4 +1,4 @@
--- @nsURI XML=http://modeling.inria.fr/XML
+-- @nsURI XML=http://www.eclipse.org/gmt/am3/2007/XML
 -- @nsURI Excel=http://modeling.inria.fr/Excel
 
 -- ******************************************************************************
@@ -187,6 +187,7 @@ rule Workbook {
 	to
 		wb : Excel!Workbook (
 			wb_worksheets <- Sequence{rw.getChildrenByName('Worksheet')->collect(e | thisModule.resolveTemp(e, 'ws'))}
+						->union(Sequence{rw.getChildrenByName('ss:Worksheet')->collect(e | thisModule.resolveTemp(e, 'ws'))})	-- OpenOffice
 		)	
 }
 
@@ -198,6 +199,7 @@ rule Worksheet {
 	from
 		ew : XML!Element (
 			ew.name = 'Worksheet'
+			or ew.name = 'ss:Worksheet'	-- OpenOffice mistake???
 		)
 	
 	to
