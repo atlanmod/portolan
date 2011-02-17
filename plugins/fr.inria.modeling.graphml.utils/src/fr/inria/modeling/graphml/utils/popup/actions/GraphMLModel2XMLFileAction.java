@@ -42,7 +42,7 @@ public class GraphMLModel2XMLFileAction implements IObjectActionDelegate {
 	private IExtractor xmlExtractor;
 	
 	private static String MODEL_KIND = "EMF";
-	private static String XML_MM_URI = "http://www.eclipse.org/XML";
+	private static String XML_MM_URI = "http://www.eclipse.org/gmt/am3/2007/XML";
 
 	private IFile inputFile;
 	
@@ -100,14 +100,13 @@ public class GraphMLModel2XMLFileAction implements IObjectActionDelegate {
 						String extension,
 						IProgressMonitor monitor) {
 		if (extension == null)
-			extension = "xml";
+			extension = "graphml";
 		String outFileName = inFile.getFullPath()
 									.removeFileExtension()
 									.addFileExtension(extension)
 									.lastSegment();
 		
-		String outFileUri = ResourcesPlugin.getWorkspace().getRoot().getLocation().toOSString()
-							+ destDir
+		String outFileUri = destDir
 							+ "/"
 							+ outFileName;
 
@@ -124,9 +123,13 @@ public class GraphMLModel2XMLFileAction implements IObjectActionDelegate {
 			
 			IModel xmlModel = factory.newModel(xmlMetamodel);
 			
-			xmiInjector.inject(xmlModel, xmlModelFile.getFullPath().toOSString());
+			xmiInjector.inject(xmlModel, xmlModelFile.getFullPath().toString());
 			
-			xmlExtractor.extract(xmlModel, outFileUri);
+			// opposed to ATL XMI injector/extractor, the ATL XML extractor
+			// only understands filesystem root for path of files
+			xmlExtractor.extract(xmlModel, 
+					ResourcesPlugin.getWorkspace().getRoot().getLocation().toString()
+					+ outFileUri);
 		} catch (ATLCoreException e) {
 			e.printStackTrace();
 		}
