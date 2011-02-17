@@ -74,7 +74,7 @@
          version="0.0.0"/>
 
    <includes
-         id="fr.inria.portolan.extensions.examples.feature"
+         id="fr.inria.portolan.examples"
          version="0.0.0"/>
 
    <requires>
