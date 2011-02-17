@@ -40,7 +40,7 @@ public class XMLFile2EXcelModelAction implements IObjectActionDelegate {
 	private IInjector xmlInjector;
 	
 	private static String MODEL_KIND = "EMF";
-	private static String XML_MM_URI = "http://www.eclipse.org/XML";
+	private static String XML_MM_URI = "http://www.eclipse.org/gmt/am3/2007/XML";
 	
 	private IFile inputFile;
 	
@@ -87,9 +87,9 @@ public class XMLFile2EXcelModelAction implements IObjectActionDelegate {
 	public IFile perform(IFile inFile, String destDir) {
 		String outFileName = inFile.getFullPath()
 									.removeFileExtension()
-//									.append("-XML")
-									.addFileExtension("xmi")
-									.lastSegment();
+									.lastSegment()
+							+ "_XML"
+							+ ".xmi";
 		
 		String outFileUri = destDir
 							+ System.getProperty("file.separator")
@@ -103,7 +103,8 @@ public class XMLFile2EXcelModelAction implements IObjectActionDelegate {
 			
 			IModel xmlModel = factory.newModel(xmlMetamodel);
 			
-			xmlInjector.inject(xmlModel, inFile.getFullPath().toOSString());
+			// XML injector considers only root filesystem
+			xmlInjector.inject(xmlModel, inFile.getLocation().toString());
 			
 			xmiExtractor.extract(xmlModel, outFileUri);
 			
