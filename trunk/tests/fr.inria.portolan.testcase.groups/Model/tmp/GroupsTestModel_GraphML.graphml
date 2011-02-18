@@ -1,0 +1,395 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<graphml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlnshttp://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="label" for="node" attr.name="label" attr.type="string"/>
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="weight" for="node" attr.name="weight" attr.type="double"/>
+  <key id="error" for="node" attr.name="error" attr.type="string"/>
+  <key id="group" for="node" attr.name="group" attr.type="string"/>
+  <key id="type" for="edge" attr.name="type" attr.type="string"/>
+  <key id="weight" for="edge" attr.name="weight" attr.type="double"/>
+  <key id="descr" for="node" attr.name="descr" attr.type="string"/>
+  <key id="descr" for="edge" attr.name="descr" attr.type="string"/>
+  <key id="directed" for="edge" attr.name="directed" attr.type="string"/>
+  <graph id="Cartography graph" edgedefault="directed">
+    <edge id="0 - no identifier" source="12 - B ID" target="13 - C ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="1 - no identifier" source="12 - B ID" target="14 - P ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="2 - no identifier" source="12 - B ID" target="20 - X ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="3 - no identifier" source="12 - B ID" target="21 - Y ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="4 - no identifier" source="13 - C ID" target="14 - P ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="5 - no identifier" source="13 - C ID" target="20 - X ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="6 - no identifier" source="13 - C ID" target="21 - Y ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="7 - no identifier" source="14 - P ID" target="20 - X ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="8 - no identifier" source="14 - P ID" target="21 - Y ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="9 - no identifier" source="20 - X ID" target="21 - Y ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: BCPXY
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; P (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+  -&gt; Y (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="10 - no identifier" source="10 - A ID" target="14 - P ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: A to P
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; A (Cartography!Entity):
+targets:
+  -&gt; P (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="14 - no identifier" source="14 - P ID" target="18 - Q ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: P to QZ
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; P (Cartography!Entity):
+targets:
+  -&gt; Q (Cartography!Entity):
+  -&gt; Z (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="15 - no identifier" source="14 - P ID" target="22 - Z ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: P to QZ
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; P (Cartography!Entity):
+targets:
+  -&gt; Q (Cartography!Entity):
+  -&gt; Z (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="16 - no identifier" source="10 - A ID" target="14 - P ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: A to P
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; A (Cartography!Entity):
+targets:
+  -&gt; P (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="18 - no identifier" source="14 - P ID" target="18 - Q ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: P to QZ
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; P (Cartography!Entity):
+targets:
+  -&gt; Q (Cartography!Entity):
+  -&gt; Z (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="22 - no identifier" source="14 - P ID" target="22 - Z ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: P to QZ
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; P (Cartography!Entity):
+targets:
+  -&gt; Q (Cartography!Entity):
+  -&gt; Z (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <node id="10 - A ID">
+      <data key="label">A ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">Group1 ID</data>
+      <data key="descr">A ID
+name: A
+type: Cartography!Entity
+----------------------------------------------
+Cartography!DirectedRelationship (A to P):
+  -&gt; P ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="12 - B ID">
+      <data key="label">B ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">Group1 ID</data>
+      <data key="descr">B ID
+name: B
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (BCPXY):
+  -&gt; C ID (Cartography!Entity)
+  -&gt; P ID (Cartography!Entity)
+  -&gt; X ID (Cartography!Entity)
+  -&gt; Y ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="13 - C ID">
+      <data key="label">C ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">Group1 ID</data>
+      <data key="descr">C ID
+name: C
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (BCPXY):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; P ID (Cartography!Entity)
+  -&gt; X ID (Cartography!Entity)
+  -&gt; Y ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="14 - P ID">
+      <data key="label">P ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">Group2 ID</data>
+      <data key="descr">P ID
+name: P
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (BCPXY):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; C ID (Cartography!Entity)
+  -&gt; X ID (Cartography!Entity)
+  -&gt; Y ID (Cartography!Entity)
+Cartography!DirectedRelationship (P to QZ):
+  -&gt; Q ID (Cartography!Entity)
+  -&gt; Z ID (Cartography!Entity)
+Cartography!DirectedRelationship (A to P):
+  -&gt; A ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="18 - Q ID">
+      <data key="label">Q ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">Group2 ID</data>
+      <data key="descr">Q ID
+name: Q
+type: Cartography!Entity
+----------------------------------------------
+Cartography!DirectedRelationship (P to QZ):
+  -&gt; P ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="20 - X ID">
+      <data key="label">X ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">X ID
+name: X
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (BCPXY):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; C ID (Cartography!Entity)
+  -&gt; P ID (Cartography!Entity)
+  -&gt; Y ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="21 - Y ID">
+      <data key="label">Y ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">Y ID
+name: Y
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (BCPXY):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; C ID (Cartography!Entity)
+  -&gt; P ID (Cartography!Entity)
+  -&gt; X ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="22 - Z ID">
+      <data key="label">Z ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">Z ID
+name: Z
+type: Cartography!Entity
+----------------------------------------------
+Cartography!DirectedRelationship (P to QZ):
+  -&gt; P ID (Cartography!Entity)
+</data>
+    </node>
+  </graph>
+</graphml>

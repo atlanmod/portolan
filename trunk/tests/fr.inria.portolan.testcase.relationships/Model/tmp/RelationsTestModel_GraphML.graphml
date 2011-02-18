@@ -1,0 +1,622 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1' ?>
+<graphml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlnshttp://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="label" for="node" attr.name="label" attr.type="string"/>
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="weight" for="node" attr.name="weight" attr.type="double"/>
+  <key id="error" for="node" attr.name="error" attr.type="string"/>
+  <key id="group" for="node" attr.name="group" attr.type="string"/>
+  <key id="type" for="edge" attr.name="type" attr.type="string"/>
+  <key id="weight" for="edge" attr.name="weight" attr.type="double"/>
+  <key id="descr" for="node" attr.name="descr" attr.type="string"/>
+  <key id="descr" for="edge" attr.name="descr" attr.type="string"/>
+  <key id="directed" for="edge" attr.name="directed" attr.type="string"/>
+  <graph id="Cartography graph" edgedefault="directed">
+    <edge id="0 - Binary relation ID" source="7 - A ID" target="21 - X ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">Binary relation ID
+name: Binary relation
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; A (Cartography!Entity)
+  -&gt; X (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="1 - N-nary relation ID" source="10 - B ID" target="14 - C ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">N-nary relation ID
+name: N-nary relation
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; Z (Cartography!Entity)
+  -&gt; W (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="2 - N-nary relation ID" source="10 - B ID" target="28 - Z ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">N-nary relation ID
+name: N-nary relation
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; Z (Cartography!Entity)
+  -&gt; W (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="3 - N-nary relation ID" source="10 - B ID" target="32 - W ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">N-nary relation ID
+name: N-nary relation
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; Z (Cartography!Entity)
+  -&gt; W (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="4 - N-nary relation ID" source="14 - C ID" target="28 - Z ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">N-nary relation ID
+name: N-nary relation
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; Z (Cartography!Entity)
+  -&gt; W (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="5 - N-nary relation ID" source="14 - C ID" target="32 - W ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">N-nary relation ID
+name: N-nary relation
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; Z (Cartography!Entity)
+  -&gt; W (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="6 - N-nary relation ID" source="28 - Z ID" target="32 - W ID">
+      <data key="type">Cartography!Relationship</data>
+      <data key="weight">0</data>
+      <data key="descr">N-nary relation ID
+name: N-nary relation
+type: Cartography!Relationship
+--------------------------------------------------------------
+relates: 
+  -&gt; B (Cartography!Entity)
+  -&gt; C (Cartography!Entity)
+  -&gt; Z (Cartography!Entity)
+  -&gt; W (Cartography!Entity)
+</data>
+      <data key="directed">false</data>
+    </edge>
+    <edge id="7 - DR 1 to 0 ID" source="7 - A ID" target="DR 1 to 0 ID target lacking">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 1 to 0 ID
+name: DR 1 to 0
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; A (Cartography!Entity):
+targets:
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="8 - DR 1 to 1 ID" source="7 - A ID" target="24 - Y ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 1 to 1 ID
+name: DR 1 to 1
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; A (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="10 - DR N to M" source="10 - B ID" target="24 - Y ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="11 - DR N to M" source="10 - B ID" target="32 - W ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="12 - DR N to 0 ID" source="10 - B ID" target="DR N to 0 ID target lacking">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to 0 ID
+name: DR N to 0
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; D (Cartography!Entity):
+targets:
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="14 - DR N to M" source="14 - C ID" target="24 - Y ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="15 - DR N to M" source="14 - C ID" target="32 - W ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="17 - DR 1 to N ID" source="17 - D ID" target="28 - Z ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 1 to N ID
+name: DR 1 to N
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; D (Cartography!Entity):
+targets:
+  -&gt; Z (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="18 - DR 1 to N ID" source="17 - D ID" target="32 - W ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 1 to N ID
+name: DR 1 to N
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; D (Cartography!Entity):
+targets:
+  -&gt; Z (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="19 - DR N to 0 ID" source="17 - D ID" target="DR N to 0 ID target lacking">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to 0 ID
+name: DR N to 0
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; D (Cartography!Entity):
+targets:
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="21 - DR 0 to 1 ID" source="DR 0 to 1 ID source lacking" target="21 - X ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 0 to 1 ID
+name: DR 0 to 1
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+targets:
+  -&gt; X (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="22 - DR 0 to N ID" source="DR 0 to N ID source lacking" target="21 - X ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 0 to N ID
+name: DR 0 to N
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+targets:
+  -&gt; X (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="24 - DR 1 to 1 ID" source="7 - A ID" target="24 - Y ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 1 to 1 ID
+name: DR 1 to 1
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; A (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="25 - DR N to M" source="10 - B ID" target="24 - Y ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="26 - DR N to M" source="14 - C ID" target="24 - Y ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="28 - no identifier" source="28 - Z ID" target="28 - Z ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: DR Z to Z
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; Z (Cartography!Entity):
+targets:
+  -&gt; Z (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="29 - DR 1 to N ID" source="17 - D ID" target="28 - Z ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 1 to N ID
+name: DR 1 to N
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; D (Cartography!Entity):
+targets:
+  -&gt; Z (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="30 - no identifier" source="28 - Z ID" target="28 - Z ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">no identifier
+name: DR Z to Z
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; Z (Cartography!Entity):
+targets:
+  -&gt; Z (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="32 - DR 1 to N ID" source="17 - D ID" target="32 - W ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 1 to N ID
+name: DR 1 to N
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; D (Cartography!Entity):
+targets:
+  -&gt; Z (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="33 - DR N to M" source="10 - B ID" target="32 - W ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="34 - DR N to M" source="14 - C ID" target="32 - W ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR N to M
+name: DR N to M
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+  -&gt; B (Cartography!Entity):
+  -&gt; C (Cartography!Entity):
+targets:
+  -&gt; Y (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <edge id="35 - DR 0 to N ID" source="DR 0 to N ID source lacking" target="32 - W ID">
+      <data key="type">Cartography!DirectedRelationship</data>
+      <data key="weight">0</data>
+      <data key="descr">DR 0 to N ID
+name: DR 0 to N
+type: Cartography!DirectedRelationship
+----------------------------------------------
+sources:
+targets:
+  -&gt; X (Cartography!Entity):
+  -&gt; W (Cartography!Entity):
+</data>
+      <data key="directed">true</data>
+    </edge>
+    <node id="7 - A ID">
+      <data key="label">A ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">A ID
+name: A
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (Unary relation):
+Cartography!Relationship (Binary relation):
+  -&gt; X ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR 1 to 0):
+Cartography!DirectedRelationship (DR 1 to 1):
+  -&gt; Y ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="DR 1 to 0 ID target lacking">
+      <data key="label">target lacking</data>
+      <data key="type">** lacking type **</data>
+      <data key="error">lacks</data>
+      <data key="group">** lacking nodes **</data>
+      <data key="descr">DR 1 to 0 ID target lacking</data>
+    </node>
+    <node id="10 - B ID">
+      <data key="label">B ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">B ID
+name: B
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (N-nary relation):
+  -&gt; C ID (Cartography!Entity)
+  -&gt; Z ID (Cartography!Entity)
+  -&gt; W ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR N to M):
+  -&gt; Y ID (Cartography!Entity)
+  -&gt; W ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR N to 0):
+</data>
+    </node>
+    <node id="DR N to 0 ID target lacking">
+      <data key="label">target lacking</data>
+      <data key="type">** lacking type **</data>
+      <data key="error">lacks</data>
+      <data key="group">** lacking nodes **</data>
+      <data key="descr">DR N to 0 ID target lacking</data>
+    </node>
+    <node id="14 - C ID">
+      <data key="label">C ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">C ID
+name: C
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (N-nary relation):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; Z ID (Cartography!Entity)
+  -&gt; W ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR N to M):
+  -&gt; Y ID (Cartography!Entity)
+  -&gt; W ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="17 - D ID">
+      <data key="label">D ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">D ID
+name: D
+type: Cartography!Entity
+----------------------------------------------
+Cartography!DirectedRelationship (DR 1 to N):
+  -&gt; Z ID (Cartography!Entity)
+  -&gt; W ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR N to 0):
+</data>
+    </node>
+    <node id="21 - X ID">
+      <data key="label">X ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">X ID
+name: X
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (Binary relation):
+  -&gt; A ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR 0 to 1):
+Cartography!DirectedRelationship (DR 0 to N):
+</data>
+    </node>
+    <node id="DR 0 to 1 ID source lacking">
+      <data key="label">source lacking</data>
+      <data key="type">** lacking type **</data>
+      <data key="error">lacks</data>
+      <data key="group">** lacking nodes **</data>
+      <data key="descr">DR 0 to 1 ID source lacking</data>
+    </node>
+    <node id="DR 0 to N ID source lacking">
+      <data key="label">source lacking</data>
+      <data key="type">** lacking type **</data>
+      <data key="error">lacks</data>
+      <data key="group">** lacking nodes **</data>
+      <data key="descr">DR 0 to N ID source lacking</data>
+    </node>
+    <node id="24 - Y ID">
+      <data key="label">Y ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">Y ID
+name: Y
+type: Cartography!Entity
+----------------------------------------------
+Cartography!DirectedRelationship (DR 1 to 1):
+  -&gt; A ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR N to M):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; C ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="28 - Z ID">
+      <data key="label">Z ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">Z ID
+name: Z
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (N-nary relation):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; C ID (Cartography!Entity)
+  -&gt; W ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR Z to Z):
+  -&gt; Z ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR 1 to N):
+  -&gt; D ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR Z to Z):
+  -&gt; Z ID (Cartography!Entity)
+</data>
+    </node>
+    <node id="32 - W ID">
+      <data key="label">W ID</data>
+      <data key="type">Cartography!Entity</data>
+      <data key="weight">0</data>
+      <data key="error"></data>
+      <data key="group">#na</data>
+      <data key="descr">W ID
+name: W
+type: Cartography!Entity
+----------------------------------------------
+Cartography!Relationship (N-nary relation):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; C ID (Cartography!Entity)
+  -&gt; Z ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR 1 to N):
+  -&gt; D ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR N to M):
+  -&gt; B ID (Cartography!Entity)
+  -&gt; C ID (Cartography!Entity)
+Cartography!DirectedRelationship (DR 0 to N):
+</data>
+    </node>
+  </graph>
+</graphml>

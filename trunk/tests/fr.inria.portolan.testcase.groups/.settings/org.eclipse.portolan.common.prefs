@@ -1,0 +1,4 @@
+#Thu Dec 23 14:04:01 CET 2010
+PortolanMetamodel=/org.eclipse.portolan.testcase.groups/Metamodel/PortolanCore.ecore
+PortolanModel=/org.eclipse.portolan.testcase.groups/Model/GroupsTestModel.xmi
+eclipse.preferences.version=1

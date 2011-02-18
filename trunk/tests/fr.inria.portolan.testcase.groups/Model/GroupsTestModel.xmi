@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<portolan:Megamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:portolan="http://portolan.inria.fr/1.0" xsi:schemaLocation="http://portolan.inria.fr/1.0">
+  <ownedElements xsi:type="portolan:Entity" __id="A" sourceOf="//@ownedElements.1">
+    <identifier value="A ID"/>
+    <locator value="A location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="A to P" source="//@ownedElements.0" target="//@ownedElements.5"/>
+  <ownedElements xsi:type="portolan:Entity" __id="B" relatedTo="//@ownedElements.3">
+    <identifier value="B ID"/>
+    <locator value="B location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Relationship" __id="BCPXY" linkedElements="//@ownedElements.2 //@ownedElements.4 //@ownedElements.5 //@ownedElements.8 //@ownedElements.9"/>
+  <ownedElements xsi:type="portolan:Entity" __id="C" relatedTo="//@ownedElements.3">
+    <identifier value="C ID"/>
+    <locator value="C location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="P" relatedTo="//@ownedElements.3" sourceOf="//@ownedElements.6" targetOf="//@ownedElements.1">
+    <identifier value="P ID"/>
+    <locator value="P location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="P to QZ" source="//@ownedElements.5" target="//@ownedElements.7 //@ownedElements.10"/>
+  <ownedElements xsi:type="portolan:Entity" __id="Q" targetOf="//@ownedElements.6">
+    <identifier value="Q ID"/>
+    <locator value="Q location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="X" relatedTo="//@ownedElements.3">
+    <identifier value="X ID"/>
+    <locator value="X location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="Y" relatedTo="//@ownedElements.3">
+    <identifier value="Y ID"/>
+    <locator value="Y location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="Z" targetOf="//@ownedElements.6">
+    <identifier value="Z ID"/>
+    <locator value="Z location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Group" __id="Group1" ownedElements="//@ownedElements.0 //@ownedElements.2 //@ownedElements.4">
+    <identifier value="Group1 ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Group" __id="Group2" ownedElements="//@ownedElements.5 //@ownedElements.7">
+    <identifier value="Group2 ID"/>
+  </ownedElements>
+</portolan:Megamodel>
