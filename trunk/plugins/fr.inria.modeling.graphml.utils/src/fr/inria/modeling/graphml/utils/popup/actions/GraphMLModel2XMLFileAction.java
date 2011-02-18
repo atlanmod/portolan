@@ -42,7 +42,7 @@ public class GraphMLModel2XMLFileAction implements IObjectActionDelegate {
 	private IExtractor xmlExtractor;
 	
 	private static String MODEL_KIND = "EMF";
-	private static String XML_MM_URI = "http://www.eclipse.org/gmt/am3/2007/XML";
+	private static String XML_MM_URI = "http://www.eclipse.org/am3/2007/XML";
 
 	private IFile inputFile;
 	
