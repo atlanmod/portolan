@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<graphml:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:graphml="http://modeling.inria.fr/GraphML">
+  <keys id="label" for="node" attrName="label" type="string"/>
+  <keys id="type" for="node" attrName="type" type="string"/>
+  <keys id="weight" for="node" attrName="weight"/>
+  <keys id="error" for="node" attrName="error" type="string"/>
+  <keys id="group" for="node" attrName="group" type="string"/>
+  <keys id="type" attrName="type" type="string"/>
+  <keys id="weight" attrName="weight"/>
+  <keys id="descr" for="node" attrName="descr" type="string"/>
+  <keys id="descr" attrName="descr" type="string"/>
+  <keys id="directed" attrName="directed" type="string"/>
+  <graphs id="Cartography graph">
+    <contents xsi:type="graphml:Node" id="0 - A ID" sourceOf="//@graphs.0/@contents.11 //@graphs.0/@contents.13 //@graphs.0/@contents.22 //@graphs.0/@contents.24" targetOf="//@graphs.0/@contents.14">
+      <datas key="label" value="A ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="A ID&#xA;name: A&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (Unary relation):&#xA;Relationship (Binary relation):&#xA;  -> X&#xA;DirectedRelationship (DR 1 to 0):&#xA;DirectedRelationship (DR 1 to 1):&#xA;  -> Y&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="1 - B ID" sourceOf="//@graphs.0/@contents.35 //@graphs.0/@contents.40" targetOf="//@graphs.0/@contents.16">
+      <datas key="label" value="B ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="B ID&#xA;name: B&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> C&#xA;  -> Z&#xA;  -> W&#xA;DirectedRelationship (DR N to M):&#xA;  -> Y&#xA;  -> W&#xA;DirectedRelationship (DR N to 0):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="2 - C ID" sourceOf="//@graphs.0/@contents.41" targetOf="//@graphs.0/@contents.17">
+      <datas key="label" value="C ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="C ID&#xA;name: C&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> B&#xA;  -> Z&#xA;  -> W&#xA;DirectedRelationship (DR N to M):&#xA;  -> Y&#xA;  -> W&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="3 - D ID" sourceOf="//@graphs.0/@contents.31 //@graphs.0/@contents.36">
+      <datas key="label" value="D ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="D ID&#xA;name: D&#xA;type: Entity&#xA;----------------------------------------------&#xA;DirectedRelationship (DR 1 to N):&#xA;  -> Z&#xA;  -> W&#xA;DirectedRelationship (DR N to 0):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="4 - X ID" targetOf="//@graphs.0/@contents.11 //@graphs.0/@contents.20 //@graphs.0/@contents.28">
+      <datas key="label" value="X ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="X ID&#xA;name: X&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (Binary relation):&#xA;  -> A&#xA;DirectedRelationship (DR 0 to 1):&#xA;DirectedRelationship (DR 0 to N):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="5 - Y ID" targetOf="//@graphs.0/@contents.24 //@graphs.0/@contents.42">
+      <datas key="label" value="Y ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Y ID&#xA;name: Y&#xA;type: Entity&#xA;----------------------------------------------&#xA;DirectedRelationship (DR 1 to 1):&#xA;  -> A&#xA;DirectedRelationship (DR N to M):&#xA;  -> B&#xA;  -> C&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="6 - Z ID" sourceOf="//@graphs.0/@contents.45" targetOf="//@graphs.0/@contents.18 //@graphs.0/@contents.32 //@graphs.0/@contents.46">
+      <datas key="label" value="Z ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Z ID&#xA;name: Z&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> B&#xA;  -> C&#xA;  -> W&#xA;DirectedRelationship (DR Z to Z):&#xA;  -> Z&#xA;DirectedRelationship (DR 1 to N):&#xA;  -> D&#xA;DirectedRelationship (DR Z to Z):&#xA;  -> Z&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="7 - W ID" targetOf="//@graphs.0/@contents.19 //@graphs.0/@contents.29 //@graphs.0/@contents.33 //@graphs.0/@contents.43">
+      <datas key="label" value="W ID"/>
+      <datas key="type" value="Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="W ID&#xA;name: W&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> B&#xA;  -> C&#xA;  -> Z&#xA;DirectedRelationship (DR 1 to N):&#xA;  -> D&#xA;DirectedRelationship (DR N to M):&#xA;  -> B&#xA;  -> C&#xA;DirectedRelationship (DR 0 to N):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Emtpy relation ID" source="//@graphs.0/@contents.9" target="//@graphs.0/@contents.10">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Emtpy relation ID&#xA;name: Emtpy relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Emtpy relation IDsource lacking" sourceOf="//@graphs.0/@contents.8">
+      <datas key="label" value="source lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="Emtpy relation ID source lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Emtpy relation IDtarget lacking" targetOf="//@graphs.0/@contents.8">
+      <datas key="label" value="target lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="Emtpy relation ID target lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="Binary relation ID" source="//@graphs.0/@contents.0" target="//@graphs.0/@contents.4">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Binary relation ID&#xA;name: Binary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> A (Entity)&#xA;  -> X (Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Unary relation ID" sourceOf="//@graphs.0/@contents.14" targetOf="//@graphs.0/@contents.13">
+      <datas key="label" value=""/>
+      <datas key="type" value="invisible"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value=""/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="8 - Unary relation ID" source="//@graphs.0/@contents.0" target="//@graphs.0/@contents.12">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Unary relation ID&#xA;name: Unary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> A (Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="9 - Unary relation ID" source="//@graphs.0/@contents.12" target="//@graphs.0/@contents.0">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Unary relation ID&#xA;name: Unary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> A (Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="N-nary relation ID" sourceOf="//@graphs.0/@contents.16 //@graphs.0/@contents.17 //@graphs.0/@contents.18 //@graphs.0/@contents.19">
+      <datas key="label" value=""/>
+      <datas key="type" value="invisible"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value=""/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="10 - N-nary relation ID" source="//@graphs.0/@contents.15" target="//@graphs.0/@contents.1">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="11 - N-nary relation ID" source="//@graphs.0/@contents.15" target="//@graphs.0/@contents.2">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="12 - N-nary relation ID" source="//@graphs.0/@contents.15" target="//@graphs.0/@contents.6">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="13 - N-nary relation ID" source="//@graphs.0/@contents.15" target="//@graphs.0/@contents.7">
+      <datas key="type" value="Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="DR 0 to 1 ID" source="//@graphs.0/@contents.21" target="//@graphs.0/@contents.4">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 0 to 1 ID&#xA;name: DR 0 to 1&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR 0 to 1 IDsource lacking" sourceOf="//@graphs.0/@contents.20">
+      <datas key="label" value="source lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR 0 to 1 ID source lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="DR 1 to 0 ID" source="//@graphs.0/@contents.0" target="//@graphs.0/@contents.23">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to 0 ID&#xA;name: DR 1 to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Entity):&#xA;targets:&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR 1 to 0 IDtarget lacking" targetOf="//@graphs.0/@contents.22">
+      <datas key="label" value="target lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR 1 to 0 ID target lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="DR 1 to 1 ID" source="//@graphs.0/@contents.0" target="//@graphs.0/@contents.5">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to 1 ID&#xA;name: DR 1 to 1&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Sequence {'X ID', 'W ID'}" sourceOf="//@graphs.0/@contents.28 //@graphs.0/@contents.29" targetOf="//@graphs.0/@contents.27">
+      <datas key="label" value=""/>
+      <datas key="type" value="invisible"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value=""/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR 0 to N IDsource lacking" sourceOf="//@graphs.0/@contents.27">
+      <datas key="label" value="source lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR 0 to N ID source lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="14 - DR 0 to N ID" source="//@graphs.0/@contents.26" target="//@graphs.0/@contents.25">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="15 - DR 0 to N ID" source="//@graphs.0/@contents.25" target="//@graphs.0/@contents.4">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="16 - DR 0 to N ID" source="//@graphs.0/@contents.25" target="//@graphs.0/@contents.7">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Sequence {'D ID', 'Z ID', 'W ID'}" sourceOf="//@graphs.0/@contents.32 //@graphs.0/@contents.33" targetOf="//@graphs.0/@contents.31">
+      <datas key="label" value=""/>
+      <datas key="type" value="invisible"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value=""/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="17 - DR 1 to N ID" source="//@graphs.0/@contents.3" target="//@graphs.0/@contents.30">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="18 - DR 1 to N ID" source="//@graphs.0/@contents.30" target="//@graphs.0/@contents.6">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="19 - DR 1 to N ID" source="//@graphs.0/@contents.30" target="//@graphs.0/@contents.7">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Sequence {'B ID', 'D ID'}" sourceOf="//@graphs.0/@contents.38" targetOf="//@graphs.0/@contents.35 //@graphs.0/@contents.36">
+      <datas key="label" value=""/>
+      <datas key="type" value="invisible"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value=""/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="20 - DR N to 0 ID" source="//@graphs.0/@contents.1" target="//@graphs.0/@contents.34">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> D (Entity):&#xA;targets:&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="21 - DR N to 0 ID" source="//@graphs.0/@contents.3" target="//@graphs.0/@contents.34">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> D (Entity):&#xA;targets:&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR N to 0 IDtarget lacking" targetOf="//@graphs.0/@contents.38">
+      <datas key="label" value="target lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR N to 0 ID target lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="22 - DR N to 0 ID" source="//@graphs.0/@contents.34" target="//@graphs.0/@contents.37">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> D (Entity):&#xA;targets:&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Sequence {'B ID', 'C ID', 'Y ID', 'W ID'}" sourceOf="//@graphs.0/@contents.42 //@graphs.0/@contents.43" targetOf="//@graphs.0/@contents.40 //@graphs.0/@contents.41">
+      <datas key="label" value=""/>
+      <datas key="type" value="invisible"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value=""/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="23 - DR N to M" source="//@graphs.0/@contents.1" target="//@graphs.0/@contents.39">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="24 - DR N to M" source="//@graphs.0/@contents.2" target="//@graphs.0/@contents.39">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="25 - DR N to M" source="//@graphs.0/@contents.39" target="//@graphs.0/@contents.5">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="26 - DR N to M" source="//@graphs.0/@contents.39" target="//@graphs.0/@contents.7">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="Sequence {'Z ID', 'Z ID'}" sourceOf="//@graphs.0/@contents.46" targetOf="//@graphs.0/@contents.45">
+      <datas key="label" value=""/>
+      <datas key="type" value="invisible"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value=""/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="27 - no identifier" source="//@graphs.0/@contents.6" target="//@graphs.0/@contents.44">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: DR Z to Z&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> Z (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="28 - no identifier" source="//@graphs.0/@contents.44" target="//@graphs.0/@contents.6">
+      <datas key="type" value="DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: DR Z to Z&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> Z (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+  </graphs>
+</graphml:Root>

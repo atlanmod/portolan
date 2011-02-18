@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<am3Xml:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am3Xml="http://www.eclipse.org/am3/2007/XML" name="graphml">
+  <children xsi:type="am3Xml:Attribute" name="xmlns:xsi" value="http://www.w3.org/2001/XMLSchema-instance"/>
+  <children xsi:type="am3Xml:Attribute" name="xsi:schemaLocation" value="http://graphml.graphdrawing.org/xmlnshttp://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"/>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="label"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="node"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="label"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="type"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="node"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="type"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="weight"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="node"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="weight"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="double"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="error"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="node"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="error"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="group"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="node"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="group"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="type"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="edge"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="type"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="weight"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="edge"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="weight"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="double"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="descr"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="node"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="descr"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="descr"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="edge"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="descr"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="key">
+    <children xsi:type="am3Xml:Attribute" name="id" value="directed"/>
+    <children xsi:type="am3Xml:Attribute" name="for" value="edge"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.name" value="directed"/>
+    <children xsi:type="am3Xml:Attribute" name="attr.type" value="string"/>
+  </children>
+  <children xsi:type="am3Xml:Element" name="graph">
+    <children xsi:type="am3Xml:Attribute" name="id" value="Cartography graph"/>
+    <children xsi:type="am3Xml:Attribute" name="edgedefault" value="directed"/>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Emtpy relation ID&#xA;name: Emtpy relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Emtpy relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Emtpy relation IDsource lacking"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Emtpy relation IDtarget lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Binary relation ID&#xA;name: Binary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> A (Entity)&#xA;  -> X (Entity)&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Binary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="0 - A ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="4 - X ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Unary relation ID&#xA;name: Unary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> A (Entity)&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="8 - Unary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="0 - A ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Unary relation ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Unary relation ID&#xA;name: Unary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> A (Entity)&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="9 - Unary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Unary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="0 - A ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="10 - N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="1 - B ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="11 - N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="2 - C ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="12 - N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="6 - Z ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Relationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Entity)&#xA;  -> C (Entity)&#xA;  -> Z (Entity)&#xA;  -> W (Entity)&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="13 - N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="N-nary relation ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="7 - W ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 0 to 1 ID&#xA;name: DR 0 to 1&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="DR 0 to 1 ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="DR 0 to 1 IDsource lacking"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="4 - X ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 1 to 0 ID&#xA;name: DR 1 to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Entity):&#xA;targets:&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="DR 1 to 0 ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="0 - A ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="DR 1 to 0 IDtarget lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 1 to 1 ID&#xA;name: DR 1 to 1&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="DR 1 to 1 ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="0 - A ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="5 - Y ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="14 - DR 0 to N ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="DR 0 to N IDsource lacking"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Sequence {'X ID', 'W ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="15 - DR 0 to N ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'X ID', 'W ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="4 - X ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="16 - DR 0 to N ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'X ID', 'W ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="7 - W ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="17 - DR 1 to N ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="3 - D ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Sequence {'D ID', 'Z ID', 'W ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="18 - DR 1 to N ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'D ID', 'Z ID', 'W ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="6 - Z ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="19 - DR 1 to N ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'D ID', 'Z ID', 'W ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="7 - W ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> D (Entity):&#xA;targets:&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="20 - DR N to 0 ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="1 - B ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Sequence {'B ID', 'D ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> D (Entity):&#xA;targets:&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="21 - DR N to 0 ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="3 - D ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Sequence {'B ID', 'D ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> D (Entity):&#xA;targets:&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="22 - DR N to 0 ID"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'B ID', 'D ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="DR N to 0 IDtarget lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="23 - DR N to M"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="1 - B ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Sequence {'B ID', 'C ID', 'Y ID', 'W ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="24 - DR N to M"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="2 - C ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Sequence {'B ID', 'C ID', 'Y ID', 'W ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="25 - DR N to M"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'B ID', 'C ID', 'Y ID', 'W ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="5 - Y ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to M&#xA;name: DR N to M&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Entity):&#xA;  -> C (Entity):&#xA;targets:&#xA;  -> Y (Entity):&#xA;  -> W (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="26 - DR N to M"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'B ID', 'C ID', 'Y ID', 'W ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="7 - W ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="no identifier&#xA;name: DR Z to Z&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> Z (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="false"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="27 - no identifier"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="6 - Z ID"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="Sequence {'Z ID', 'Z ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="edge">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="DirectedRelationship"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="no identifier&#xA;name: DR Z to Z&#xA;type: DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> Z (Entity):&#xA;targets:&#xA;  -> Z (Entity):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="directed"/>
+        <children xsi:type="am3Xml:Text" value="true"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="28 - no identifier"/>
+      <children xsi:type="am3Xml:Attribute" name="source" value="Sequence {'Z ID', 'Z ID'}"/>
+      <children xsi:type="am3Xml:Attribute" name="target" value="6 - Z ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="A ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="A ID&#xA;name: A&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (Unary relation):&#xA;Relationship (Binary relation):&#xA;  -> X&#xA;DirectedRelationship (DR 1 to 0):&#xA;DirectedRelationship (DR 1 to 1):&#xA;  -> Y&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="0 - A ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="B ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="B ID&#xA;name: B&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> C&#xA;  -> Z&#xA;  -> W&#xA;DirectedRelationship (DR N to M):&#xA;  -> Y&#xA;  -> W&#xA;DirectedRelationship (DR N to 0):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="1 - B ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="C ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="C ID&#xA;name: C&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> B&#xA;  -> Z&#xA;  -> W&#xA;DirectedRelationship (DR N to M):&#xA;  -> Y&#xA;  -> W&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="2 - C ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="D ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="D ID&#xA;name: D&#xA;type: Entity&#xA;----------------------------------------------&#xA;DirectedRelationship (DR 1 to N):&#xA;  -> Z&#xA;  -> W&#xA;DirectedRelationship (DR N to 0):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="3 - D ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="X ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="X ID&#xA;name: X&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (Binary relation):&#xA;  -> A&#xA;DirectedRelationship (DR 0 to 1):&#xA;DirectedRelationship (DR 0 to N):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="4 - X ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="Y ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Y ID&#xA;name: Y&#xA;type: Entity&#xA;----------------------------------------------&#xA;DirectedRelationship (DR 1 to 1):&#xA;  -> A&#xA;DirectedRelationship (DR N to M):&#xA;  -> B&#xA;  -> C&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="5 - Y ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="Z ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Z ID&#xA;name: Z&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> B&#xA;  -> C&#xA;  -> W&#xA;DirectedRelationship (DR Z to Z):&#xA;  -> Z&#xA;DirectedRelationship (DR 1 to N):&#xA;  -> D&#xA;DirectedRelationship (DR Z to Z):&#xA;  -> Z&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="6 - Z ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="W ID"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="Entity"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="W ID&#xA;name: W&#xA;type: Entity&#xA;----------------------------------------------&#xA;Relationship (N-nary relation):&#xA;  -> B&#xA;  -> C&#xA;  -> Z&#xA;DirectedRelationship (DR 1 to N):&#xA;  -> D&#xA;DirectedRelationship (DR N to M):&#xA;  -> B&#xA;  -> C&#xA;DirectedRelationship (DR 0 to N):&#xA;"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="7 - W ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="source lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="** lacking type **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value="lacks"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="** lacking nodes **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Emtpy relation ID source lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Emtpy relation IDsource lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="target lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="** lacking type **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value="lacks"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="** lacking nodes **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="Emtpy relation ID target lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Emtpy relation IDtarget lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="invisible"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Unary relation ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="invisible"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="N-nary relation ID"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="source lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="** lacking type **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value="lacks"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="** lacking nodes **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 0 to 1 ID source lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="DR 0 to 1 IDsource lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="target lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="** lacking type **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value="lacks"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="** lacking nodes **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 1 to 0 ID target lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="DR 1 to 0 IDtarget lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="invisible"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Sequence {'X ID', 'W ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="source lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="** lacking type **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value="lacks"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="** lacking nodes **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR 0 to N ID source lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="DR 0 to N IDsource lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="invisible"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Sequence {'D ID', 'Z ID', 'W ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="invisible"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Sequence {'B ID', 'D ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value="target lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="** lacking type **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value="lacks"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="** lacking nodes **"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value="DR N to 0 ID target lacking"/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="DR N to 0 IDtarget lacking"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="invisible"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Sequence {'B ID', 'C ID', 'Y ID', 'W ID'}"/>
+    </children>
+    <children xsi:type="am3Xml:Element" name="node">
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="label"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="type"/>
+        <children xsi:type="am3Xml:Text" value="invisible"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="weight"/>
+        <children xsi:type="am3Xml:Text" value="0"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="error"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="group"/>
+        <children xsi:type="am3Xml:Text" value="#na"/>
+      </children>
+      <children xsi:type="am3Xml:Element" name="data">
+        <children xsi:type="am3Xml:Attribute" name="key" value="descr"/>
+        <children xsi:type="am3Xml:Text" value=""/>
+      </children>
+      <children xsi:type="am3Xml:Attribute" name="id" value="Sequence {'Z ID', 'Z ID'}"/>
+    </children>
+  </children>
+</am3Xml:Root>

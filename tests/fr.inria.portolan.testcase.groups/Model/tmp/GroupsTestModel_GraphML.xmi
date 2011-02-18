@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<graphml:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:graphml="http://modeling.inria.fr/GraphML">
+  <keys id="label" for="node" attrName="label" type="string"/>
+  <keys id="type" for="node" attrName="type" type="string"/>
+  <keys id="weight" for="node" attrName="weight"/>
+  <keys id="error" for="node" attrName="error" type="string"/>
+  <keys id="group" for="node" attrName="group" type="string"/>
+  <keys id="type" attrName="type" type="string"/>
+  <keys id="weight" attrName="weight"/>
+  <keys id="descr" for="node" attrName="descr" type="string"/>
+  <keys id="descr" attrName="descr" type="string"/>
+  <keys id="directed" attrName="directed" type="string"/>
+  <graphs id="Cartography graph">
+    <contents xsi:type="graphml:Edge" id="0 - no identifier" source="//@graphs.0/@contents.12" target="//@graphs.0/@contents.13">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="1 - no identifier" source="//@graphs.0/@contents.12" target="//@graphs.0/@contents.14">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="2 - no identifier" source="//@graphs.0/@contents.12" target="//@graphs.0/@contents.20">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="3 - no identifier" source="//@graphs.0/@contents.12" target="//@graphs.0/@contents.21">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="4 - no identifier" source="//@graphs.0/@contents.13" target="//@graphs.0/@contents.14">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="5 - no identifier" source="//@graphs.0/@contents.13" target="//@graphs.0/@contents.20">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="6 - no identifier" source="//@graphs.0/@contents.13" target="//@graphs.0/@contents.21">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="7 - no identifier" source="//@graphs.0/@contents.14" target="//@graphs.0/@contents.20">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="8 - no identifier" source="//@graphs.0/@contents.14" target="//@graphs.0/@contents.21">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="9 - no identifier" source="//@graphs.0/@contents.20" target="//@graphs.0/@contents.21">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: BCPXY&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> P (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;  -> Y (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="10 - A ID" sourceOf="//@graphs.0/@contents.11 //@graphs.0/@contents.17">
+      <datas key="label" value="A ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="Group1 ID"/>
+      <datas key="descr" value="A ID&#xA;name: A&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!DirectedRelationship (A to P):&#xA;  -> P ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="10 - no identifier" source="//@graphs.0/@contents.10" target="//@graphs.0/@contents.14">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: A to P&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Cartography!Entity):&#xA;targets:&#xA;  -> P (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="12 - B ID" sourceOf="//@graphs.0/@contents.0 //@graphs.0/@contents.1 //@graphs.0/@contents.2 //@graphs.0/@contents.3">
+      <datas key="label" value="B ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="Group1 ID"/>
+      <datas key="descr" value="B ID&#xA;name: B&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (BCPXY):&#xA;  -> C ID (Cartography!Entity)&#xA;  -> P ID (Cartography!Entity)&#xA;  -> X ID (Cartography!Entity)&#xA;  -> Y ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="13 - C ID" sourceOf="//@graphs.0/@contents.4 //@graphs.0/@contents.5 //@graphs.0/@contents.6" targetOf="//@graphs.0/@contents.0">
+      <datas key="label" value="C ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="Group1 ID"/>
+      <datas key="descr" value="C ID&#xA;name: C&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (BCPXY):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> P ID (Cartography!Entity)&#xA;  -> X ID (Cartography!Entity)&#xA;  -> Y ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="14 - P ID" sourceOf="//@graphs.0/@contents.15 //@graphs.0/@contents.16 //@graphs.0/@contents.7 //@graphs.0/@contents.8 //@graphs.0/@contents.19 //@graphs.0/@contents.23" targetOf="//@graphs.0/@contents.11 //@graphs.0/@contents.17 //@graphs.0/@contents.1 //@graphs.0/@contents.4">
+      <datas key="label" value="P ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="Group2 ID"/>
+      <datas key="descr" value="P ID&#xA;name: P&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (BCPXY):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> C ID (Cartography!Entity)&#xA;  -> X ID (Cartography!Entity)&#xA;  -> Y ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (P to QZ):&#xA;  -> Q ID (Cartography!Entity)&#xA;  -> Z ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (A to P):&#xA;  -> A ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="14 - no identifier" source="//@graphs.0/@contents.14" target="//@graphs.0/@contents.18">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: P to QZ&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> P (Cartography!Entity):&#xA;targets:&#xA;  -> Q (Cartography!Entity):&#xA;  -> Z (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="15 - no identifier" source="//@graphs.0/@contents.14" target="//@graphs.0/@contents.22">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: P to QZ&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> P (Cartography!Entity):&#xA;targets:&#xA;  -> Q (Cartography!Entity):&#xA;  -> Z (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="16 - no identifier" source="//@graphs.0/@contents.10" target="//@graphs.0/@contents.14">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: A to P&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Cartography!Entity):&#xA;targets:&#xA;  -> P (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="18 - Q ID" targetOf="//@graphs.0/@contents.15 //@graphs.0/@contents.19">
+      <datas key="label" value="Q ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="Group2 ID"/>
+      <datas key="descr" value="Q ID&#xA;name: Q&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!DirectedRelationship (P to QZ):&#xA;  -> P ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="18 - no identifier" source="//@graphs.0/@contents.14" target="//@graphs.0/@contents.18">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: P to QZ&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> P (Cartography!Entity):&#xA;targets:&#xA;  -> Q (Cartography!Entity):&#xA;  -> Z (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="20 - X ID" sourceOf="//@graphs.0/@contents.9" targetOf="//@graphs.0/@contents.2 //@graphs.0/@contents.5 //@graphs.0/@contents.7">
+      <datas key="label" value="X ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="X ID&#xA;name: X&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (BCPXY):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> C ID (Cartography!Entity)&#xA;  -> P ID (Cartography!Entity)&#xA;  -> Y ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="21 - Y ID" targetOf="//@graphs.0/@contents.3 //@graphs.0/@contents.6 //@graphs.0/@contents.8 //@graphs.0/@contents.9">
+      <datas key="label" value="Y ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Y ID&#xA;name: Y&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (BCPXY):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> C ID (Cartography!Entity)&#xA;  -> P ID (Cartography!Entity)&#xA;  -> X ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="22 - Z ID" targetOf="//@graphs.0/@contents.16 //@graphs.0/@contents.23">
+      <datas key="label" value="Z ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Z ID&#xA;name: Z&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!DirectedRelationship (P to QZ):&#xA;  -> P ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="22 - no identifier" source="//@graphs.0/@contents.14" target="//@graphs.0/@contents.22">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: P to QZ&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> P (Cartography!Entity):&#xA;targets:&#xA;  -> Q (Cartography!Entity):&#xA;  -> Z (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+  </graphs>
+</graphml:Root>

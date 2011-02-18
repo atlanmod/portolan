@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<graphml:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:graphml="http://modeling.inria.fr/GraphML">
+  <keys id="label" for="node" attrName="label" type="string"/>
+  <keys id="type" for="node" attrName="type" type="string"/>
+  <keys id="weight" for="node" attrName="weight"/>
+  <keys id="error" for="node" attrName="error" type="string"/>
+  <keys id="group" for="node" attrName="group" type="string"/>
+  <keys id="type" attrName="type" type="string"/>
+  <keys id="weight" attrName="weight"/>
+  <keys id="descr" for="node" attrName="descr" type="string"/>
+  <keys id="descr" attrName="descr" type="string"/>
+  <keys id="directed" attrName="directed" type="string"/>
+  <graphs id="Cartography graph">
+    <contents xsi:type="graphml:Edge" id="0 - Binary relation ID" source="//@graphs.0/@contents.7" target="//@graphs.0/@contents.23">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="Binary relation ID&#xA;name: Binary relation&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> A (Cartography!Entity)&#xA;  -> X (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="1 - N-nary relation ID" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.16">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> Z (Cartography!Entity)&#xA;  -> W (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="2 - N-nary relation ID" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.32">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> Z (Cartography!Entity)&#xA;  -> W (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="3 - N-nary relation ID" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> Z (Cartography!Entity)&#xA;  -> W (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="4 - N-nary relation ID" source="//@graphs.0/@contents.16" target="//@graphs.0/@contents.32">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> Z (Cartography!Entity)&#xA;  -> W (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="5 - N-nary relation ID" source="//@graphs.0/@contents.16" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> Z (Cartography!Entity)&#xA;  -> W (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="6 - N-nary relation ID" source="//@graphs.0/@contents.32" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!Relationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="N-nary relation ID&#xA;name: N-nary relation&#xA;type: Cartography!Relationship&#xA;--------------------------------------------------------------&#xA;relates: &#xA;  -> B (Cartography!Entity)&#xA;  -> C (Cartography!Entity)&#xA;  -> Z (Cartography!Entity)&#xA;  -> W (Cartography!Entity)&#xA;"/>
+      <datas key="directed" value="false"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="7 - A ID" sourceOf="//@graphs.0/@contents.9 //@graphs.0/@contents.10 //@graphs.0/@contents.0 //@graphs.0/@contents.29">
+      <datas key="label" value="A ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="A ID&#xA;name: A&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (Unary relation):&#xA;Cartography!Relationship (Binary relation):&#xA;  -> X ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR 1 to 0):&#xA;Cartography!DirectedRelationship (DR 1 to 1):&#xA;  -> Y ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR 1 to 0 ID target lacking" targetOf="//@graphs.0/@contents.9">
+      <datas key="label" value="target lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR 1 to 0 ID target lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="7 - DR 1 to 0 ID" source="//@graphs.0/@contents.7" target="//@graphs.0/@contents.8">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to 0 ID&#xA;name: DR 1 to 0&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Cartography!Entity):&#xA;targets:&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="8 - DR 1 to 1 ID" source="//@graphs.0/@contents.7" target="//@graphs.0/@contents.28">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to 1 ID&#xA;name: DR 1 to 1&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="10 - B ID" sourceOf="//@graphs.0/@contents.12 //@graphs.0/@contents.13 //@graphs.0/@contents.15 //@graphs.0/@contents.1 //@graphs.0/@contents.2 //@graphs.0/@contents.3 //@graphs.0/@contents.30 //@graphs.0/@contents.38">
+      <datas key="label" value="B ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="B ID&#xA;name: B&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (N-nary relation):&#xA;  -> C ID (Cartography!Entity)&#xA;  -> Z ID (Cartography!Entity)&#xA;  -> W ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR N to M):&#xA;  -> Y ID (Cartography!Entity)&#xA;  -> W ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR N to 0):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="10 - DR N to M" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.28">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="11 - DR N to M" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR N to 0 ID target lacking" targetOf="//@graphs.0/@contents.15 //@graphs.0/@contents.22">
+      <datas key="label" value="target lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR N to 0 ID target lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="12 - DR N to 0 ID" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.14">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> D (Cartography!Entity):&#xA;targets:&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="14 - C ID" sourceOf="//@graphs.0/@contents.17 //@graphs.0/@contents.18 //@graphs.0/@contents.4 //@graphs.0/@contents.5 //@graphs.0/@contents.31 //@graphs.0/@contents.39" targetOf="//@graphs.0/@contents.1">
+      <datas key="label" value="C ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="C ID&#xA;name: C&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (N-nary relation):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> Z ID (Cartography!Entity)&#xA;  -> W ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR N to M):&#xA;  -> Y ID (Cartography!Entity)&#xA;  -> W ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="14 - DR N to M" source="//@graphs.0/@contents.16" target="//@graphs.0/@contents.28">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="15 - DR N to M" source="//@graphs.0/@contents.16" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="17 - D ID" sourceOf="//@graphs.0/@contents.20 //@graphs.0/@contents.21 //@graphs.0/@contents.22 //@graphs.0/@contents.34 //@graphs.0/@contents.37">
+      <datas key="label" value="D ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="D ID&#xA;name: D&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!DirectedRelationship (DR 1 to N):&#xA;  -> Z ID (Cartography!Entity)&#xA;  -> W ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR N to 0):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="17 - DR 1 to N ID" source="//@graphs.0/@contents.19" target="//@graphs.0/@contents.32">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Cartography!Entity):&#xA;targets:&#xA;  -> Z (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="18 - DR 1 to N ID" source="//@graphs.0/@contents.19" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Cartography!Entity):&#xA;targets:&#xA;  -> Z (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="19 - DR N to 0 ID" source="//@graphs.0/@contents.19" target="//@graphs.0/@contents.14">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to 0 ID&#xA;name: DR N to 0&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> D (Cartography!Entity):&#xA;targets:&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="21 - X ID" targetOf="//@graphs.0/@contents.25 //@graphs.0/@contents.27 //@graphs.0/@contents.0">
+      <datas key="label" value="X ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="X ID&#xA;name: X&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (Binary relation):&#xA;  -> A ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR 0 to 1):&#xA;Cartography!DirectedRelationship (DR 0 to N):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR 0 to 1 ID source lacking" sourceOf="//@graphs.0/@contents.25">
+      <datas key="label" value="source lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR 0 to 1 ID source lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="21 - DR 0 to 1 ID" source="//@graphs.0/@contents.24" target="//@graphs.0/@contents.23">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 0 to 1 ID&#xA;name: DR 0 to 1&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="DR 0 to N ID source lacking" sourceOf="//@graphs.0/@contents.27 //@graphs.0/@contents.40">
+      <datas key="label" value="source lacking"/>
+      <datas key="type" value="** lacking type **"/>
+      <datas key="error" value="lacks"/>
+      <datas key="group" value="** lacking nodes **"/>
+      <datas key="descr" value="DR 0 to N ID source lacking"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="22 - DR 0 to N ID" source="//@graphs.0/@contents.26" target="//@graphs.0/@contents.23">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="24 - Y ID" targetOf="//@graphs.0/@contents.10 //@graphs.0/@contents.12 //@graphs.0/@contents.17 //@graphs.0/@contents.29 //@graphs.0/@contents.30 //@graphs.0/@contents.31">
+      <datas key="label" value="Y ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Y ID&#xA;name: Y&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!DirectedRelationship (DR 1 to 1):&#xA;  -> A ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR N to M):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> C ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="24 - DR 1 to 1 ID" source="//@graphs.0/@contents.7" target="//@graphs.0/@contents.28">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to 1 ID&#xA;name: DR 1 to 1&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> A (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="25 - DR N to M" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.28">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="26 - DR N to M" source="//@graphs.0/@contents.16" target="//@graphs.0/@contents.28">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="28 - Z ID" sourceOf="//@graphs.0/@contents.33 //@graphs.0/@contents.6 //@graphs.0/@contents.35" targetOf="//@graphs.0/@contents.20 //@graphs.0/@contents.33 //@graphs.0/@contents.34 //@graphs.0/@contents.35 //@graphs.0/@contents.2 //@graphs.0/@contents.4">
+      <datas key="label" value="Z ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="Z ID&#xA;name: Z&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (N-nary relation):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> C ID (Cartography!Entity)&#xA;  -> W ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR Z to Z):&#xA;  -> Z ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR 1 to N):&#xA;  -> D ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR Z to Z):&#xA;  -> Z ID (Cartography!Entity)&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="28 - no identifier" source="//@graphs.0/@contents.32" target="//@graphs.0/@contents.32">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: DR Z to Z&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> Z (Cartography!Entity):&#xA;targets:&#xA;  -> Z (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="29 - DR 1 to N ID" source="//@graphs.0/@contents.19" target="//@graphs.0/@contents.32">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Cartography!Entity):&#xA;targets:&#xA;  -> Z (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="30 - no identifier" source="//@graphs.0/@contents.32" target="//@graphs.0/@contents.32">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="no identifier&#xA;name: DR Z to Z&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> Z (Cartography!Entity):&#xA;targets:&#xA;  -> Z (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Node" id="32 - W ID" targetOf="//@graphs.0/@contents.13 //@graphs.0/@contents.18 //@graphs.0/@contents.21 //@graphs.0/@contents.37 //@graphs.0/@contents.38 //@graphs.0/@contents.39 //@graphs.0/@contents.40 //@graphs.0/@contents.3 //@graphs.0/@contents.5 //@graphs.0/@contents.6">
+      <datas key="label" value="W ID"/>
+      <datas key="type" value="Cartography!Entity"/>
+      <datas key="weight" value="0"/>
+      <datas key="error" value=""/>
+      <datas key="group" value="#na"/>
+      <datas key="descr" value="W ID&#xA;name: W&#xA;type: Cartography!Entity&#xA;----------------------------------------------&#xA;Cartography!Relationship (N-nary relation):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> C ID (Cartography!Entity)&#xA;  -> Z ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR 1 to N):&#xA;  -> D ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR N to M):&#xA;  -> B ID (Cartography!Entity)&#xA;  -> C ID (Cartography!Entity)&#xA;Cartography!DirectedRelationship (DR 0 to N):&#xA;"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="32 - DR 1 to N ID" source="//@graphs.0/@contents.19" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 1 to N ID&#xA;name: DR 1 to N&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> D (Cartography!Entity):&#xA;targets:&#xA;  -> Z (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="33 - DR N to M" source="//@graphs.0/@contents.11" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="34 - DR N to M" source="//@graphs.0/@contents.16" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR N to M&#xA;name: DR N to M&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;  -> B (Cartography!Entity):&#xA;  -> C (Cartography!Entity):&#xA;targets:&#xA;  -> Y (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+    <contents xsi:type="graphml:Edge" id="35 - DR 0 to N ID" source="//@graphs.0/@contents.26" target="//@graphs.0/@contents.36">
+      <datas key="type" value="Cartography!DirectedRelationship"/>
+      <datas key="weight" value="0"/>
+      <datas key="descr" value="DR 0 to N ID&#xA;name: DR 0 to N&#xA;type: Cartography!DirectedRelationship&#xA;----------------------------------------------&#xA;sources:&#xA;targets:&#xA;  -> X (Cartography!Entity):&#xA;  -> W (Cartography!Entity):&#xA;"/>
+      <datas key="directed" value="true"/>
+    </contents>
+  </graphs>
+</graphml:Root>

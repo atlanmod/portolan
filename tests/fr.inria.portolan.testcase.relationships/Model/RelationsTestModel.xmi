@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ASCII"?>
+<portolan:Megamodel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:portolan="http://portolan.inria.fr/1.0" xsi:schemaLocation="http://portolan.eclipse.org/1.0 /org.eclipse.portolan.testcase.relationships/Metamodel/PortolanCore.ecore#/0">
+  <ownedElements xsi:type="portolan:Entity" __id="A" relatedTo="//@ownedElements.9 //@ownedElements.10" sourceOf="//@ownedElements.14 //@ownedElements.15">
+    <identifier value="A ID"/>
+    <locator value="A location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="B" relatedTo="//@ownedElements.11" sourceOf="//@ownedElements.20 //@ownedElements.19">
+    <identifier value="B ID"/>
+    <locator value="B location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="C" relatedTo="//@ownedElements.11" sourceOf="//@ownedElements.20">
+    <identifier value="C ID"/>
+    <locator value="C location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="D" sourceOf="//@ownedElements.18 //@ownedElements.19">
+    <identifier value="D ID"/>
+    <locator value="D location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="X" relatedTo="//@ownedElements.10" targetOf="//@ownedElements.13 //@ownedElements.17">
+    <identifier value="X ID"/>
+    <locator value="X location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="Y" targetOf="//@ownedElements.15 //@ownedElements.20">
+    <identifier value="Y ID"/>
+    <locator value="Y location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="Z" relatedTo="//@ownedElements.11" sourceOf="//@ownedElements.16" targetOf="//@ownedElements.18 //@ownedElements.16">
+    <identifier value="Z ID"/>
+    <locator value="Z location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Entity" __id="W" relatedTo="//@ownedElements.11" targetOf="//@ownedElements.18 //@ownedElements.20 //@ownedElements.17">
+    <identifier value="W ID"/>
+    <locator value="W location"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Relationship" __id="Emtpy relation">
+    <identifier value="Emtpy relation ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Relationship" __id="Unary relation" linkedElements="//@ownedElements.0">
+    <identifier value="Unary relation ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Relationship" __id="Binary relation" linkedElements="//@ownedElements.0 //@ownedElements.4">
+    <identifier value="Binary relation ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:Relationship" __id="N-nary relation" linkedElements="//@ownedElements.1 //@ownedElements.2 //@ownedElements.6 //@ownedElements.7">
+    <identifier value="N-nary relation ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR empty">
+    <identifier value="DR empty ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR 0 to 1" target="//@ownedElements.4">
+    <identifier value="DR 0 to 1 ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR 1 to 0" source="//@ownedElements.0">
+    <identifier value="DR 1 to 0 ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR 1 to 1" source="//@ownedElements.0" target="//@ownedElements.5">
+    <identifier value="DR 1 to 1 ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR Z to Z" source="//@ownedElements.6" target="//@ownedElements.6"/>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR 0 to N" target="//@ownedElements.4 //@ownedElements.7">
+    <identifier value="DR 0 to N ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR 1 to N" source="//@ownedElements.3" target="//@ownedElements.6 //@ownedElements.7">
+    <identifier value="DR 1 to N ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR N to 0" source="//@ownedElements.1 //@ownedElements.3">
+    <identifier value="DR N to 0 ID"/>
+  </ownedElements>
+  <ownedElements xsi:type="portolan:DirectedRelationship" __id="DR N to M" source="//@ownedElements.1 //@ownedElements.2" target="//@ownedElements.5 //@ownedElements.7">
+    <identifier value="DR N to M"/>
+  </ownedElements>
+</portolan:Megamodel>
