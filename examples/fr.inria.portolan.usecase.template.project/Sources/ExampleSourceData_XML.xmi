@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<am3Xml:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am3Xml="http://www.eclipse.org/am3/2007/XML" name="source">
+  <children xsi:type="am3Xml:Attribute" name="xmlns:xsi" value="http://www.w3.org/2001/XMLSchema-instance"/>
+  <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="am3Xml:Element" name="node">
+    <children xsi:type="am3Xml:Attribute" name="id" value="Node ONE"/>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="description">
+      <children xsi:type="am3Xml:Attribute" name="value" value="First node"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="place">
+      <children xsi:type="am3Xml:Attribute" name="value" value="-1.0,47.0,0.0"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="am3Xml:Element" name="node">
+    <children xsi:type="am3Xml:Attribute" name="id" value="Node TWO"/>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="description">
+      <children xsi:type="am3Xml:Attribute" name="value" value="Second node"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="place">
+      <children xsi:type="am3Xml:Attribute" name="value" value="1.5,50.0,0.0"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="am3Xml:Element" name="node">
+    <children xsi:type="am3Xml:Attribute" name="id" value="Node THREE"/>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="description">
+      <children xsi:type="am3Xml:Attribute" name="value" value="Third node"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="place">
+      <children xsi:type="am3Xml:Attribute" name="value" value="1.0,45.0,0.0"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="am3Xml:Element" name="edge">
+    <children xsi:type="am3Xml:Attribute" name="text" value="simple edge"/>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="from">
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="am3Xml:Element" name="nodeId">
+        <children xsi:type="am3Xml:Attribute" name="id" value="Node ONE"/>
+      </children>
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="to">
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="am3Xml:Element" name="nodeId">
+        <children xsi:type="am3Xml:Attribute" name="id" value="Node TWO"/>
+      </children>
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="am3Xml:Element" name="edge">
+    <children xsi:type="am3Xml:Attribute" name="text" value="multiple edge"/>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="from">
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="am3Xml:Element" name="nodeId">
+        <children xsi:type="am3Xml:Attribute" name="id" value="Node TWO"/>
+      </children>
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="to">
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="am3Xml:Element" name="nodeId">
+        <children xsi:type="am3Xml:Attribute" name="id" value="Node ONE"/>
+      </children>
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="am3Xml:Element" name="nodeId">
+        <children xsi:type="am3Xml:Attribute" name="id" value="Node THREE"/>
+      </children>
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  <children xsi:type="am3Xml:Element" name="edge">
+    <children xsi:type="am3Xml:Attribute" name="text" value="uncomplete edge"/>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="from">
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;&#x9;"/>
+      <children xsi:type="am3Xml:Element" name="nodeId">
+        <children xsi:type="am3Xml:Attribute" name="id" value="Node ONE"/>
+      </children>
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    <children xsi:type="am3Xml:Element" name="to">
+      <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;&#x9;"/>
+    </children>
+    <children xsi:type="am3Xml:Text" name="#text" value="&#xA;&#x9;"/>
+  </children>
+  <children xsi:type="am3Xml:Text" name="#text" value="&#xA;"/>
+</am3Xml:Root>

@@ -50,7 +50,7 @@ public class XMLModel2ExcelModelAction implements IObjectActionDelegate {
 	private static String BUNDLE_NAME	= "fr.inria.modeling.excel.utils";
 	private static String VM_NAME		= "EMF-specific VM";
 	private static String MODEL_KIND	= "EMF";
-	private static String XML_MM_URI	= "http://www.eclipse.org/gmt/am3/2007/XML";
+	private static String XML_MM_URI	= "http://www.eclipse.org/am3/2007/XML";
 	private static String XML_MM_ID		= "XML";
 	private static String EXCEL_MM_URI	= "http://modeling.inria.fr/Excel";
 	private static String EXCEL_MM_ID	= "Excel";

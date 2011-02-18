@@ -40,7 +40,7 @@ public class XMLFile2EXcelModelAction implements IObjectActionDelegate {
 	private IInjector xmlInjector;
 	
 	private static String MODEL_KIND = "EMF";
-	private static String XML_MM_URI = "http://www.eclipse.org/gmt/am3/2007/XML";
+	private static String XML_MM_URI = "http://www.eclipse.org/am3/2007/XML";
 	
 	private IFile inputFile;
 	
