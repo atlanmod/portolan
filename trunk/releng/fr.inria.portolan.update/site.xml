@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/fr.inria.portolan.examples_0.7.1.201102231358.jar" id="fr.inria.portolan.examples" version="0.7.1.201102231358">
+   <feature url="features/fr.inria.portolan.examples_0.7.1.201106221559.jar" id="fr.inria.portolan.examples" version="0.7.1.201106221559">
       <category name="fr.inria.portolan.update.framework"/>
    </feature>
-   <feature url="features/fr.inria.portolan.extensions_0.7.1.201102231358.jar" id="fr.inria.portolan.extensions" version="0.7.1.201102231358">
+   <feature url="features/fr.inria.portolan.extensions_0.7.1.201106221559.jar" id="fr.inria.portolan.extensions" version="0.7.1.201106221559">
       <category name="fr.inria.portolan.update.framework"/>
    </feature>
-   <feature url="features/fr.inria.portolan.tool_0.7.1.201102231358.jar" id="fr.inria.portolan.tool" version="0.7.1.201102231358">
+   <feature url="features/fr.inria.portolan.tool_0.7.1.201106221559.jar" id="fr.inria.portolan.tool" version="0.7.1.201106221559">
       <category name="fr.inria.portolan.update.framework"/>
    </feature>
    <category-def name="fr.inria.portolan.update.framework" label="Portolan Framework"/>

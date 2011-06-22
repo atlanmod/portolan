@@ -42,7 +42,7 @@ public class GraphMLModel2XMLFileAction implements IObjectActionDelegate {
 	private IExtractor xmlExtractor;
 	
 	private static String MODEL_KIND = "EMF";
-	private static String XML_MM_URI = "http://www.eclipse.org/am3/2007/XML";
+	private static String XML_MM_URI = "http://www.eclipse.org/XML";
 
 	private IFile inputFile;
 	
@@ -128,7 +128,7 @@ public class GraphMLModel2XMLFileAction implements IObjectActionDelegate {
 			// opposed to ATL XMI injector/extractor, the ATL XML extractor
 			// only understands filesystem root for path of files
 			xmlExtractor.extract(xmlModel, 
-					ResourcesPlugin.getWorkspace().getRoot().getLocation().toString()
+					"file://"+ResourcesPlugin.getWorkspace().getRoot().getLocation().toString()
 					+ outFileUri);
 		} catch (ATLCoreException e) {
 			e.printStackTrace();
