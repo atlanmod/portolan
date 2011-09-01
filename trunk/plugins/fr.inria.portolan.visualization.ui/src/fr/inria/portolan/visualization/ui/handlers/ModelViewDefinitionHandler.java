@@ -42,8 +42,10 @@ public class ModelViewDefinitionHandler extends AbstractHandler {
 	private String metamodelId;
 	private String postName;
 	private String transfoPath;
+	private String pluginId;
 	
-	public ModelViewDefinitionHandler(String editorId,
+	public ModelViewDefinitionHandler(String pluginId,
+									  String editorId,
 									  String metamodelId,
 									  String postName,
 									  String transfoPath) {
@@ -51,6 +53,7 @@ public class ModelViewDefinitionHandler extends AbstractHandler {
 		this.metamodelId	= metamodelId;
 		this.postName		= postName;
 		this.transfoPath	= transfoPath;
+		this.pluginId		= pluginId;
 	}
 	
 	/* (non-Javadoc)
@@ -84,7 +87,8 @@ public class ModelViewDefinitionHandler extends AbstractHandler {
 												metamodelId,
 												tmpFolder,
 												postName,
-												transfoPath);
+												transfoPath,
+												pluginId);
 		} catch (PortolanException e1) {
 			Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
 			MessageDialog.openError(shell, "Portolan Initialization",

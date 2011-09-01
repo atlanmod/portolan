@@ -22,6 +22,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.m2m.atl.core.ATLCoreException;
 import org.eclipse.m2m.atl.core.IExtractor;
 import org.eclipse.m2m.atl.core.IInjector;
@@ -66,7 +67,8 @@ public class ViewDefinitionProcessor {
 						 String metamodelID,
 						 String destDir,
 						 String postName,
-						 String transfoPath)
+						 String transfoPath, 
+						 String pluginId)
 			throws PortolanException {
 		
 		String inFileName = inFile.getFullPath()
@@ -125,10 +127,16 @@ public class ViewDefinitionProcessor {
 				launcher.addOutModel(refiningTraceModel, "refiningTrace", "RefiningTrace");
 				
 				// launch the transformation
-				IProject project = CommonUtils.getWorkspaceReferencedProject();
-				IFile transfo = project.getFile(transformations[i]);
+				// if pluginId == null then the transformation is embedded in a project
+				URL transfoURL =null;
+				if (pluginId == null){
+					IProject project = CommonUtils.getWorkspaceReferencedProject();
+					IFile transfo = project.getFile(transformations[i]);
+					transfoURL = transfo.getLocationURI().toURL();
+				}else{
+					transfoURL = Platform.getBundle(pluginId).getEntry(transfoPath);
+				}
 				
-				URL transfoURL = transfo.getLocationURI().toURL();
 				InputStream is = transfoURL.openStream();
 				launcher.launch(ILauncher.RUN_MODE, new NullProgressMonitor(),
 								options, is);
