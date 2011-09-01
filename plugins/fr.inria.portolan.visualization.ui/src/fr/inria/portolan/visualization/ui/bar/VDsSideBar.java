@@ -95,6 +95,14 @@ public class VDsSideBar extends ViewPart {
 			addFullViewButton(config);
 		}
 		
+		//TODO This suppose that a view definition offered by a plugin should be available for everything...
+		/////////////// Manage view definitions in plugins //////////////////////
+		IConfigurationElement[] elts = registry.getConfigurationElementsFor("fr.inria.portolan.visualization.viewDefinition");
+		for (int i = 0; i < elts.length; i++) {
+			IConfigurationElement config = elts[i];
+			addPluginVDButton(config);
+		}
+		
 		// we add a listener on view definition extensions
 		registry.addListener(new IRegistryEventListener() {
 			
@@ -161,6 +169,8 @@ public class VDsSideBar extends ViewPart {
 		} catch (ProjectInitializationException e) {
 		}
 	}
+
+	
 
 	@Override
 	public void setFocus() {
@@ -265,7 +275,9 @@ public class VDsSideBar extends ViewPart {
 				postName = "_out";
 			String transfoPath = config.getAttribute("transformationPath");
 			
-			IHandler handler = new ModelViewDefinitionHandler(editorId,
+			//TODO the first parameter is null because the view definition is not embedded in a plug-in
+			IHandler handler = new ModelViewDefinitionHandler(null,
+															  editorId,
 															  metamodelId,
 															  postName,
 															  transfoPath);
@@ -275,6 +287,40 @@ public class VDsSideBar extends ViewPart {
 			hs.activateHandler(commandID, handler);
 		}
 		
+		newButton(config, image);
+	}
+	
+	protected void addPluginVDButton(IConfigurationElement config) {
+		Image image = getPluginImage(config.getContributor().getName(), config.getAttribute("iconPath"));
+
+		String commandID = config.getAttribute("commandId");
+
+		// the corresponding command & handler may not be registered
+		ICommandService cs = (ICommandService) PlatformUI.getWorkbench()
+		.getService(ICommandService.class);
+		Category category = cs.getCategory(config.getAttribute("categoryId"));
+		Command command = cs.getCommand(commandID);
+		if (! command.isDefined()) {
+			command.define(commandID, "", category);
+
+			// build the corresponding handler
+			String editorId = config.getAttribute("editorId");
+			String metamodelId = config.getAttribute("shortMM");
+			String postName = config.getAttribute("postName");
+			if (postName == null || postName.isEmpty())	// optional attribute
+				postName = "_out";
+			String transfoPath = config.getAttribute("transformationPath");
+
+			IHandler handler = new ModelViewDefinitionHandler(config.getContributor().getName(), editorId,
+					metamodelId,
+					postName,
+					transfoPath);
+
+			IHandlerService hs = (IHandlerService) PlatformUI.getWorkbench()
+			.getService(IHandlerService.class);
+			hs.activateHandler(commandID, handler);
+		}
+
 		newButton(config, image);
 	}
 	
