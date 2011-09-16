@@ -60,8 +60,12 @@ public class PrefuseEditor extends EditorPart {
 			// get the progress monitor of Eclipse status bar (not possible to use a Job)
 			IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 			IWorkbenchPart part = window.getActivePage().getActivePart();
-			IViewSite viewSite = (IViewSite) part.getSite();
-			IStatusLineManager manager = viewSite.getActionBars().getStatusLineManager();
+			IStatusLineManager manager = null;
+			if (part.getSite() instanceof IViewSite){
+				manager = ((IViewSite) (part.getSite())).getActionBars().getStatusLineManager();
+			}else{
+				manager = ((IEditorSite)(part.getSite())).getActionBars().getStatusLineManager();
+			}
 			IProgressMonitor monitor = manager.getProgressMonitor();
 			manager.update(true);
 			try {
